@@ -1,0 +1,19 @@
+テーブル作成SQLの違い
+
+	PRIMARY KEY 主キーで、自動連番
+
+		MySQL Workbench:
+
+
+			id INT AUTO_INCREMENT PRIMARY KEY
+
+			自動増分を指定するAUTO_INCREMENTは、数値型という指定も加えて必要になる。
+
+		Postgresql:
+
+			id SERIAL PRIMARY KEY
+
+
+			このSERIALが識別番号という意味で、自動増分とINT型という両方をこの1単語で定義していることになる。
+
+			

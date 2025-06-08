@@ -1,0 +1,17 @@
+
+埋め込みで、プログラム内にSQLを書く場合。(DBの種類に関わらず、共通）
+
+SELECT は、
+
+	executeQuery() で実行。ResultSet型の変数で、その結果を受け取る。
+
+
+INSERT、UPDATE、DELETEは、
+
+	executeUpdate() で実行。int型の変数で、その影響を受けたレコード数を返す。
+
+	CREATE TABLEや、DROP TABLE (テーブルごと削除）でも、これを使うが、実行の成功・失敗に関わらず、0が変えるので、ifなどで、実行結果の判定ができない。
+
+	なので、この場合は、ifなどの実行結果判定は書かず、try / catch のみで対応。
+
+			
