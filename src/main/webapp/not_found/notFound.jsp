@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Not Found | 面談予約システム<title>
+<title>Not Found | 面談予約システム</title>
 </head>
 <body>
 
 	<p>ページにアクセスできませんでした。</p>
 	
-	<p><a href="../index.jsp">トップへ</a></p>
+	<p><a href="../meeting_reservation_system/index.jsp">トップへ</a></p>
 
 </body>
 </html>
