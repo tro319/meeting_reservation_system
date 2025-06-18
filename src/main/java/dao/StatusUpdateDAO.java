@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -19,8 +20,9 @@ public class StatusUpdateDAO {
 	 * 
 	 */
 	
-	public void updateStatus(String interviewerName, String weekday) {
+	public void updateStatus(String weekday, String interviewerName) {
 		
+		// 時間枠の数を取得。
 		
 		TimesGetDAO timesGetDAO = new TimesGetDAO();
 		
@@ -30,9 +32,11 @@ public class StatusUpdateDAO {
 		
 		// SQL群定義
 		
-		String statusConfSQL = "SELECT COUNT(reservations.id) FROM reservations, reservation_slots, interviewers, time_slots WHERE reservations.interviewer_id = reservation_slots.interviewer_id AND reservation_slots.time_id = time_slots.id AND reservations.interviewers_id = interviewers.id reservation_slots.weekday = ? AND interviewers.name = ?";
+		String statusConfSQL = "SELECT reservations.id FROM reservations JOIN reservation_slots ON reservations.slot_id = reservation_slots.id JOIN interviewers ON reservations.interviewer_id = interviewers.id JOIN time_slots ON reservation_slots.time_id = time_slots.id WHERE reservation_slots.weekday = ? AND interviewers.name = ?";
 		
 		String updateSQL = "UPDATE reservation_slots SET status = false WHERE weekday = ?";
+		
+		// 対象予約枠への、予約の件数を取得
 		
 		try (Connection con = DBConnect.getDB();
 			PreparedStatement pstmt = con.prepareStatement(statusConfSQL)) {
@@ -40,9 +44,22 @@ public class StatusUpdateDAO {
 			pstmt.setString(1, weekday);
 			pstmt.setString(2, interviewerName);
 			
-			int confResultCount = pstmt.executeUpdate();
+			ResultSet confResult = pstmt.executeQuery();
+			
+			int confResultCount = 0;
+			
+			
+			while (confResult.next()) {
+				
+				confResultCount += 1;
+				
+			}
+			
+			// 対象予約枠の予約件数と、既定の時間枠の枠数が一致しているか。
 			
 			if (confResultCount == timeSlotsCount) {
+				
+				// 一致していたら、更新処理実行
 				
 				try (PreparedStatement pstmt2 = con.prepareStatement(updateSQL)) {
 					
@@ -64,7 +81,7 @@ public class StatusUpdateDAO {
 					
 					System.out.println("DBの接続に失敗しました。");
 					
-					System.out.println("DB接続エラー: " + e.getMessage());
+					System.out.println("DB接続エラーサブ: " + e.getMessage());
 					
 				}
 				

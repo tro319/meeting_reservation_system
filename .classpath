@@ -13,8 +13,8 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/java2025/meeting_reservation_system/src/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/java2025/meeting_reservation_system/src/main/webapp/WEB-INF/lib/postgresql-42.7.1.jar"/>
-	<classpathentry kind="lib" path="C:/java2025/meeting_reservation_system/src/main/webapp/WEB-INF/lib/standard-1.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/java_git/meeting_reservation_system/src/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/java_git/meeting_reservation_system/src/main/webapp/WEB-INF/lib/postgresql-42.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/java_git/meeting_reservation_system/src/main/webapp/WEB-INF/lib/standard-1.1.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
