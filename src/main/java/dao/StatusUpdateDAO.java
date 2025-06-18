@@ -20,7 +20,7 @@ public class StatusUpdateDAO {
 	 * 
 	 */
 	
-	public void updateStatus(String weekday, String interviewerName) {
+	public void updateStatus(String weekday, String interName) {
 		
 		// 時間枠の数を取得。
 		
@@ -42,7 +42,7 @@ public class StatusUpdateDAO {
 			PreparedStatement pstmt = con.prepareStatement(statusConfSQL)) {
 			
 			pstmt.setString(1, weekday);
-			pstmt.setString(2, interviewerName);
+			pstmt.setString(2, interName);
 			
 			ResultSet confResult = pstmt.executeQuery();
 			

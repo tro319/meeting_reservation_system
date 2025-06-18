@@ -58,7 +58,7 @@ public class StatusUpdateResult extends HttpServlet {
 
 		// 対象面談実施者名
 		
-		String interviewerName = "清川";
+		String interName = "清川";
 		
 		// 対象曜日（現在の）
 		
@@ -110,7 +110,7 @@ public class StatusUpdateResult extends HttpServlet {
 		
 		StatusUpdateDAO statusUpdateDAO = new StatusUpdateDAO();
 		
-		statusUpdateDAO.updateStatus(dayWeek, interviewerName);
+		statusUpdateDAO.updateStatus(dayWeek, interName);
 		
 		
 		
