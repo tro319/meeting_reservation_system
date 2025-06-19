@@ -1,0 +1,21 @@
+# === Java コンパイル生成物 ===
+*.class
+*.jar
+*.war
+*.ear
+
+# === 一般的なビルドディレクトリ ===
+/bin/
+/build/
+/target/
+/out/
+/classes/
+
+# === Eclipse固有ファイル ===
+.classpath
+.project
+.settings/
+
+# === OS別のゴミファイル ===
+.DS_Store
+Thumbs.db
