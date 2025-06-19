@@ -105,6 +105,9 @@ public class InterSlotsResult extends HttpServlet {
 		}
 		
 		
+		request.setAttribute("result_msg", "成功しました！");
+		
+		
 		
 		
 		// 遷移

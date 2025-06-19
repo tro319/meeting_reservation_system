@@ -110,7 +110,11 @@ public class StatusUpdateResult extends HttpServlet {
 		
 		StatusUpdateDAO statusUpdateDAO = new StatusUpdateDAO();
 		
-		statusUpdateDAO.updateStatus(dayWeek, interName);
+		String resultMsg = statusUpdateDAO.updateStatus(dayWeek, interName);
+		
+		request.setAttribute("result_msg", resultMsg);
+		
+		
 		
 		
 		

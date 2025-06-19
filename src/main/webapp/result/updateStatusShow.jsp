@@ -9,7 +9,13 @@
 </head>
 <body>
 
-<p>予約枠、status更新完了。</p>
+<% 
+
+String resultMsg = (String)request.getAttribute("result_msg");
+
+%>
+
+<p><%= resultMsg %></p>
 
 </body>
 </html>

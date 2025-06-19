@@ -9,7 +9,13 @@
 </head>
 <body>
 
-<p>各面談実施者の、予約枠状況取得成功。</p>
+<% 
+
+String resultMsg = (String)request.getAttribute("result_msg");
+
+%>
+
+<p><%= resultMsg %></p>
 
 </body>
 </html>

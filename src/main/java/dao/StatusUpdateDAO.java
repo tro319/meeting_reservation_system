@@ -16,11 +16,11 @@ public class StatusUpdateDAO {
 	 * 
 	 * @param int interviewerName, String weekday 対象面談実施者の名前, 対象の曜日
 	 * 
-	 * @return なし
+	 * @return String resultMsg 結果メッセージ
 	 * 
 	 */
 	
-	public void updateStatus(String weekday, String interName) {
+	public String updateStatus(String weekday, String interName) {
 		
 		// 時間枠の数を取得。
 		
@@ -35,6 +35,10 @@ public class StatusUpdateDAO {
 		String statusConfSQL = "SELECT reservations.id FROM reservations JOIN reservation_slots ON reservations.slot_id = reservation_slots.id JOIN interviewers ON reservations.interviewer_id = interviewers.id JOIN time_slots ON reservation_slots.time_id = time_slots.id WHERE reservation_slots.weekday = ? AND interviewers.name = ?";
 		
 		String updateSQL = "UPDATE reservation_slots SET status = false WHERE weekday = ?";
+		
+		// 結果格納変数
+		
+		String resultMsg = "なし";
 		
 		// 対象予約枠への、予約の件数を取得
 		
@@ -69,11 +73,11 @@ public class StatusUpdateDAO {
 					
 					if (updateResultCount == timeSlotsCount) {
 						
-						System.out.println("予約枠のstatus、更新成功！");
+						resultMsg = "予約枠のstatus、更新成功！";
 						
 					} else {
 						
-						System.out.println("予約枠のstatus、更新失敗");
+						resultMsg = "予約枠のstatus、更新失敗";
 						
 					}
 					
@@ -96,6 +100,8 @@ public class StatusUpdateDAO {
 			
 		}
 		
+		
+		return resultMsg;
 	}
 
 }
