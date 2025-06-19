@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.InterSlotsDAO;
+import dao.TimesGetDAO;
 import dto.ReseSituDTO;
+import dto.TimeSlotDTO;
 
 /**
  * Servlet implementation class MsgShow
@@ -66,7 +68,7 @@ public class InterSlotsResult extends HttpServlet {
 		ArrayList<ReseSituDTO> interSlotReses = interSlotDAO.getSlotSituations(interName);
 		
 		
-		// 配列中身表示テスト（一時的に、コンソールに表示）
+		// 一時的に、コンソールに表示
 		
 		System.out.println("\n");
 		
@@ -98,6 +100,10 @@ public class InterSlotsResult extends HttpServlet {
 			
 			System.out.println("\n");
 			
+			System.out.println(interSlotSitu.getStartTime());
+			
+			System.out.println("\n");
+			
 			System.out.println("-------------");
 			
 			System.out.println("\n");
@@ -105,7 +111,18 @@ public class InterSlotsResult extends HttpServlet {
 		}
 		
 		
-		request.setAttribute("result_msg", "成功しました！");
+		request.setAttribute("result_status_list", interSlotReses);
+
+		
+		
+		// 時間枠一覧を受け取る
+		
+		TimesGetDAO timesGetDAO = new TimesGetDAO();
+		
+		ArrayList<TimeSlotDTO> timeSlotsList = timesGetDAO.getTimeSlots();
+		
+		request.setAttribute("result_time_list", timeSlotsList);
+		
 		
 		
 		

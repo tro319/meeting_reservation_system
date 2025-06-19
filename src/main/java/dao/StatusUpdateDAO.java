@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import db_connect.DBConnect;
+import dto.TimeSlotDTO;
 
 public class StatusUpdateDAO {
 	
@@ -26,7 +27,7 @@ public class StatusUpdateDAO {
 		
 		TimesGetDAO timesGetDAO = new TimesGetDAO();
 		
-		ArrayList<Integer> timeSlots = timesGetDAO.getTimeSlots();
+		ArrayList<TimeSlotDTO> timeSlots = timesGetDAO.getTimeSlots();
 		
 		int timeSlotsCount = timeSlots.size();
 		

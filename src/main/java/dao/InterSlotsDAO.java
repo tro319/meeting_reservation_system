@@ -30,7 +30,7 @@ public class InterSlotsDAO {
 		
 		// SQL定義
 
-		String sql = "SELECT * FROM reservation_slots JOIN interviewers ON reservation_slots.interviewer_id = interviewers.id WHERE interviewers.name = ? ORDER BY reservation_slots.id";
+		String sql = "SELECT * FROM reservation_slots JOIN interviewers ON reservation_slots.interviewer_id = interviewers.id JOIN time_slots ON reservation_slots.time_id = time_slots.id WHERE interviewers.name = ? ORDER BY reservation_slots.id";
 		
 		// 予約枠の予約状況一覧を取得
 		
@@ -53,7 +53,9 @@ public class InterSlotsDAO {
 				
 				String weekday = results.getString("weekday");
 				
-				ReseSituDTO slotSituDTO = new ReseSituDTO(id, status, interID, timeID, weekday); 
+				int startTime = results.getInt("start_time");
+				
+				ReseSituDTO slotSituDTO = new ReseSituDTO(id, status, interID, timeID, weekday, startTime); 
 				
 				reseSlotSituations.add(slotSituDTO);
 				

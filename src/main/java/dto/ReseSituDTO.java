@@ -14,11 +14,13 @@ public class ReseSituDTO {
 	
 	private String weekday;
 	
+	private int startTime;
+	
 	
 	// コンストラクタ
 	
 	
-	public ReseSituDTO(int id, Boolean status, int interID, int timeID, String weekday) {
+	public ReseSituDTO(int id, Boolean status, int interID, int timeID, String weekday, int startTime) {
 		
 		this.id = id;
 		
@@ -29,6 +31,8 @@ public class ReseSituDTO {
 		this.timeID = timeID;
 		
 		this.weekday = weekday;
+		
+		this.startTime = startTime;
 		
 	}
 	
@@ -105,6 +109,18 @@ public class ReseSituDTO {
 	public void setWeekday(String weekday) {
 		
 		this.weekday = weekday;
+		
+	}
+	
+	public int getStartTime() {
+		
+		return startTime;
+		
+	}
+	
+	public void setStartTime(int startTime) {
+		
+		this.startTime = startTime;
 		
 	}
 	

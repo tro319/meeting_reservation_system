@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import db_connect.DBConnect;
+import dto.TimeSlotDTO;
 
 
 
@@ -26,19 +27,16 @@ public class TimesGetDAO {
 	 * 
 	 */
 	
-	public ArrayList<Integer> getTimeSlots() {
+	public ArrayList<TimeSlotDTO> getTimeSlots() {
 		
 		// SQL定義
 		
-		String sql = "SELECT start_time FROM time_slots";
+		String sql = "SELECT * FROM time_slots";
 		
 		// 時間枠格納配列定義
 		
-		ArrayList<Integer> timeSlots = new ArrayList<>();
-		
-		// 時間枠要素格納変数定義
-		
-		Integer timeSlot = 0;
+		ArrayList<TimeSlotDTO> timeSlots = new ArrayList<>();
+	
 		
 		try (Connection con = DBConnect.getDB();
 			PreparedStatement pstmt = con.prepareStatement(sql)) {
@@ -47,9 +45,13 @@ public class TimesGetDAO {
 			
 			while (results.next()) {
 				
-				timeSlot = results.getInt("start_time");
+				int id = results.getInt("id");
 				
-				timeSlots.add(timeSlot);
+				int startTime = results.getInt("start_time");
+				
+				TimeSlotDTO timeSlotDto = new TimeSlotDTO(id, startTime);
+				
+				timeSlots.add(timeSlotDto);
 				
 			}
 			
