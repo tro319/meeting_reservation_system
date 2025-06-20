@@ -55,6 +55,8 @@ public class TimesGetDAO {
 				
 			}
 			
+			DBConnect.closeDB(con);
+			
 			
 		} catch (SQLException e) {
 			

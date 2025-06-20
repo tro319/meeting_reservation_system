@@ -13,9 +13,13 @@ public class DBConnect extends HttpServlet {
 		
 	}
 	
-	private static final String URL = "jdbc:postgresql://db.ormtgwjagiinhiufyoko.supabase.co:5432/postgres";
-	private static final String USER = "postgres";
-	private static final String PASS = "tuyjjkuitekekppac8";
+	// 返すコネクションオブジェクト
+	
+	Connection con = null;
+	
+	private static final String URL = "jdbc:mysql://localhost:3307/meeting_reservation_sys";
+	private static final String USERNAME = "root";
+	private static final String PASS = "ktcpass25";
 	
 	/** 
 	 * DB接続メソッド
@@ -28,17 +32,18 @@ public class DBConnect extends HttpServlet {
 		
 		try {
 			
-			Class.forName("org.postgresql.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
 			
 		} catch (ClassNotFoundException e) {
 			
 			e.printStackTrace();
 			
-			throw new SQLException("PostgreSQLドライバが見つかりません。", e);
+			throw new SQLException("MySQL ドライバ が見つかりません。", e);
 			
 		}
 		
-		return DriverManager.getConnection(URL, USER, PASS);
+		return DriverManager.getConnection(URL, USERNAME, PASS);
 		
 	}
 	

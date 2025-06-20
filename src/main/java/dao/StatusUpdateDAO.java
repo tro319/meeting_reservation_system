@@ -88,6 +88,8 @@ public class StatusUpdateDAO {
 					
 					System.out.println("DB接続エラーサブ: " + e.getMessage());
 					
+					DBConnect.closeDB(con);
+					
 				}
 				
 			}
@@ -98,8 +100,11 @@ public class StatusUpdateDAO {
 			System.out.println("DBの接続に失敗しました。予約枠取得クラス");
 			
 			System.out.println("DB接続エラー: " + e.getMessage());
+
 			
 		}
+		
+		
 		
 		
 		return resultMsg;

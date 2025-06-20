@@ -62,6 +62,9 @@ public class InterSlotsDAO {
 			}
 			
 			
+			DBConnect.closeDB(con);
+			
+			
 			
 		} catch (SQLException e) {
 			
