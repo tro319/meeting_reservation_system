@@ -95,7 +95,7 @@ public class StatusUpdateDAO {
 			
 		} catch (SQLException e) {
 			
-			System.out.println("DBの接続に失敗しました。");
+			System.out.println("DBの接続に失敗しました。予約枠取得クラス");
 			
 			System.out.println("DB接続エラー: " + e.getMessage());
 			
