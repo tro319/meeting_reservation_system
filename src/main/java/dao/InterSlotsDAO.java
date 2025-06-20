@@ -65,6 +65,8 @@ public class InterSlotsDAO {
 			
 		} catch (SQLException e) {
 			
+			e.printStackTrace();
+			
 			System.out.println("DB接続エラー発生: " + e.getMessage());
 			
 		}
