@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+.container {
+	max-width: 960px;
+	margin: 40px auto;
+}
+
+/* 面談実施者別、予約枠状況取得 テーブル
+========================================== */
+
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	border: solid 1px rgb(128, 128, 128);
+	margin: 30px auto;
+}
+
+.inter_slot_table th,
+.inter_slot_table td {
+	border-right: solid 1px rgb(128, 128, 128);
+	border-bottom: solid 1px rgb(128, 128, 128);
+}
+
+.inter_slot_table th {
+	background-color: rgb(129, 193, 228);
+}
+
+.inter_slot_table td {
+	text-align: center;
+}
+
