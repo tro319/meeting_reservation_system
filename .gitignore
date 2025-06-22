@@ -19,3 +19,8 @@
 # === OS別のゴミファイル ===
 .DS_Store
 Thumbs.db
+
+# === git push 対象外のDB接続専用パッケージ ===
+
+src/main/java/db_connect/
+
