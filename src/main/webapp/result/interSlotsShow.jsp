@@ -19,14 +19,27 @@
 		
 			<tr>
 			
-				<th></th>
-				<th>月</th>
-				<th>火</th>
-				<th>水</th>
-				<th>木</th>
-				<th>金</th>
-				<th>土</th>
-				<th>日</th>
+				<th class="th_white"></th>
+			
+				<c:forEach items="${result_date_list}" var="x">
+				
+					<th><c:out value="${x}" /></th>
+					
+				</c:forEach>
+
+			</tr>
+		
+				
+			<tr>
+				
+				<th class="th_white"></th>	
+				
+				
+				<c:forEach items="${result_date_week_list}" var="y">
+				
+					<th><c:out value="${y}" /></th>
+					
+				</c:forEach>
 			
 			</tr>
 		

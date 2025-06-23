@@ -25,10 +25,21 @@
 
 .inter_slot_table th {
 	background-color: rgb(129, 193, 228);
+	color: rgb(128, 128, 128);
 }
 
 .inter_slot_table td {
 	text-align: center;
 	color: rgb(0, 128, 192);
 }
+
+.inter_slot_table th.th_white {
+	border-bottom: none;
+}
+
+.inter_slot_table tbody th {
+	border-top: solid 1px rgb(128, 128, 128);
+}
+
+
 

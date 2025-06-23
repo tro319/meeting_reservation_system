@@ -1,6 +1,7 @@
 package inter_slot_situs_result;
 
 import java.io.IOException;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -151,9 +152,86 @@ public class InterSlotsResult extends HttpServlet {
 		
 		ArrayList<LocalDate> datesBefore = getDate.getDates();
 		
+		// 現在からの曜日群格納配列、定義
+		
+		ArrayList<String> dateWeeks = new ArrayList<>();
+		
+		for (LocalDate dateWeekBefore : datesBefore) {
+			
+			DayOfWeek dateWeekAfter = dateWeekBefore.getDayOfWeek();
+			
+			String dateWeekAfter2 = dateWeekAfter.toString();
+			
+			String dateWeekAfter3 = "初期";
+			
+		switch (dateWeekAfter2) {
+			
+			case "MONDAY":
+				dateWeekAfter3 = "月";
+				break;
+			case "TUESDAY":
+				dateWeekAfter3 = "火";
+				break;
+			case "WEDNESDAY":
+				dateWeekAfter3 = "水";
+				break;
+			case "THURSDAY":
+				dateWeekAfter3 = "木";
+				break;
+			case "FRIDAY":
+				dateWeekAfter3 = "金";
+				break;
+			case "SATURDAY":
+				dateWeekAfter3 = "土";
+				break;
+			case "SUNDAY":
+				dateWeekAfter3 = "日";
+				break;
+			default:
+				dateWeekAfter3 = "なし";
+				break;
+	
+		}
+			
+			dateWeeks.add(dateWeekAfter3);
+			
+		}
+		
+		// テスト
+		
+		System.out.println("**** ここから表示用、曜日群取得確認出力 ****");
+		
+		System.out.println("\n");
+		
+		System.out.println("-------------");
+		
+		System.out.println("\n");
+		
+		
+		for (String dateWeekAfter2 : dateWeeks) {
+			
+			System.out.println(dateWeekAfter2);
+			
+			System.out.println("\n");
+			
+			System.out.println("-------------");
+			
+			System.out.println("\n");
+			
+		}
+		
+		request.setAttribute("result_date_week_list", dateWeeks);
+		
+		
+		
+		
+		
+		
 		// String型日付格納用配列、定義
 		
 		ArrayList<String> datesAfter = new ArrayList<>();
+		
+
 		
 		// 取得した日付をストリング型へ。
 		

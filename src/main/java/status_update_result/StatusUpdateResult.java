@@ -71,7 +71,7 @@ public class StatusUpdateResult extends HttpServlet {
 		String dayOfWeekBefore = dayOfWeek.toString();
 		
 		
-		// 曜日格納(日本語版)
+		// 曜日格納 (日本語版)
 
 		
 		String dayWeek = "";
