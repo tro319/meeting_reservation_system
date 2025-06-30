@@ -52,6 +52,8 @@
 		<tbody>
 		
 			<c:set var="count" value="0" />
+			
+			<c:set var="dateCount" value="0" />
 	
 		  	
 			<tr>
@@ -61,6 +63,7 @@
 		
 		  			
 		  			<c:set var="count" value="${count + 1}" />
+		  		
 		  		
 		  			<c:if test="${count == 1}">
 					
@@ -76,7 +79,10 @@
 			
 				<c:forEach items="${result_status_list}" var="j">
 				
+				
+				
 					<c:if test="${judgeTime == j.getStartTime()}">
+					
 							
 						<c:choose>
 						
@@ -94,7 +100,7 @@
 							
 							<c:when test="${j.getStatus() == 'true'}">
 										
-								<td><a href="ParamShow?id=${ j.getID() }&week=${ j.getWeekday() }&time=${ j.getStartTime() }">◎</a></td>
+								<td><a href="ParamShow?id=${ j.getID() }&week=${ j.getWeekday() }&time=${ j.getStartTime() }&date_count=${ dateCount }">◎</a></td>
 										
 							</c:when>
 									
@@ -106,9 +112,12 @@
 							</c:when>
 								
 						</c:choose>
+						
+						<c:set var="dateCount" value="${dateCount + 1}" />
 								
 					</c:if>
 		
+				
 					
 				</c:forEach>
 				
@@ -116,6 +125,8 @@
 			
 			
 			<c:set var="count" value="0" />
+			
+			<c:set var="dateCount" value="0" />
 				
 				
 			<tr>
@@ -140,6 +151,8 @@
 			
 				<c:forEach items="${result_status_list}" var="j">
 				
+				
+				
 					<c:if test="${judgeTime == j.getStartTime()}">
 					
 							
@@ -171,9 +184,13 @@
 							</c:when>
 								
 						</c:choose>
+						
+						<c:set var="dateCount" value="${dateCount + 1}" />
 								
 					</c:if>
-		
+					
+					
+				
 					
 				</c:forEach>
 				
@@ -181,6 +198,8 @@
 			
 			
 			<c:set var="count" value="0" />
+			
+			<c:set var="dateCount" value="0" />
 	
 	
 			<tr>
@@ -205,6 +224,8 @@
 			
 				<c:forEach items="${result_status_list}" var="j">
 				
+				
+				
 					<c:if test="${judgeTime == j.getStartTime()}">
 					
 						<c:choose>
@@ -235,8 +256,12 @@
 							</c:when>
 								
 						</c:choose>
+						
+						<c:set var="dateCount" value="${dateCount + 1}" />
 								
 					</c:if>
+					
+				
 		
 					
 				</c:forEach>

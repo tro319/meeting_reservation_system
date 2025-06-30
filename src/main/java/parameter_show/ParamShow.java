@@ -9,33 +9,40 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class ParamShow
- */
 @WebServlet("/ParamShow")
 public class ParamShow extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ParamShow() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+      
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * 
+	 * 選択した予約枠情報を取得・遷移先への設定、を行うメソッド
+	 * 
+	 * @param HttpServletRequest request, HttpServletResponse response
+	 * 
 	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		// 文字化け防止
 		
 		request.setCharacterEncoding("UTF-8");
 		
-		String id = request.getParameter("id");
+		// 遷移先パス、定義
+		
+		String path = "rese/rese_form.jsp";
+		
+		// 予約枠の各値、パラメーターから取得
+		
+		int id = Integer.parseInt(request.getParameter("id"));
 		
 		String week = request.getParameter("week");
 		
 		String time = request.getParameter("time");
+		
+		int dateCount = Integer.parseInt(request.getParameter("date_count"));
+		
+		// 予約枠の各値を、遷移先へ設定
 		
 		
 		request.setAttribute("id", id);
@@ -44,7 +51,11 @@ public class ParamShow extends HttpServlet {
 		
 		request.setAttribute("time", time);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("rese/rese_form.jsp");
+		request.setAttribute("date_count", dateCount);
+		
+		// 画面遷移
+		
+		RequestDispatcher rd = request.getRequestDispatcher(path);
 		
 		rd.forward(request, response);
 	}

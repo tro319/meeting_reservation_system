@@ -162,7 +162,7 @@ public class InterSlotsResult extends HttpServlet {
 			
 			String dateWeekAfter2 = dateWeekAfter.toString();
 			
-			String dateWeekAfter3 = "初期";
+			String dateWeekAfter3 = null;
 			
 		switch (dateWeekAfter2) {
 			
