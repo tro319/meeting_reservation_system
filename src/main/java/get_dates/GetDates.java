@@ -19,7 +19,7 @@ public class GetDates {
 		
 		// 現在から7日間の日付を、配列に格納
 		
-		for (int i = 1; i < 8; i++) {
+		for (int i = 0; i < 7; i++) {
 
 			LocalDate dateAfter = dateBefore.plusDays(i);
 			

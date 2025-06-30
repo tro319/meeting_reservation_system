@@ -10,7 +10,10 @@
 </head>
 <body>
 
+
 <div class="container">
+
+<div class="table_cover">
 
 
 	<table class="table inter_slot_table">
@@ -61,7 +64,7 @@
 		  		
 		  			<c:if test="${count == 1}">
 					
-						<th><c:out value="${i.getStartTime()}:00 ～" /></th>	
+						<th><c:out value="${i.getStartTime()}:00" /></th>	
 						
 						<c:set var="judgeTime" value="${i.getStartTime()}" />
 						
@@ -91,7 +94,7 @@
 							
 							<c:when test="${j.getStatus() == 'true'}">
 										
-								<td>◎</td>
+								<td><a href="ParamShow?id=${ j.getID() }&week=${ j.getWeekday() }&time=${ j.getStartTime() }">◎</a></td>
 										
 							</c:when>
 									
@@ -125,7 +128,7 @@
 		  		
 		  			<c:if test="${count == 2}">
 					
-						<th><c:out value="${i.getStartTime()}:00 ～" /></th>	
+						<th><c:out value="${i.getStartTime()}:00" /></th>	
 						
 						<c:set var="judgeTime" value="${i.getStartTime()}" />
 						
@@ -190,7 +193,7 @@
 		  		
 		  			<c:if test="${count == 3}">
 					
-						<th><c:out value="${i.getStartTime()}:00 ～" /></th>	
+						<th><c:out value="${i.getStartTime()}:00" /></th>	
 						
 						<c:set var="judgeTime" value="${i.getStartTime()}" />
 						
@@ -245,6 +248,8 @@
 	
 	
 	</table>
+	
+	</div>
 
 </div>
 
