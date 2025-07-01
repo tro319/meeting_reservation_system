@@ -16,11 +16,13 @@ public class ReseSituDTO {
 	
 	private int startTime;
 	
+	private int orderInt;
+	
 	
 	// コンストラクタ
 	
 	
-	public ReseSituDTO(int id, Boolean status, int interID, int timeID, String weekday, int startTime) {
+	public ReseSituDTO(int id, Boolean status, int interID, int timeID, String weekday, int startTime, int orderInt) {
 		
 		this.id = id;
 		
@@ -33,6 +35,8 @@ public class ReseSituDTO {
 		this.weekday = weekday;
 		
 		this.startTime = startTime;
+		
+		this.orderInt = orderInt;
 		
 	}
 	
@@ -121,6 +125,12 @@ public class ReseSituDTO {
 	public void setStartTime(int startTime) {
 		
 		this.startTime = startTime;
+		
+	}
+	
+	public int getOrderInt() {
+		
+		return orderInt;
 		
 	}
 	

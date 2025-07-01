@@ -1,6 +1,7 @@
 package parameter_show;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import get_dates.GetDate;
 
 @WebServlet("/ParamShow")
 public class ParamShow extends HttpServlet {
@@ -42,6 +45,14 @@ public class ParamShow extends HttpServlet {
 		
 		int dateCount = Integer.parseInt(request.getParameter("date_count"));
 		
+		// 予約対象日付取得
+		
+		GetDate getDate = new GetDate();
+		
+		LocalDate reseDayBefore = getDate.getDate(dateCount);
+		
+		String reseDayAfter = reseDayBefore.toString();
+		
 		// 予約枠の各値を、遷移先へ設定
 		
 		
@@ -51,7 +62,8 @@ public class ParamShow extends HttpServlet {
 		
 		request.setAttribute("time", time);
 		
-		request.setAttribute("date_count", dateCount);
+		request.setAttribute("rese_date", reseDayAfter);
+		
 		
 		// 画面遷移
 		

@@ -13,14 +13,18 @@
 
 	<h2>面談予約フォーム</h2>
 	
-	<p>今日から数えて、<c:out value="${ date_count }" />日後の予約枠です。</p>
-	
 	
 	<form action="ConfRese" method="post">
 	
 		<input type="hidden" name="id" id="id" value="${ id }" />
 		
 		<input type="hidden" name="week" id="week" value="${ week }" />
+		
+		<label for="rese_date"><span>予約日: <c:out value="${ rese_date }" /></span>
+		
+			<input type="hidden" name="rese_date" id="rese_date" value="${ rese_date }" />
+		
+		</label>
 		
 		<br>
 	

@@ -172,7 +172,7 @@
 							
 							<c:when test="${j.getStatus() == 'true'}">
 										
-								<td>◎</td>
+								<td><a href="ParamShow?id=${ j.getID() }&week=${ j.getWeekday() }&time=${ j.getStartTime() }&date_count=${ dateCount }">◎</a></td>
 										
 							</c:when>
 									
@@ -244,7 +244,7 @@
 							
 							<c:when test="${j.getStatus() == 'true'}">
 										
-								<td>◎</td>
+								<td><a href="ParamShow?id=${ j.getID() }&week=${ j.getWeekday() }&time=${ j.getStartTime() }&date_count=${ dateCount }">◎</a></td>
 										
 							</c:when>
 									
