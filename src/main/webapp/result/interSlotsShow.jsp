@@ -13,6 +13,10 @@
 
 <div class="container">
 
+<h1 class="site_title">面談予約システム</h1>
+
+<h2 class="sub_title">面談担当：<c:out value="${ inter_name_conf }" /> 空き状況</h2>
+
 <div class="table_cover">
 
 

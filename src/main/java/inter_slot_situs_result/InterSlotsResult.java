@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.InterSlotsDAO;
 import dao.TimesGetDAO;
@@ -55,6 +56,11 @@ public class InterSlotsResult extends HttpServlet {
 		
 		request.setCharacterEncoding("UTF-8");
 		
+		// セッション初期化
+		
+		HttpSession session = request.getSession();
+		
+		
 		// 遷移先パスを定義
 		
 		String path = "result/interSlotsShow.jsp";
@@ -62,7 +68,13 @@ public class InterSlotsResult extends HttpServlet {
 
 		// 対象面談実施者名
 		
-		String interName = "清川";
+		String interName = "実施者1";
+		
+		
+		// セッションに面談実施者の名前設定
+		
+		session.setAttribute("inter_name", interName);
+		
 		
 		// 予約枠状況の配列を受け取る
 		
@@ -274,6 +286,8 @@ public class InterSlotsResult extends HttpServlet {
 		System.out.println(datesAfterSize);
 		
 		request.setAttribute("result_date_list", datesAfter);
+		
+		request.setAttribute("inter_name_conf", interName);
 		
 		
 		
