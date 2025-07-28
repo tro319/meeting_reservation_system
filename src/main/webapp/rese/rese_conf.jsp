@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>面談予約確認 | 面談予約システム</title>
+<link rel="stylesheet" href="/meeting_reservation_system/css/body.css">
 </head>
 <body>
 
@@ -56,7 +57,7 @@
 		
 		<br>
 		
-		<input type="submit" value="予約確定" />
+		<input type="submit" value="予約確定" class="entry_btn" />
 	
 	</form>
 

@@ -12,6 +12,8 @@
 <div class="container">
 
 	<p><c:out value="${ result_msg }" /></p>
+	
+	<a href="index.jsp">トップへ<a>
 
 </div>
 

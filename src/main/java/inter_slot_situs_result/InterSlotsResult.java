@@ -68,7 +68,7 @@ public class InterSlotsResult extends HttpServlet {
 
 		// 対象面談実施者名
 		
-		String interName = "実施者1";
+		String interName = request.getParameter("inter_name");
 		
 		
 		// セッションに面談実施者の名前設定

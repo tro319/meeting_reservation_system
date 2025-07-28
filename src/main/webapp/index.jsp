@@ -6,25 +6,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>面談予約システム</title>
+<title>面談予約空き状況取得 | 面談予約システム</title>
 </head>
 <body>
 
 <h1>面談予約システム</h1>
 
-	<h2>テーブル作成</h2>
-	
-	<form action="CreateTable" method="post">
-	
-		<label for="table_name"><span>テーブル名</span><br>
+	<h2>面談予約空き状況取得</h2>
+
 		
-		<input type="text" id="table_name" name="table_name" maxlength="30" required>
+		<form action="InterSlotsResult" method="get">
 		
-		</label>
+			<p>面談実施者名を、選択してください。</p>
 		
-		<input type="submit" value="作成">
-	
-	</form>
+			<select name="inter_name">
+			
+				<option value="実施者1" selected>実施者1</option>
+			
+			</select>
+			
+			<input type="submit" value="取得" class="entry_btn" />
+		
+		
+		</form>
 
 	
 

@@ -82,6 +82,7 @@ public class ShowReseEntry extends HttpServlet {
 		// 結果メッセージを遷移先へセット
 		
 		request.setAttribute("result_msg", resultMsg);
+	
 		
 		
 		// ページ遷移
