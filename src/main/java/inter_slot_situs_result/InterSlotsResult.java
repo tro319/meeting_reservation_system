@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.AddSlotDAO;
 import dao.InterSlotsDAO;
 import dao.TimesGetDAO;
 import dto.ReseSituDTO;
@@ -81,6 +82,15 @@ public class InterSlotsResult extends HttpServlet {
 		InterSlotsDAO interSlotDAO = new InterSlotsDAO();
 		
 		ArrayList<ReseSituDTO> interSlotReses = interSlotDAO.getSlotSituations(interName);
+		
+		
+		// 一時的テスト、予約枠追加処理呼び出し
+		
+		AddSlotDAO addSlotDAO = new AddSlotDAO();
+		
+		String resultMsgAdd = addSlotDAO.addSlot(2);
+		
+		System.out.println(resultMsgAdd);
 		
 		
 		// テスト
