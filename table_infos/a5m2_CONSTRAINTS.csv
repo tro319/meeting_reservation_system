@@ -1,7 +1,0 @@
-TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,CONSTRAINT_NAME,CONSTRAINT_TYPE,CONSTRAINT_CONTENTS
-meeting_reservation_sys,meeting_reservation_sys,interviewers,PRIMARY,PRIMARY KEY,interviewer_id
-meeting_reservation_sys,meeting_reservation_sys,managers,PRIMARY,PRIMARY KEY,manager_id
-meeting_reservation_sys,meeting_reservation_sys,reservation_pasts,PRIMARY,PRIMARY KEY,past_id
-meeting_reservation_sys,meeting_reservation_sys,reservations,PRIMARY,PRIMARY KEY,reservation_id
-meeting_reservation_sys,meeting_reservation_sys,times,PRIMARY,PRIMARY KEY,time_id
-meeting_reservation_sys,meeting_reservation_sys,users,PRIMARY,PRIMARY KEY,user_id
