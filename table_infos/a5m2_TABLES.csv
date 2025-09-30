@@ -1,0 +1,7 @@
+TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,LOGICAL_NAME,TABLE_TYPE,DESCRIPTION,TAG
+meeting_reservation_sys,meeting_reservation_sys,interviewers,,BASE TABLE,,
+meeting_reservation_sys,meeting_reservation_sys,managers,,BASE TABLE,,
+meeting_reservation_sys,meeting_reservation_sys,reservation_pasts,,BASE TABLE,,
+meeting_reservation_sys,meeting_reservation_sys,reservations,,BASE TABLE,,
+meeting_reservation_sys,meeting_reservation_sys,times,,BASE TABLE,,
+meeting_reservation_sys,meeting_reservation_sys,users,,BASE TABLE,,
