@@ -1,4 +1,0 @@
-ソフトウェア機能定義書:
-
-	url: https://miro.com/app/board/uXjVIqugnLA=/
-
