@@ -25,3 +25,4 @@ Thumbs.db
 src/main/java/db_connect/
 
 /.metadata/*
+/Servers/*
