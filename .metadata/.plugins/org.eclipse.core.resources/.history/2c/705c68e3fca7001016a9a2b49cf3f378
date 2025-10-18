@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="meeting_rese_code">
-        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-        <property name="context-root" value="meeting_rese_code"/>
-        <property name="java-output-path" value="/meeting_rese_code/build/classes"/>
-    </wb-module>
-</project-modules>

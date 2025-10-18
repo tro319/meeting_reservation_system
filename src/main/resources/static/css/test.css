@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+	background-color: rgb(128, 128, 192);
+	color: rgb(255, 255, 255)
+}
+
+.inner-contents {
+	background-color: rgb(115, 100, 192);
+	border-radius: 13px;
+	padding: 10px;
+	margin: 30px auto;
+}
+
+h1 {
+	font-size: 1.4rem;
+	background-color: rgb(77, 152, 244);
+	border-radius: 13px;
+	padding: 15px;
+	margin: 25px auto;
+}
+
+h2 {
+	font-size: 1.25rem;
+	text-indent: 0.5rem;
+	padding: 15px;
+	margin: 15px auto;
+}
+

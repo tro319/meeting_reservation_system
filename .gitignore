@@ -1,28 +1,33 @@
-# === Java コンパイル生成物 ===
-*.class
-*.jar
-*.war
-*.ear
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# === 一般的なビルドディレクトリ ===
-/bin/
-/build/
-/target/
-/out/
-/classes/
-
-# === Eclipse固有ファイル ===
+### STS ###
+.apt_generated
 .classpath
+.factorypath
 .project
-.settings/
+.settings
+.springBeans
+.sts4-cache
 
-# === OS別のゴミファイル ===
-.DS_Store
-Thumbs.db
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-# === git push 対象外のDB接続専用パッケージ ===
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-src/main/java/db_connect/
-
-/.metadata/*
-/Servers/*
+### VS Code ###
+.vscode/

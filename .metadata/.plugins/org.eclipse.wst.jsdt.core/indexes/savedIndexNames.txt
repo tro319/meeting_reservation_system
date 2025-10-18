@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+C:\java2025\meeting_reservation_system\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-567924312.index
-3307744240.index
-3627645874.index
-435514903.index
-184139291.index
-1242410280.index
