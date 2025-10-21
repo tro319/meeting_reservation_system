@@ -8,6 +8,8 @@
 	
 	<h2>ログイン画面</h2>
 	
+	<p class="err" th:text="${err_msg}"></p>
+	
 	<form th:action="@{/users/login}" method="post" th:object="${loginFormInfo}">
 
 		<div>
