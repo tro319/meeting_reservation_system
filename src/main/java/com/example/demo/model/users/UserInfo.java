@@ -1,5 +1,6 @@
 package com.example.demo.model.users;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -24,5 +25,8 @@ public class UserInfo {
 	private String email;
 	
 	private String pass;
+	
+	@Column(name = "user_name")
+	private String userName;
 
 }

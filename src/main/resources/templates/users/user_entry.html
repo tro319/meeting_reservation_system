@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>会員登録画面 | 予約者</title>
+</head>
+<body>
+	
+	<h2>会員登録画面</h2>
+	
+	
+	<p class="err" th:text="${errMsg}"></p>
+	
+	<form th:action="@{/users/user_entry}" method="post" th:object="${userEntryFormInfo}">
+		
+		<div>
+			
+			<label>ユーザーネーム</label>
+			<input type="text" th:field="*{userName}" />
+
+		</div>
+
+		<div>
+			
+			<label>email</label>
+			<input type="email" th:field="*{email}" />
+		
+		</div>
+		
+		<div>
+			
+			<label>パスワード</label>
+			<input type="password" th:field="*{pass}" required />
+
+		</div>
+		
+		<div>
+			
+			<input type="submit" value="確認" />
+
+		</div>
+
+		
+	</form>
+
+</body>
+</html>

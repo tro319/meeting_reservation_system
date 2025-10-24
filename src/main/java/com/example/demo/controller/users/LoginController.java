@@ -72,9 +72,6 @@ public class LoginController {
 		
 		Boolean loginCheck = userInfo.isPresent() && passwordEncoder.matches(form.getPass(), userInfo.get().getPass());
 		
-		String hashedPass = passwordEncoder.encode(form.getPass());
-		
-		System.out.println(hashedPass);
 		
 		// TODO エラーメッセージ、プロパティファイルで管理する
 		
@@ -85,7 +82,7 @@ public class LoginController {
 		} else {
 			
 			var errMsg = AppUtil.getMessage(messageSource,  ErrMessageConst.LOGIN_ERR_INPUT);
-			model.addAttribute("err_msg", errMsg);
+			model.addAttribute("errMsg", errMsg);
 			return "/users/login";
 			
 		}
