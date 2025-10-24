@@ -1,11 +1,14 @@
 package com.example.demo.controller.users;
 
+import org.springframework.context.MessageSource;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.example.demo.kyoutu.AppUtil;
+import com.example.demo.kyoutu.ErrMessageConst;
 import com.example.demo.model.common.LoginFormInfo;
 import com.example.demo.service.users.LoginService;
 
@@ -29,6 +32,8 @@ public class LoginController {
 	
 	private final PasswordEncoder passwordEncoder;
 	
+	private final MessageSource messageSource;
+	
 	/**
 	 * ログイン画面、初期表示
 	 * 
@@ -45,7 +50,10 @@ public class LoginController {
 		
 	}
 	
+	
 	/**
+	 * 
+	 * 
 	 * ログイン処理
 	 * 
 	 * @param model モデル
@@ -64,6 +72,10 @@ public class LoginController {
 		
 		Boolean loginCheck = userInfo.isPresent() && passwordEncoder.matches(form.getPass(), userInfo.get().getPass());
 		
+		String hashedPass = passwordEncoder.encode(form.getPass());
+		
+		System.out.println(hashedPass);
+		
 		// TODO エラーメッセージ、プロパティファイルで管理する
 		
 		if (loginCheck == true) {
@@ -72,7 +84,8 @@ public class LoginController {
 			
 		} else {
 			
-			model.addAttribute("err_msg", "ログイン情報が、間違っています。");
+			var errMsg = AppUtil.getMessage(messageSource,  ErrMessageConst.LOGIN_ERR_INPUT);
+			model.addAttribute("err_msg", errMsg);
 			return "/users/login";
 			
 		}
