@@ -17,8 +17,6 @@ public class UserEntryController {
 	
 	public String viewUserEntry(Model model, UserEntryFormInfo userEntryFormInfo) {
 		
-		System.out.println("GET");
-		
 		return "users/user_entry";
 				
 	}
