@@ -66,14 +66,11 @@ public class LoginController {
 	
 	public String loginResult(Model model, LoginFormInfo form) {
 		
-		// TODO パスワードハッシュ化
 		
 		var userInfo = service.searchRepositoryByEmail(form.getEmail());
 		
 		Boolean loginCheck = userInfo.isPresent() && passwordEncoder.matches(form.getPass(), userInfo.get().getPass());
 		
-		
-		// TODO エラーメッセージ、プロパティファイルで管理する
 		
 		if (loginCheck == true) {
 			

@@ -11,7 +11,7 @@
 	
 	<p class="err" th:text="${errMsg}"></p>
 	
-	<form th:action="@{/users/user_entry}" method="post" th:object="${userEntryFormInfo}">
+	<form th:action="@{/users/signup}" method="post" th:object="${signUpFormInfo}">
 		
 		<div>
 			
@@ -31,6 +31,13 @@
 			
 			<label>パスワード</label>
 			<input type="password" th:field="*{pass}" required />
+
+		</div>
+		
+		<div>
+			
+			<label>パスワード【再】</label>
+			<input type="password" th:field="*{repass}" required />
 
 		</div>
 		
