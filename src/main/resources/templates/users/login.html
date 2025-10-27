@@ -1,41 +1,71 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>ログイン画面 | 予約者</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body>
 	
-	<h2>ログイン画面</h2>
-	
-	<p class="err" th:text="${errMsg}"></p>
-	
-	<form th:action="@{/users/login}" method="post" th:object="${loginFormInfo}">
-
-		<div>
-			
-			<label>email</label>
-			<input type="email" th:field="*{email}" />
+	<header th:replace="~{/users/layouts/layout :: common_header}">
 		
+		
+	</header>
+	
+	
+	<div id="sub_nav">
+		
+		<div class="sub-title">
+			
+			<h2 class="sub-title">ログイン画面</h2>
+			
 		</div>
 		
-		<div>
+		<div class="sub-link">
 			
-			<label>パスワード</label>
-			<input type="password" th:field="*{pass}" required />
-
+			<a th:href="@{/users/signup}">会員登録へ</a>
+			
 		</div>
 		
-		<div>
-			
-			<input type="submit" value="ログイン" />
-
-		</div>
-
 		
-	</form>
+	</div>
 	
-	<p class="link"><a th:href="@{/users/signup}">会員登録へ</a></p>
+	
+	
+	<div class="container">
+	
+		<p class="err" th:text="${errMsg}"></p>
+		
+		<form th:action="@{/users/login}" method="post" th:object="${loginFormInfo}">
+	
+			<div>
+				
+				<label>email</label>
+				<input type="email" th:field="*{email}" />
+			
+			</div>
+			
+			<div>
+				
+				<label>パスワード</label>
+				<input type="password" th:field="*{pass}" required />
+	
+			</div>
+			
+			<div>
+				
+				<input type="submit" value="ログイン" />
+	
+			</div>
+	
+			
+		</form>
+		
+	</div>
+		
+	
+	
+
 
 </body>
 </html>
