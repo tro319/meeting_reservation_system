@@ -5,13 +5,21 @@
 	margin: 0;
 }
 
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
 .site-title {
 	font-size: 1.4rem;
 	font-weight: bold;
 }
 
 .sub-title {
-	font-size: 1.3rem;
+	font-size: 1.25rem;
 	font-weight: bold;
 }
 
@@ -20,6 +28,36 @@
 	margin: 40px auto;
 }
 
+
+.form {
+	margin-bottom: 40px;
+}
+
+.form label,
+.form input {
+	margin-top: 20px;
+}
+
+.form label:first-child,
+.form input:first-child {
+	margin-top: 0;
+}
+
+.form label {
+	margin-right: 5px;
+}
+
+.form .submit-btns {
+	text-align: right;
+	margin-top: 25px;
+}
+
+.form .submit-btns input {
+	color: #FFF;
+	background-color: #2D88FF; 
+	border: none;
+	padding: 3px 10px;
+}
 
 #header {
 	color: #FFF;
