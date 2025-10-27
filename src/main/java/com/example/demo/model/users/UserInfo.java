@@ -20,7 +20,7 @@ import lombok.Data;
 public class UserInfo {
 	
 	@Id
-	private int userID;
+	private int id;
 	
 	private String email;
 	
