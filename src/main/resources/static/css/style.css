@@ -1,8 +1,20 @@
 @charset "UTF-8";
 
+
+/* 全体共通設定
+============================== */
+
 * {
 	padding: 0;
 	margin: 0;
+}
+
+body {
+	font-size: 1rem;
+}
+
+ul {
+	list-style: none;
 }
 
 img {
@@ -25,9 +37,13 @@ a {
 
 .container {
 	max-width: 960px;
+	padding: 13px;
 	margin: 40px auto;
 }
 
+
+/* フォーム共通設定
+============================== */
 
 .form {
 	margin-bottom: 40px;
@@ -59,21 +75,109 @@ a {
 	padding: 3px 10px;
 }
 
+
+/* ヘッダー共通設定
+============================== */
+
 #header {
 	color: #FFF;
 	background-color: #A1A1A1;
 }
 
 .header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	padding: 25px 40px;
 	margin-bottom: 40px;
 }
 
 
-#sub_nav {
+.page-main-tops {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 40px;
+}
+
+
+.hamburgers-wrapper {
+	display: none;
+}
+
+
+/* 小型端末など表示、共通設定
+============================== */
+
+@media screen and (max-width: 1024px) {
+	
+	.header-inner {
+		padding: 25px 7px;
+	}
+	
+	.hamburgers-wrapper {
+		position: absolute;
+		top: 30px;
+		right: 7px;
+		display: block;
+		width: 40px;
+		height: 16px;
+		z-index: 99;
+	} 
+	
+	.hamburgers {
+		display: block;
+		border: none;
+		color: inherit;
+		background: none;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+	
+	.hamburger-border {
+		width: 100%;
+		display: block;
+		height: 2px;
+		background-color: #FFF;
+		transition: transform 0.6s;
+		-webkit-transition: transform 0.6s;
+		-moz-transition: transform 0.6s;
+		-ms-transition: transform 0.6s;
+		-o-transition: transform 0.6s;
+	}
+	
+	.hamburger-border:nth-child(2) {
+		margin-top: 8px;
+	}
+	
+	.hamburger-border:last-child {
+		margin-top: 8px;
+	}
+	
+	.hamburgers-wrapper.click-on .hamburgers .hamburger-border:first-child {
+		transform: translate(0px, 9px) rotate(45deg);
+		-webkit-transform: translate(0px, 9px) rotate(45deg);
+		-moz-transform: translate(0px, 9px) rotate(45deg);
+		-ms-transform: translate(0px, 9px) rotate(45deg);
+		-o-transform: translate(0px, 9px) rotate(45deg);
+	}
+	
+	.hamburgers-wrapper.click-on .hamburgers .hamburger-border:nth-child(2) {
+		opacity: 0;
+	}
+	
+	.hamburgers-wrapper.click-on .hamburgers .hamburger-border:last-child {
+		transform: translate(0px, -9px) rotate(-45deg);
+		-webkit-transform: translate(0px, -9px) rotate(-45deg);
+		-moz-transform: translate(0px, -9px) rotate(-45deg);
+		-ms-transform: translate(0px, -9px) rotate(-45deg);
+		-o-transform: translate(0px, -9px) rotate(-45deg);
+	}
+	
+	.page-main-tops {
+		margin: 0 10px;
+	}
+	
 }
 

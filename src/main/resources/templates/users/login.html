@@ -5,64 +5,72 @@
 <title>ログイン画面 | 予約者</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
+
 <body>
 	
-	<header th:replace="~{/users/layouts/layout :: common_header}">
+	<header th:replace="~{/users/layouts/layout :: common_header_before}">
+		
 		
 	</header>
 	
 	
-	<nav id="sub_nav">
-		
-		<div class="sub-title">
+	
+	<main>
+	
+	
+		<div class="page-main-tops">
 			
-			<h2 class="sub-title">ログイン画面</h2>
+			<div class="sub-title">
+				
+				<h2 class="sub-title">ログイン画面</h2>
+				
+			</div>
+			
+			<div class="sub-link">
+				
+				<a th:href="@{/users/signup}">会員登録へ</a>
+				
+			</div>
+			
 			
 		</div>
 		
-		<div class="sub-link">
+		
+		
+		
+		
+		<div class="container">
+		
+			<p class="err" th:text="${errMsg}"></p>
 			
-			<a th:href="@{/users/signup}">会員登録へ</a>
+			<form th:action="@{/users/login}" method="post" th:object="${loginFormInfo}" class="form">
+		
+				<div>
+					
+					<label>email</label>
+					<input type="email" th:field="*{email}" />
+				
+				</div>
+				
+				<div>
+					
+					<label>パスワード</label>
+					<input type="password" th:field="*{pass}" required />
+		
+				</div>
+				
+				<div class="submit-btns">
+					
+					<input type="submit" value="ログイン" />
+		
+				</div>
+		
+				
+			</form>
 			
 		</div>
-		
-		
-	</nav>
 	
-	
-	
-	
-	
-	<div class="container">
-	
-		<p class="err" th:text="${errMsg}"></p>
-		
-		<form th:action="@{/users/login}" method="post" th:object="${loginFormInfo}" class="form">
-	
-			<div>
-				
-				<label>email</label>
-				<input type="email" th:field="*{email}" />
-			
-			</div>
-			
-			<div>
-				
-				<label>パスワード</label>
-				<input type="password" th:field="*{pass}" required />
-	
-			</div>
-			
-			<div class="submit-btns">
-				
-				<input type="submit" value="ログイン" />
-	
-			</div>
-	
-			
-		</form>
-		
-	</div>
+	</main>
 		
 	
 	

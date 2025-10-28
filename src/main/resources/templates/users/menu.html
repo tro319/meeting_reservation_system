@@ -7,30 +7,36 @@
 </head>
 <body>
 	
-	<header th:replace="~{/users/layouts/layout :: common_header}">
+	<header th:replace="~{/users/layouts/layout :: common_header_after}">
 		
+
 		
 	</header>
 	
-	<nav id="sub_nav">
-		
-		<div class="sub-title">
-			
-			<h2 class="sub-title">メニュー</h2>
-			
-		</div>
-		
-<!--		<div class="sub-link">-->
-			
-<!--			<a th:href="@{/users/signup}">会員登録へ</a>-->
-			
-<!--		</div>-->
-		
-		
-	</nav>
 	
 	
 	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">メニュー</h2>
+				
+			</div>
+			
+	<!--		<div class="sub-link">-->
+				
+	<!--			<a th:href="@{/users/signup}">会員登録へ</a>-->
+				
+	<!--		</div>-->
+			
+			
+		</div>
+		
+		
+		
 		
 		<div class="container">
 			
@@ -41,6 +47,10 @@
 		
 		
 	</main>
+	
+	
+	
+	<script th:src="@{/js/original.js}"></script>
 	
 
 </body>
