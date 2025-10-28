@@ -9,6 +9,7 @@
 	margin: 0;
 }
 
+
 body {
 	font-size: 1rem;
 }
@@ -80,6 +81,7 @@ a {
 ============================== */
 
 #header {
+	width: 100%;
 	color: #FFF;
 	background-color: #A1A1A1;
 }
@@ -92,17 +94,41 @@ a {
 	margin-bottom: 40px;
 }
 
+#pc_nav {
+	display: block;
+}
+
+.header-list {
+	display: flex;
+	align-items: center;
+}
+
+.header-list li {
+	color: #FFF;
+	margin-left: 13px;
+}
+
+.header-list li a {
+	color: #FFF;
+}
+
+#sp_nav {
+	display: none;
+}
+
+.hamburgers-wrapper {
+	display: none;
+}
+
+
+/* メイン部分上部表示、共通設定
+============================== */
 
 .page-main-tops {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 40px;
-}
-
-
-.hamburgers-wrapper {
-	display: none;
+	padding: 0 40px;
 }
 
 
@@ -175,8 +201,66 @@ a {
 		-o-transform: translate(0px, -9px) rotate(-45deg);
 	}
 	
+	#pc_nav {
+		display: none;
+	}
+	
+	#sp_nav {
+		display: none;
+	}
+	
+	#sp_nav.open {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100vh;
+		display: block;
+		background-color: rgba(0, 0, 0, 0.8);
+		animation-name: menu-fadeopen-anime;
+		animation-duration: 0.6s;
+		opacity: 1;
+		transition: 0.6s all;
+		-webkit-transition: 0.6s all;
+		-moz-transition: 0.6s all;
+		-ms-transition: 0.6s all;
+		-o-transition: 0.6s all;
+	}
+	
+	
+	@keyframes menu-fadeopen-anime {
+		
+		from {
+			opacity: 0;
+		}
+		
+		to {
+			opacity: 1;
+		}
+		
+	}
+	
+	
+	#sp_nav.open .header-list {
+		width: 100%;
+		display: block;
+		flex-direction: column;
+		text-align: left;
+		padding: 40px 0 0 0;
+	}
+	
+	#sp_nav.open .header-list li {
+		margin: 0 0 20px 40px;
+	}
+	
+	#sp_nav.open .header-list li:first-child {
+		margin: 0 0 30px 40px;
+	}
+	
+	
+	
 	.page-main-tops {
-		margin: 0 10px;
+		padding: 0 10px;
 	}
 	
 }

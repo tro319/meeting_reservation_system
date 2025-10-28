@@ -6,10 +6,9 @@
 </head>
 <body>
 	
-	<header th:replace="~{/users/layouts/layout :: common_header}">
-		
-		
-	</header>
+	
+	
+	<!-- ログイン後用 -->
 	
 	<header th:fragment="common_header_after" id="header">
 		
@@ -20,6 +19,34 @@
 				<h1 class="site-title">面談予約</h1>
 				
 			</div>
+			
+			<nav id="pc_nav">
+				
+				<ul class="header-list">
+					
+					<li>ようこそ</li>
+					<li><a th:href="@{/users/menu}">予約空き状況一覧</a></li>
+					<li><a th:href="@{/users/menu}">予約一覧</a></li>
+					<li><a th:href="@{/users/menu}">面談履歴一覧</a></li>
+					
+				</ul>
+				
+			</nav>
+			
+			
+			<nav id="sp_nav">
+				
+				<ul class="header-list">
+					
+					<li>ようこそ</li>
+					<li><a th:href="@{/users/menu}">個人情報確認</a></li>
+					<li><a th:href="@{/users/menu}">予約空き状況一覧</a></li>
+					<li><a th:href="@{/users/menu}">予約一覧</a></li>
+					<li><a th:href="@{/users/menu}">面談履歴一覧</a></li>
+					
+				</ul>
+				
+			</nav>
 			
 			
 			<div class="hamburgers-wrapper">
@@ -38,6 +65,10 @@
 		</div>
 		
 	</header>
+	
+	
+	
+	<!-- ログイン前、会員登録前用 -->
 	
 	<header th:fragment="common_header_before" id="header">
 		

@@ -59,7 +59,10 @@ public class LoginController {
 	 * @param model モデル
 	 * @param form 入力情報
 	 * @return 認証失敗時 そのままの遷移パス | 成功時 メニュー画面への遷移パス
+	 * 
+	 * 
 	 */
+	
 	
 	
 	@PostMapping("/users/login")

@@ -36,6 +36,9 @@ public class SignUpController {
 	 * 
 	 */
 	
+	
+	// TODO フッター共通設定追加 (layout.html、各htmlに) tamapon
+	
 	@GetMapping("/users/signup")
 	public String signUpView(Model model, SignUpFormInfo form) {
 		
@@ -53,6 +56,11 @@ public class SignUpController {
 	 * @param form 入力情報
 	 * 
 	 */
+	
+	
+	// TODO メールアドレス重複チェック ys
+	
+	// TODO パスワード再入力、整合性チェック ys
 	
 	
 	@PostMapping("/users/signup")
