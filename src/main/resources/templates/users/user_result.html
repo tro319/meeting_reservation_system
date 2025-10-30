@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ユーザー情報確認画面 | 予約者</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+	<header th:replace="~{/users/layouts/layout :: common_header_after}">
+		
+
+		
+	</header>
+	
+	
+	<main>
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">ユーザー情報確認</h2>
+				
+			</div>
+			
+	<!--		<div class="sub-link">-->
+				
+	<!--			<a th:href="@{/users/signup}">会員登録へ</a>-->
+				
+	<!--		</div>-->
+			
+			
+		</div>
+		
+		
+		<div class="container">
+			
+			<table class="table border-off">
+				
+				<tr>
+					
+					<td class="tr-title">予約者名</td>
+					<td th:text="${userInfoResult.userName}" class="tr-text"></td>
+					
+				</tr>
+				
+				<tr>
+					
+					<td class="tr-title">メールアドレス</td>
+					<td th:text="${userInfoResult.email}" class="tr-text"></td>
+					
+				</tr>
+				
+			</table>
+			
+			
+		</div>
+		
+		
+	</main>
+
+</body>
+</html>

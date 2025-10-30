@@ -25,5 +25,16 @@ public interface UsersRepository extends JpaRepository<UserInfo, Integer> {
 	 */
 	
 	Optional<UserInfo> findByEmail(String email);
+	
+	
+	/**
+	 * idカラムからDBを検索するメソッド定義
+	 * 
+	 * @param id 取得したログイン中のユーザーid
+	 * @return ユーザー情報エンティティ群
+	 */
+	
+	Optional<UserInfo> findById(int id);
+	
 
 }

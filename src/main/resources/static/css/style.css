@@ -77,6 +77,29 @@ a {
 }
 
 
+/* テーブル共通設定
+============================== */
+
+.table tr {
+	display: block;
+	margin-top: 20px;
+}
+
+.table tr:first-child {
+	margin-top: 0;
+}
+
+.table tr .tr-title {
+	display: inline-block;
+	margin-right: 40px;
+}
+
+.table tr .tr-text {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+
 /* ヘッダー共通設定
 ============================== */
 

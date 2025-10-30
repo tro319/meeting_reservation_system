@@ -38,4 +38,16 @@ public class LoginService {
 		
 	}
 	
+	
+	/**
+	 * ログイン中のユーザーidから、レコード検索
+	 * 
+	 * @param id ログイン中ユーザーid
+	 * @return 取得したユーザー情報エンティティ群(1件のみ)
+	 */
+	
+	public Optional<UserInfo> searchRepositoryById(int id) {
+		return repository.findById(id);
+	}
+	
 }
