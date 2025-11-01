@@ -36,19 +36,19 @@
 		
 		<div class="container">
 			
-			<table class="table border-off">
+			<table class="table border-off" th:object="${userInfoResult}">
 				
 				<tr>
 					
 					<td class="tr-title">予約者名</td>
-					<td th:text="${userInfoResult.userName}" class="tr-text"></td>
+					<td th:text="*{userName}" class="tr-text"></td>
 					
 				</tr>
 				
 				<tr>
 					
 					<td class="tr-title">メールアドレス</td>
-					<td th:text="${userInfoResult.email}" class="tr-text"></td>
+					<td th:text="*{email}" class="tr-text"></td>
 					
 				</tr>
 				
