@@ -2,7 +2,6 @@ package com.example.demo.controller.users;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.model.users.SignUpFormInfo;
@@ -25,26 +24,45 @@ public class SignUpController {
 	// インスタンス変数定義
 	
 	private final SignUpService service;
-	
-	
-	/**
-	 * 会員登録画面、初期表示
-	 * 
-	 * @param model モデル
-	 * @param form 入力情報
-	 * @return 表示画面
-	 * 
-	 */
+
 	
 	
 	// TODO フッター共通設定追加 (layout.html、各htmlに) tamapon
 	
-	@GetMapping("/users/signup")
-	public String signUpView(Model model, SignUpFormInfo form) {
+
+	
+	
+	/**
+	 * 
+	 * 
+	 * 会員登録確認処理
+	 * 
+	 * @param model モデル
+	 * @param form 入力情報
+	 * 
+	 */
+	
+	@PostMapping("/users/signup/confirm")
+	
+	public String signUpConfirm(Model model, SignUpFormInfo form) {
 		
-		return "users/signup";
+		Boolean checkResult = false;
+		
+		checkResult = service.confirm(form.getEmail(), form.getUserName());
+		
+		if (checkResult == true) {
+			
+			return "redirect:/users/signup";
+			
+		}
+		
+		System.out.println(checkResult);
+		
+		return "redirect:/users/signup/confirm";
 		
 	}
+	
+	
 	
 	
 	/**

@@ -51,4 +51,26 @@ public class SignUpService {
 		
 	}
 	
+	
+	/**
+	 * 会員登録重複チェック処理
+	 * 
+	 * @param 入力値 (email, userName)
+	 * @return 既に存在したかを表すT/F
+	 * 
+	 */
+
+	
+	public Boolean confirm(String email, String userName) {
+		
+		Boolean emailCount = repository.existsByEmail(email);
+		
+		Boolean userNameCount = repository.existsByUserName(userName);
+		
+		
+		return emailCount || userNameCount;
+
+		
+	}
+	
 }

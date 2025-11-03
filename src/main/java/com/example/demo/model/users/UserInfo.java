@@ -1,6 +1,5 @@
 package com.example.demo.model.users;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -30,7 +29,6 @@ public class UserInfo {
 	
 	private String pass;
 	
-	@Column(name = "user_name")
 	private String userName;
 
 }

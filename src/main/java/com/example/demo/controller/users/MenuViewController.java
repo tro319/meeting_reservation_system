@@ -22,7 +22,7 @@ public class MenuViewController {
 	/**
 	 * 
 	 * 
-	 * ログイン処理
+	 * ログイン中ユーザー会員情報確認画面表示
 	 * 
 	 * @param model モデル
 	 * @param session セッション情報
@@ -40,6 +40,18 @@ public class MenuViewController {
 		return "users/user_result";
 		
 	}
+	
+	
+	/**
+	 * 
+	 * 
+	 * メニュー画面表示
+	 * 
+	 * 
+	 * @return テンプレートファイルのパス
+	 * 
+	 * 
+	 */
 	
 	@GetMapping("/users/menu")
 	public String menuView() {
