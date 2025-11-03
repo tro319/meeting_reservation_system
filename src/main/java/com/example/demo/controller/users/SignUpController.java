@@ -46,19 +46,35 @@ public class SignUpController {
 	
 	public String signUpConfirm(Model model, SignUpFormInfo form) {
 		
-		Boolean checkResult = false;
+		Boolean checkResult = null;
 		
-		checkResult = service.confirm(form.getEmail(), form.getUserName());
+		String inputPass = form.getPass();
 		
-		if (checkResult == true) {
+		String rePass = form.getRepass();
+		
+		if (inputPass.equals(rePass)) {
 			
-			return "redirect:/users/signup";
+			checkResult = service.confirm(form.getEmail(), form.getUserName());
+			
+			if (checkResult == true) {
+				
+				return "redirect:/users/signup";
+				
+			}
+			
+			return "redirect:/users/signup/confirm";
+			
 			
 		}
 		
 		System.out.println(checkResult);
 		
-		return "redirect:/users/signup/confirm";
+		return "redirect:/users/signup";
+		
+		
+		
+		
+
 		
 	}
 	
@@ -75,10 +91,7 @@ public class SignUpController {
 	 * 
 	 */
 	
-	
-	// TODO メールアドレス重複チェック ys
-	
-	// TODO パスワード再入力、整合性チェック ys
+
 	
 	
 	@PostMapping("/users/signup")
