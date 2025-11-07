@@ -78,6 +78,7 @@ public class LoginController {
 		
 		Boolean loginCheck = userInfoLoginCheck.isPresent() && passwordEncoder.matches(form.getPass(), userInfoLoginCheck.get().getPass());
 		
+		System.out.println(passwordEncoder.encode(form.getPass()));
 		
 		
 		if (loginCheck == true) {
