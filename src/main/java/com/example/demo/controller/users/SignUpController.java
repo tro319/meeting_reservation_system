@@ -112,6 +112,8 @@ public class SignUpController {
 		if (signUpResult != null) {
 			
 			session.setAttribute("userLoginId", signUpResult.getId());
+			
+			redirectAttributes.addFlashAttribute("succ1", "会員登録が完了しました。");
 			return "redirect:/users/user_info";
 			
 		}

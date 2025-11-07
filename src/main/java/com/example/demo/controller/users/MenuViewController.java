@@ -36,6 +36,12 @@ public class MenuViewController {
 		UserInfo userInfoGet = (UserInfo)session.getAttribute("userGetResult");
 		model.addAttribute("userInfoResult", userInfoGet);
 		
+		if (model.getAttribute("succ1") != null) {
+			
+			String signUpSucc1 = (String)model.getAttribute("succ1");
+			
+		}
+		
 	
 		return "users/user_result";
 		
