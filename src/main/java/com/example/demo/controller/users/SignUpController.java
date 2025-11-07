@@ -3,6 +3,7 @@ package com.example.demo.controller.users;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.users.SignUpFormInfo;
 import com.example.demo.service.users.SignUpService;
@@ -44,7 +45,7 @@ public class SignUpController {
 	
 	@PostMapping("/users/signup/confirm")
 	
-	public String signUpConfirm(Model model, SignUpFormInfo form) {
+	public String signUpConfirm(Model model, RedirectAttributes redirectAttributes, SignUpFormInfo form) {
 		
 		Boolean checkResult = null;
 		
@@ -58,6 +59,7 @@ public class SignUpController {
 			
 			if (checkResult == true) {
 				
+				redirectAttributes.addFlashAttribute("err1", "ユーザー名 または メールアドレスが既に登録されています");
 				return "redirect:/users/signup";
 				
 			}
@@ -69,6 +71,7 @@ public class SignUpController {
 		
 		System.out.println(checkResult);
 		
+		redirectAttributes.addFlashAttribute("err2", "パスワード入力が一致しません");
 		return "redirect:/users/signup";
 		
 		

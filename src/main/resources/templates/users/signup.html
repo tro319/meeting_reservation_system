@@ -39,7 +39,8 @@
 		
 		<div class="container">
 			
-			<p class="err" th:text="${errMsg}"></p>
+			<p class="err" th:text="${err1}"></p>
+			<p class="err" th:text="${err2}"></p>
 
 			<form th:action="@{/users/signup/confirm}" method="post" th:object="${signUpFormInfo}" class="form">
 				
