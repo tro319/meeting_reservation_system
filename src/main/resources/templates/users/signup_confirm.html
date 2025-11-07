@@ -39,6 +39,41 @@
 		
 		<div class="container">
 			
+			
+			<form th:action="@{/users/signup}" method="post" th:object="${signUpFormInfo}" class="form">
+				
+				<div>
+					
+					<label>ユーザーネーム</label>
+					<input type="hidden" th:field="*{userName}" value="${userName}" /><span th:text="*{userName}"></span>
+
+				</div>
+
+				<div>
+					
+					<label>email</label>
+					<input type="hidden" th:field="*{email}" value="${email}" /><span th:text="*{email}"></span>
+				
+				</div>
+				
+				<div>
+					
+					<label>パスワード</label>
+					<input type="hidden" th:field="*{pass}" value="${pass}" required /><span>パスワードは表示されません</span>
+
+				</div>
+
+				
+				<div class="submit-btns">
+					
+					<button type="button" onclick="window.location.href='/users/signup/return'">修正</button>	
+					<input type="submit" value="登録" />
+
+				</div>
+
+				
+			</form>
+			
 
 			
 			

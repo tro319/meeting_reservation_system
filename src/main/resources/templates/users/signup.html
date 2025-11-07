@@ -41,7 +41,8 @@
 			
 			<p class="err" th:text="${err1}"></p>
 			<p class="err" th:text="${err2}"></p>
-
+			<p class="err" th:text="${err3}"></p>
+			
 			<form th:action="@{/users/signup/confirm}" method="post" th:object="${signUpFormInfo}" class="form">
 				
 				<div>
@@ -74,7 +75,7 @@
 				
 				<div class="submit-btns">
 					
-					<input type="submit" value="登録" />
+					<input type="submit" value="確認" />
 
 				</div>
 

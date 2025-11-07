@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.kyoutu.AppUtil;
 import com.example.demo.kyoutu.ErrMessageConst;
@@ -71,7 +72,7 @@ public class LoginController {
 	
 	
 	@PostMapping("/users/login")
-	public String loginResult(Model model, HttpSession session, LoginFormInfo form) {
+	public String loginResult(Model model, HttpSession session, RedirectAttributes redirectAttributes, LoginFormInfo form) {
 		
 		
 		var userInfoLoginCheck = service.searchRepositoryByEmail(form.getEmail());
@@ -91,7 +92,7 @@ public class LoginController {
 		} else {
 			
 			var errMsg = AppUtil.getMessage(messageSource,  ErrMessageConst.LOGIN_ERR_INPUT);
-			model.addAttribute("errMsg", errMsg);
+			redirectAttributes.addFlashAttribute("errMsg", errMsg);
 			return "redirect:/users/login";
 			
 		}

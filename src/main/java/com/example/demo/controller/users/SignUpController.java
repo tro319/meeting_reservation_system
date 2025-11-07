@@ -1,11 +1,14 @@
 package com.example.demo.controller.users;
 
+import jakarta.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.users.SignUpFormInfo;
+import com.example.demo.model.users.UserInfo;
 import com.example.demo.service.users.SignUpService;
 
 import lombok.RequiredArgsConstructor;
@@ -64,6 +67,7 @@ public class SignUpController {
 				
 			}
 			
+			redirectAttributes.addFlashAttribute("signUpFormInfo", form);
 			return "redirect:/users/signup/confirm";
 			
 			
@@ -90,6 +94,8 @@ public class SignUpController {
 	 * 会員登録処理
 	 * 
 	 * @param model モデル
+	 * @param session セッション
+	 * @param redirectAttributes リダイレクト時値保持用
 	 * @param form 入力情報
 	 * 
 	 */
@@ -99,9 +105,19 @@ public class SignUpController {
 	
 	@PostMapping("/users/signup")
 	
-	public void signUpResult(Model model, SignUpFormInfo form) {
+	public String signUpResult(Model model, HttpSession session, RedirectAttributes redirectAttributes, SignUpFormInfo form) {
 		
-		service.register(form);
+		UserInfo signUpResult = service.register(form);
+		
+		if (signUpResult != null) {
+			
+			session.setAttribute("userLoginId", signUpResult.getId());
+			return "redirect:/users/user_info";
+			
+		}
+		
+		redirectAttributes.addFlashAttribute("err3", "会員登録に失敗しました。");
+		return "redirect:/users/signup";
 		
 	}
 	
