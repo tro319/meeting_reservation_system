@@ -113,10 +113,17 @@ public class LoginController {
 	
 	
 	@GetMapping("/users/user_info")
-	public String getUserInfo(Model model, HttpSession session) {
+	public String getUserInfo(Model model, HttpSession session, RedirectAttributes redirectAttributes) {
 		
 		
 		Integer presentUserId = null;
+		
+		if (model.getAttribute("succ1") != null) {
+			
+			String succ1 = (String)model.getAttribute("succ1");
+			redirectAttributes.addFlashAttribute("succ1", succ1);
+			System.out.println(succ1);
+		}
 		
 		
 		

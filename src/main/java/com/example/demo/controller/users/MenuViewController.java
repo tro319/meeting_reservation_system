@@ -39,6 +39,8 @@ public class MenuViewController {
 		if (model.getAttribute("succ1") != null) {
 			
 			String signUpSucc1 = (String)model.getAttribute("succ1");
+			System.out.println(2 + signUpSucc1);
+			model.addAttribute("signUpSucc1", signUpSucc1);
 			
 		}
 		

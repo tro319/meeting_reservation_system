@@ -5,7 +5,10 @@
 <title>ユーザー情報確認画面 | 予約者</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body>
+
+<!-- JavaScript で使用する値受け取り-->
+
+<body th:attr="data-signup-msg=${signUpSucc1}">
 	
 	<header th:replace="~{/users/layouts/layout :: common_header_after}">
 		
@@ -55,6 +58,7 @@
 			</table>
 			
 			
+			
 		</div>
 		
 		
@@ -63,6 +67,18 @@
 	<footer th:replace="~{/users/layouts/layout :: common_footer_after}">
 		
 	</footer>
+	
+	<script th:src="@{/js/original.js}"></script>
+	
+	<!-- 会員登録結果があれば ポップアップ -->
+	
+	<script>
+		
+
+		const msg = document.body.dataset.signupMsg;
+		if(msg) window.alert(msg);
+		
+	</script>
 
 </body>
 </html>
