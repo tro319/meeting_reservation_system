@@ -154,42 +154,44 @@ a {
 /* フッター共通設定
 ============================== */
 #footer {
-    border-top: 1px solid #e5e5e5;
-    background: rgb(192, 192, 192);
-	text-align: center;
+    width: 100%;
+	color: #FFF;
+    background: #A1A1A1;
 }
 
 .footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 40px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px;
+    margin-bottom: 30px;
 }
 
-.footer-inner small {
-    color: #666;
+#copy {
+	font-size: 0.7rem;
+	text-align: center;
+	padding: 40px;
 }
 
-.footer-links {
-    flex-wrap: wrap;
-    gap: 16px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.footer-list {
+    flex-direction: column;
 }
 
-.footer-links a {
-    color: #222;
-    text-decoration: none;
+.footer-list li {
+	margin-bottom: 20px;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.footer-list li:last-child {
+	margin-bottom: 0;
 }
+
+.footer-list li a {
+    color: #FFF;
+}
+
+/*.footer-list a:hover {*/
+/*    text-decoration: underline;*/
+/*}*/
 
 
 

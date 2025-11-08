@@ -90,32 +90,39 @@
 	</header>
 	
 	<!-- ログイン後用 -->
+	
 		<footer th:fragment="common_footer_after" id="footer">
 		    <div class="footer-inner">
-		        <h1 class="site-title">面談予約</h1>
-		        <ul class="footer-links">
-		            <li><a th:href="@{/users/menu}">ホーム</a></li>
-		            <li><a th:href="@{/logout}">ログアウト</a></li>
-					<li><a th:href="@{/users/menu}">ホーム</a></li>
-					<li><a th:href="@{/users/menu}">ホーム</a></li>
-		        </ul>
+				
+				<div class="footer-logo">
+					
+					<h1 class="site-title">面談予約</h1>
+					
+				</div>
+				
+				<nav id="footer_nav">
+					
+					<ul class="footer-list">
+						
+						<li><a th:href="@{/users/user_info}">個人情報確認</a></li>
+						<li><a th:href="@{/users/menu}">予約空き状況一覧</a></li>
+						<li><a th:href="@{/users/menu}">予約一覧</a></li>
+						<li><a th:href="@{/users/menu}">面談履歴一覧</a></li>
+						
+					</ul>
+					
+					
+				</nav>
+		        
+
 		    </div>
-			<small>&copy; 2025 面談予約システム</small>
+			
+			
+			<p id="copy">&copy; 2025 面談予約システム</p>
+			
+			
 		</footer>
 	
-	<!-- ログイン前、会員登録前用 -->
-	
-	<footer th:fragment="common_footer_before" id="footer">
-	    <div class="footer-inner">
-	        <h1 class="site-title">面談予約</h1>
-
-	        <ul class="footer-links">
-	            <li><a th:href="@{/login}">ログイン</a></li>
-	            <li><a th:href="@{/register}">新規会員登録</a></li>
-	        </ul>
-	    </div>
-		<small>&copy; 2025 面談予約システム</small>
-	</footer>
 
 	
 </body>
