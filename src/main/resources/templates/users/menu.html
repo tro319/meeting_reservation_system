@@ -2,10 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>メニュー選択画面 | 予約者</title>
+<title>メニュー画面 | 予約者</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body>
+<body th:attr="data-log-msg=${logSuccMsg}">
 	
 	<header th:replace="~{/users/layouts/layout :: common_header_after}">
 		
@@ -53,6 +53,14 @@
 	</footer>
 	
 	<script th:src="@{/js/original.js}"></script>
+	
+	<script>
+		
+		const logSuccMsg = document.body.dataset.logMsg;
+		if (logSuccMsg) window.alert(logSuccMsg);
+		
+		
+	</script>
 	
 
 </body>

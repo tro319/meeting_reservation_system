@@ -30,9 +30,6 @@ public class SignUpController {
 	private final SignUpService service;
 
 	
-	
-	// TODO フッター共通設定追加 (layout.html、各htmlに) tamapon
-	
 
 	
 	

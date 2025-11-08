@@ -86,6 +86,7 @@ public class LoginController {
 			
 			int loginResultId = userInfoLoginCheck.get().getId();
 			session.setAttribute("userLoginId", loginResultId);
+			redirectAttributes.addFlashAttribute("logSucc1", "ログインしました");
 			return "redirect:/users/menu";
 			
 			

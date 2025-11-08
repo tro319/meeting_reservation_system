@@ -62,7 +62,20 @@ public class MenuViewController {
 	 */
 	
 	@GetMapping("/users/menu")
-	public String menuView() {
+	public String menuView(Model model) {
+		
+		String logSucc1 = (String)model.getAttribute("logSucc1");
+		if (logSucc1 != null) {
+			
+			model.addAttribute("logSuccMsg", logSucc1);
+			
+			System.out.println(logSucc1);
+			
+		} else {
+			
+			return "redirect: /users/login";
+			
+		}
 		
 		return "users/menu";
 		
