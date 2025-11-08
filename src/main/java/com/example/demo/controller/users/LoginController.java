@@ -52,6 +52,14 @@ public class LoginController {
 	@GetMapping("/users/login")
 	public String loginView(Model model, LoginFormInfo form) {
 		
+		String repassEmailSucc1 = (String)model.getAttribute("repassEmailSucc1");
+		
+		if (repassEmailSucc1 != null) {
+			
+			model.addAttribute("repassEmailSucc1", repassEmailSucc1);
+			
+		}
+		
 		return "users/login";
 		
 	}

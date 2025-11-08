@@ -73,4 +73,23 @@ public class SignUpService {
 		
 	}
 	
+	
+	/**
+	 * パスワード再設定url送信時、既存メールアドレスかのチェック処理
+	 * 
+	 * @param 入力値 (email)
+	 * @return 存在したかを表すT/F
+	 * 
+	 */
+	
+	public Boolean repassCheckEmail(String email) {
+		
+		Boolean emailCount = repository.existsByEmail(email);
+		
+		
+		return emailCount;
+
+		
+	}
+	
 }

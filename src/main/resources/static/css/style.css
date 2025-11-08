@@ -84,6 +84,11 @@ a {
 	padding: 3px 10px;
 }
 
+#repass_email_link {
+	text-align: right;
+	margin: 20px 0;
+}
+
 
 /* テーブル共通設定
 ============================== */

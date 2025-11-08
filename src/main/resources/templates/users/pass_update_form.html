@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>パスワード変更フォーム画面 | 予約者</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+	<header th:replace="~{/users/layouts/layout :: common_header_before}">
+		
+		
+	</header>
+	
+	
+	
+	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">パスワード変更フォーム</h2>
+				
+			</div>
+			
+			<div class="sub-link">
+				
+				<a th:href="@{/users/login}">ログインへ</a>
+				
+			</div>
+			
+			
+		</div>
+		
+		
+		
+		
+		<div class="container">
+			
+
+			
+			<form th:action="@{/users/signup/repass}" method="post" th:object="${repassFormInfo}" class="form">
+				
+				<div>
+					
+					<label>新しいパスワード</label>
+					<input type="password" th:field="*{pass}" required />
+
+				</div>
+				
+				
+				<div class="submit-btns">
+					
+					<input type="submit" value="更新" />
+
+				</div>
+
+				
+			</form>
+			
+			
+		</div>
+		
+		
+	</main>
+	
+
+
+
+</body>
+</html>
