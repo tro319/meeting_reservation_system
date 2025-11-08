@@ -30,6 +30,18 @@ public class RepassEmailSendController {
 	
 	private final LoginService loginService;
 	
+	/**
+	 * 
+	 * 
+	 * パスワードリセットurl送信用メールアドレス入力フォーム画面表示
+	 * 
+	 * @param model モデル
+	 * @param form パスワードリセットurl送信用メールアドレス入力フォーム入力情報
+	 * @return テンプレートファイルへのパス
+	 * 
+	 * 
+	 */
+	
 	@GetMapping("/users/repass_email")
 	public String repassEmailFormView(Model model, RepassEmailFormInfo form) {
 		
@@ -44,6 +56,21 @@ public class RepassEmailSendController {
 		return "users/repass_email_form";
 
 	}
+	
+	
+	/**
+	 * 
+	 * 
+	 * 入力されたメールアドレスが登録されいたら、パスワードリセット用メール送信する処理
+	 * 
+	 * @param model モデル
+	 * @param redirectAttributes リダイレクト時値保持用
+	 * @param session セッション情報
+	 * @param form パスワードリセットurl送信用メールアドレス入力フォーム入力情報
+	 * @return メールアドレスが存在していれば ログインページへの遷移パス | 存在していなければ 現在のメールアドレス入力フォームに維持
+	 * 
+	 * 
+	 */
 	
 	
 	@PostMapping("/users/repass_email")

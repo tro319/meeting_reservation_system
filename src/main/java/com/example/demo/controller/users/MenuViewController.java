@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.example.demo.model.users.UserInfo;
 
 /**
- * メニュー選択ページを表示させる
+ * メニュー内項目、各画面表示処理
  * 
  * @author ys
  * 
@@ -26,7 +26,7 @@ public class MenuViewController {
 	 * 
 	 * @param model モデル
 	 * @param session セッション情報
-	 * @return 未ログイン時 ログインページへ | 成功時 ユーザー情報取得画面への遷移パス
+	 * @return 未ログイン時 ログインページへ | 成功時 テンプレートファイルへのパス
 	 * 
 	 * 
 	 */
@@ -55,8 +55,8 @@ public class MenuViewController {
 	 * 
 	 * メニュー画面表示
 	 * 
-	 * 
-	 * @return テンプレートファイルのパス
+	 * @param model モデル
+	 * @return 未ログイン時 or ログイン失敗時 ログインページへ | ログインしている時 テンプレートファイルのパス
 	 * 
 	 * 
 	 */

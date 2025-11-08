@@ -31,7 +31,7 @@ public class SignUpService {
 	/**
 	 * 会員登録処理
 	 * 
-	 * @param 入力値
+	 * @param form ユーザー登録フォーム入力値
 	 * @return 登録情報(対象のユーザー情報1件)
 	 * 
 	 */
@@ -55,7 +55,8 @@ public class SignUpService {
 	/**
 	 * 会員登録重複チェック処理
 	 * 
-	 * @param 入力値 (email, userName)
+	 * @param email 入力されたメールアドレス
+	 * @param userName 入力されたユーザーネーム
 	 * @return 既に存在したかを表すT/F
 	 * 
 	 */
@@ -77,7 +78,7 @@ public class SignUpService {
 	/**
 	 * パスワード再設定url送信時、既存メールアドレスかのチェック処理
 	 * 
-	 * @param 入力値 (email)
+	 * @param email 入力されたメールアドレス
 	 * @return 存在したかを表すT/F
 	 * 
 	 */

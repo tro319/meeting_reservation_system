@@ -22,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 
 
 /**
- * ログイン関連ページを繋げる処理
+ * ログイン時に使える機能の処理を繋げる処理
  * 
  *@author ys 
  * 
@@ -40,29 +40,7 @@ public class LoginController {
 	
 	private final MessageSource messageSource;
 	
-	/**
-	 * ログイン画面、初期表示
-	 * 
-	 * @param model モデル
-	 * @param form 入力情報
-	 * @return 表示画面
-	 * 
-	 */
-	
-	@GetMapping("/users/login")
-	public String loginView(Model model, LoginFormInfo form) {
-		
-		String repassEmailSucc1 = (String)model.getAttribute("repassEmailSucc1");
-		
-		if (repassEmailSucc1 != null) {
-			
-			model.addAttribute("repassEmailSucc1", repassEmailSucc1);
-			
-		}
-		
-		return "users/login";
-		
-	}
+
 	
 	
 	/**
@@ -71,6 +49,8 @@ public class LoginController {
 	 * ログイン処理
 	 * 
 	 * @param model モデル
+	 * @param session セッション情報
+	 * @param redirectsAttributes リダイレクト時値保持
 	 * @param form 入力情報
 	 * @return 認証失敗時 そのままの遷移パス | 成功時 メニュー画面への遷移パス
 	 * 
@@ -110,10 +90,11 @@ public class LoginController {
 	/**
 	 * 
 	 * 
-	 * ログイン処理
+	 * ユーザー情報取得処理
 	 * 
 	 * @param model モデル
 	 * @param session セッション情報
+	 * @param redirectsAttributes リダイレクト時値保持
 	 * @return 未ログイン時 ログインページへ | 成功時 ユーザー情報取得画面への遷移パス
 	 * 
 	 * 

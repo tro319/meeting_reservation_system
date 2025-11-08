@@ -11,10 +11,34 @@ import com.example.demo.model.users.RepassFormInfo;
 
 import lombok.RequiredArgsConstructor;
 
+/**
+ * 
+ * 
+ * パスワード更新画面表示処理
+ * 
+ * @author ys
+ * 
+ * 
+ */
+
 @Controller
 @RequiredArgsConstructor
-public class RepassController {
+public class RepassViewController {
 
+	/**
+	 * 
+	 * 
+	 * パスワード更新画面表示
+	 * 
+	 * @param set URL末尾のハッシュ値
+	 * @param model モデル
+	 * @param session セッション情報
+	 * @param RepassFormInfo パスワード更新フォーム入力情報
+	 * @return ハッシュ値不一致 ログインページへ | ハッシュ値一致 テンプレートファイルへのパス
+	 * 
+	 * 
+	 */
+	
 	@GetMapping("/users/signup/repass")
 	public String repassFormView(@RequestParam String set, Model model, HttpSession session, RepassFormInfo form) {
 		
