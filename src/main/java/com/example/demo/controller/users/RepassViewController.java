@@ -44,6 +44,9 @@ public class RepassViewController {
 		
 		String checkHash = (String)session.getAttribute("repassURLHash");
 		
+		String updatePassResult = (String)model.getAttribute("updatePassResult");
+		
+		
 		if (!checkHash.equals(set)) {
 			
 			System.out.println(set);
@@ -52,6 +55,14 @@ public class RepassViewController {
 			return "redirect:/users/login";
 			
 		}
+		
+		
+		if (updatePassResult != null){
+				
+			model.addAttribute("setPassResult", updatePassResult);
+				
+		}
+		
 		
 		return "users/pass_update_form";
 		

@@ -93,4 +93,36 @@ public class SignUpService {
 		
 	}
 	
+	
+	/**
+	 * パスワード再設定処理
+	 * 
+	 * @param id 対象ユーザーID
+	 * @param newPass 新しいパスワード
+	 * @return 更新結果
+	 * 
+	 */
+	
+	public String setNewPass(Integer id, String newPass) {
+		
+		String updatePassResult = null;
+		
+		String hashedPass = passwordEncoder.encode(newPass);
+		
+		UserInfo repassUser = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("ユーザーが存在しません"));
+	
+		
+		repassUser.setPass(hashedPass);
+		
+		repository.save(repassUser);
+		
+		updatePassResult = "パスワード更新しました";
+		
+		return updatePassResult;
+
+		
+	}
+	
+	
+	
 }

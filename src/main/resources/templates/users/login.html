@@ -6,7 +6,7 @@
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 
-<body th:attr="data-repass-email-succ1=${repassEmailSucc1}">
+<body th:attr="data-repass-email-succ1=${repassEmailSucc1}, data-update-pass-result=${setPassResult}">
 	
 	<header th:replace="~{/users/layouts/layout :: common_header_before}">
 		
@@ -82,7 +82,12 @@
 	<script>
 		
 		const repassEmailSucc1 = document.body.dataset.repassEmailSucc1;
+		const updatePassResult = document.body.dataset.updatePassResult;
+		
 		if (repassEmailSucc1) window.alert(repassEmailSucc1);
+		
+		if (updatePassResult) window.alert(updatePassResult);
+		
 		
 	</script>
 	

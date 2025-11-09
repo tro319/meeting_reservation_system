@@ -36,9 +36,16 @@ public class LoginViewController {
 		
 		String repassEmailSucc1 = (String)model.getAttribute("repassEmailSucc1");
 		
+		String updatePassResult = (String)model.getAttribute("setPassResult");
+		
 		if (repassEmailSucc1 != null) {
 			
 			model.addAttribute("repassEmailSucc1", repassEmailSucc1);
+			
+		} else if (updatePassResult != null){
+			
+			System.out.println(updatePassResult);
+			model.addAttribute("setPassResult", updatePassResult);
 			
 		}
 		

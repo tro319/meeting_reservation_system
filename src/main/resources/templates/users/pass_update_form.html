@@ -5,7 +5,7 @@
 <title>パスワード変更フォーム画面 | 予約者</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body>
+<body th:attr="data-update-pass-result=${setPassResult}">
 	
 	<header th:replace="~{/users/layouts/layout :: common_header_before}">
 		
@@ -66,7 +66,13 @@
 		
 	</main>
 	
-
+	<script>
+		
+		const updatePassResult = document.body.dataset.updatePassResult;
+		
+		if (updatePassResult) window.alert(updatePassResult);
+		
+	</script>
 
 
 </body>
