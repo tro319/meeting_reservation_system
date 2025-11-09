@@ -51,6 +51,33 @@ a {
 }
 
 
+/* 更新/退会ボタン(フォーム外）共通設定
+============================== */
+
+.link-btns {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 24px 0 40px 0;
+}
+
+.link-btns p {
+	margin-left: 30px;
+}
+
+.link-btns p a {
+	color: #FFF;
+	background-color: #2D88FF;
+	padding: 3px 8px;
+}
+
+
+
+.link-btns p:first-child {
+	margin-left: 0;
+}
+
+
 /* フォーム共通設定
 ============================== */
 

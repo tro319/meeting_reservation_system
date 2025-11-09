@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>ユーザー情報確認画面 | 予約者</title>
+<title>ユーザー情報確認画面 | 面談予約システム</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 
 <!-- JavaScript で使用する値受け取り-->
 
-<body th:attr="data-signup-msg=${signUpSucc1}">
+<body th:attr="data-signup-msg=${signUpSucc1}, data-user-update-result=${userUpdateResult}">
 	
 	<header th:replace="~{/users/layouts/layout :: common_header_after}">
 		
@@ -55,7 +55,19 @@
 					
 				</tr>
 				
+
+				
 			</table>
+			
+			
+			<div class="link-btns">
+				
+				<p><a th:href="@{/users/user_update}">更新</a></p>
+				<p><a th:href="@{/users/user_delete}">退会</a></p>
+				
+			</div>
+			
+
 			
 			
 			
@@ -76,7 +88,11 @@
 		
 
 		const signUpSuccMsg = document.body.dataset.signupMsg;
+		const userUpdateResult = document.body.dataset.userUpdateResult;
+		
 		if(signUpSuccMsg) window.alert(signUpSuccMsg);
+		if(userUpdateResult) window.alert(userUpdateResult);
+
 		
 	</script>
 

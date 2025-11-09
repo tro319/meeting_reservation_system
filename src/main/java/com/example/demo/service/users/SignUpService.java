@@ -125,4 +125,36 @@ public class SignUpService {
 	
 	
 	
+	/**
+	 * ユーザー情報更新処理
+	 * 
+	 * @param id 対象ユーザーID
+	 * @param userName 入力された新しいユーザーネーム
+	 * @param email 入力された新しいメールアドレス
+	 * @return 更新結果
+	 * 
+	 */
+	
+	public String setUser(Integer id, String newUserName, String newEmail) {
+		
+		String updateUserResult = null;
+		
+		
+		UserInfo updateUser = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("ユーザーが存在しません"));
+	
+		updateUser.setUserName(newUserName);
+		
+		updateUser.setEmail(newEmail);
+		
+		repository.save(updateUser);
+		
+		updateUserResult = "会員情報更新しました";
+		
+		return updateUserResult;
+
+		
+	}
+	
+	
+	
 }

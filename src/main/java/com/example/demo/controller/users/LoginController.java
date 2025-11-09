@@ -125,6 +125,17 @@ public class LoginController {
 			Optional<UserInfo> userGetResult = service.searchRepositoryById(presentUserId);
 			
 			session.setAttribute("userGetResult", userGetResult.get());
+			
+			String updateResult = (String)model.getAttribute("updateResult");
+			
+			if (updateResult != null) {
+				
+				redirectAttributes.addFlashAttribute("userUpdateResult", updateResult);
+				
+				System.out.println(updateResult);
+				
+			}
+			
 			return "redirect:/users/user_result";
 			
 		} else {

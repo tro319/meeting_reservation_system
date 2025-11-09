@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>会員情報更新画面 | 面談予約システム</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body th:attr="data-update-pass-result=${setPassResult}">
+	
+	<header th:replace="~{/users/layouts/layout :: common_header_before}">
+		
+		
+	</header>
+	
+	
+	
+	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">会員情報更新フォーム</h2>
+				
+			</div>
+			
+<!--			<div class="sub-link">-->
+				
+<!--				<a th:href="@{/users/login}">ログインへ</a>-->
+				
+<!--			</div>-->
+			
+			
+		</div>
+		
+		
+		
+		
+		<div class="container">
+			
+			<p class="err" th:text="*{userUpdateResult}"></p>
+			
+
+			
+			<form th:action="@{/users/user_update}" method="post" th:object="${updateForm}" class="form">
+				
+				
+				<input type="hidden" th:field="*{hidId}" th:value="${hidId}" required />
+				
+				
+				<div>
+					
+					<label>ユーザーネーム</label>
+					<input type="text" th:field="*{userName}" th:value="${userName}" required />
+					
+					<input type="hidden" th:field="*{hidUserName}" th:value="${hidUserName}" required />
+
+				</div>
+				
+				<div>
+					
+					<label>メールアドレス</label>
+					<input type="email" th:field="*{email}" th:value="${email}" required />
+					
+					<input type="hidden" th:field="*{hidEmail}" th:value="${hidEmail}" required />
+
+				</div>
+				
+				
+				<div class="submit-btns">
+					
+					<input type="submit" value="更新" />
+
+				</div>
+
+				
+			</form>
+			
+			
+		</div>
+		
+		
+	</main>
+	
+	<script>
+		
+		const updatePassResult = document.body.dataset.updatePassResult;
+		
+		if (updatePassResult) window.alert(updatePassResult);
+		
+	</script>
+
+
+</body>
+</html>
