@@ -11,11 +11,32 @@ import com.example.demo.model.users.UserUpdateFormInfo;
 
 import lombok.RequiredArgsConstructor;
 
+/**
+ * 
+ * 
+ * 会員情報更新フォーム画面表示処理
+ * 
+ * @author ys
+ * 
+ * 
+ */
+
 @Controller
 @RequiredArgsConstructor
 public class UserUpdateViewController {
 	
-
+	/**
+	 * 
+	 * 
+	 * 会員情報更新フォーム画面表示
+	 * 
+	 * @param model モデル
+	 * @param session セッション情報
+	 * @param form 会員情報更新フォーム入力情報
+	 * @return テンプレートファイルのパス
+	 * 
+	 * 
+	 */
 	
 	@GetMapping("/users/user_update")
 	public String userUpdate(Model model, HttpSession session, UserUpdateFormInfo form) {

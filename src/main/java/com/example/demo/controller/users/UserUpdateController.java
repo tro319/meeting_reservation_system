@@ -12,6 +12,16 @@ import com.example.demo.service.users.SignUpService;
 
 import lombok.RequiredArgsConstructor;
 
+/**
+ * 
+ * 
+ * 会員情報更新処理
+ * 
+ * @author ys
+ * 
+ * 
+ */
+
 @Controller
 @RequiredArgsConstructor
 public class UserUpdateController {
@@ -19,6 +29,21 @@ public class UserUpdateController {
 	// インスタンス定義
 	
 	private final SignUpService signUpService;
+	
+	
+	/**
+	 * 
+	 * 
+	 * 会員情報更新処理に繋げる処理
+	 * 
+	 * @param model モデル
+	 * @param session セッション情報
+	 * @param redirectAttributes リダイレクト時値保持
+	 * @param form 会員情報更新フォーム入力情報
+	 * @return 失敗時 そのままの画面維持パス | 成功時 会員情報詳細画面への遷移パス
+	 * 
+	 * 
+	 */
 	
 	@PostMapping("/users/user_update")
 	public String userUpdate(Model model, HttpSession session, RedirectAttributes redirectAttributes, UserUpdateFormInfo form) {

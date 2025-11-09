@@ -11,7 +11,7 @@ import com.example.demo.model.users.UserInfo;
 import lombok.RequiredArgsConstructor;
 
 /**
- * ユーザー情報DAOを呼び出して使用
+ * ユーザー情報DAOを呼び出して使用 (会員登録関連用)
  * 
  * 
  * @author ys
@@ -21,7 +21,9 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class SignUpService {
-
+	
+	// インスタンス定義
+	
 	private final UsersRepository repository;
 	
 	private final PasswordEncoder passwordEncoder;

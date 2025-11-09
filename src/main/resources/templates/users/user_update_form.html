@@ -2,12 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>会員情報更新画面 | 面談予約システム</title>
+<title>会員情報更新フォーム画面 | 面談予約システム</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body th:attr="data-update-pass-result=${setPassResult}">
 	
-	<header th:replace="~{/users/layouts/layout :: common_header_before}">
+	<header th:replace="~{/users/layouts/layout :: common_header_after}">
 		
 		
 	</header>
@@ -82,6 +82,12 @@
 		
 		
 	</main>
+	
+	<footer th:replace="~{/users/layouts/layout :: common_footer_after}">
+		
+	</footer>
+
+	<script th:src="@{/js/original.js}"></script>
 	
 	<script>
 		
