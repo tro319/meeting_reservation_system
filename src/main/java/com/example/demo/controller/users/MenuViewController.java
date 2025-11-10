@@ -56,24 +56,28 @@ public class MenuViewController {
 	 * メニュー画面表示
 	 * 
 	 * @param model モデル
+	 * @param session セッション情報
 	 * @return 未ログイン時 or ログイン失敗時 ログインページへ | ログインしている時 テンプレートファイルのパス
 	 * 
 	 * 
 	 */
 	
 	@GetMapping("/users/menu")
-	public String menuView(Model model) {
+	public String menuView(Model model, HttpSession session) {
 		
 		String logSucc1 = (String)model.getAttribute("logSucc1");
+		
+		Integer userLogID = (Integer)session.getAttribute("userLoginId");
+		
 		if (logSucc1 != null) {
 			
 			model.addAttribute("logSuccMsg", logSucc1);
 			
 			System.out.println(logSucc1);
 			
-		} else {
+		} else if (userLogID == null) {
 			
-			return "redirect: /users/login";
+			return "redirect:/users/login";
 			
 		}
 		

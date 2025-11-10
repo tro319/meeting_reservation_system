@@ -1,5 +1,7 @@
 package com.example.demo.controller.users;
 
+import jakarta.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,7 +34,23 @@ public class LoginViewController {
 	 */
 	
 	@GetMapping("/users/login")
-	public String loginView(Model model, LoginFormInfo form) {
+	public String loginView(Model model, HttpSession session, LoginFormInfo form) {
+		
+		Integer logID = (Integer)session.getAttribute("userLoginId");
+		
+		String logoutResult = (String)model.getAttribute("logoutResult");
+		
+		
+		if (logoutResult != null) {
+			model.addAttribute("logoutResult", logoutResult);
+		}
+		
+		
+		if (logID != null) {
+			
+			return "redirect:/users/menu";
+			
+		}
 		
 		String repassEmailSucc1 = (String)model.getAttribute("repassEmailSucc1");
 		

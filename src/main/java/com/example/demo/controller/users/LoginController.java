@@ -87,6 +87,7 @@ public class LoginController {
 		}
 	}
 	
+	
 	/**
 	 * 
 	 * 
@@ -146,6 +147,53 @@ public class LoginController {
 		}
 		
 
+		
+
+	}
+	
+	
+	
+	
+	/**
+	 * 
+	 * 
+	 *　ログアウト処理
+	 * 
+	 * @param model モデル
+	 * @param session セッション情報
+	 * @param redirectsAttributes リダイレクト時値保持
+	 * @return 未ログイン時 ログインページへ | 成功時 ログインページへ
+	 * 
+	 * 
+	 */
+	
+	
+	
+	@GetMapping("/users/logout")
+	public String logout(Model model, HttpSession session, RedirectAttributes redirectAttributes) {
+		
+		
+		Integer presentUserId = null;
+
+		
+		
+		
+		presentUserId = (Integer)session.getAttribute("userLoginId");
+		
+		
+		if (presentUserId == null) {
+			
+			return "redirect:/users/login";
+			
+		} else {
+			
+			session.removeAttribute("userLoginId");
+			
+			redirectAttributes.addFlashAttribute("logoutResult", "ログアウトしました");
+			return "redirect:/users/login";
+			
+			
+		}
 		
 
 	}

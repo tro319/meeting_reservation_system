@@ -1,5 +1,7 @@
 package com.example.demo.controller.users;
 
+import java.util.Optional;
+
 import jakarta.servlet.http.HttpSession;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -60,44 +62,58 @@ public class RepassEmailSendController {
 		
 		String toEmail = form.getEmail();
 		
-		UserInfo gotUser = loginService.searchRepositoryByEmail(toEmail).get();
+		Optional<UserInfo> gotUserBefore = loginService.searchRepositoryByEmail(toEmail);
 		
-		Boolean emailCheck = signUpService.repassCheckEmail(toEmail);
-		
-		if (emailCheck == true) {
+		if (!gotUserBefore.isPresent()) {
 			
-			String repassUserName = gotUser.getUserName();
+			redirectAttributes.addFlashAttribute("repassEmailErr1", "指定されたメールアドレスは、登録されていません" );
 			
-			int repassUserID = gotUser.getId();
+			return "redirect:/users/repass_email";
 			
 			
-			String subject = "パスワード再設定のご案内 | 面談予約システム";
+		} else {
 			
-			String encodedHash = passwordEncoder.encode(toEmail);
+			UserInfo gotUser = gotUserBefore.get();
 			
-			// セッションにハッシュ値セット (後にurl末尾パラメーターでの判断で使うため)
+			Boolean emailCheck = signUpService.repassCheckEmail(toEmail);
 			
-			session.setAttribute("repassURLHash", encodedHash);
+			if (emailCheck == true) {
+				
+				String repassUserName = gotUser.getUserName();
+				
+				int repassUserID = gotUser.getId();
+				
+				
+				String subject = "パスワード再設定のご案内 | 面談予約システム";
+				
+				String encodedHash = passwordEncoder.encode(toEmail);
+				
+				// セッションにハッシュ値セット (後にurl末尾パラメーターでの判断で使うため)
+				
+				session.setAttribute("repassURLHash", encodedHash);
+				
+				// セッションに対象ユーザーIDセット
+				
+				session.setAttribute("repassUserID", repassUserID);
+				
+				String url = "http://localhost:8080/users/signup/repass?set=" + encodedHash;
+				
+				String text = "ユーザーネーム: " + repassUserName + " さん \n いつも、面談予約システムをご利用頂き、ありがとうございます! \n 下記が、パスワード再設定用のurlです。\n" + url;
+				
+				emailService.sendEmail(toEmail, subject, text);
+				
+				redirectAttributes.addFlashAttribute("repassEmailSucc1", "指定されたメールアドレスに、送信しました" );
+				
+				return "redirect:/users/login";
+				
+			}
 			
-			// セッションに対象ユーザーIDセット
-			
-			session.setAttribute("repassUserID", repassUserID);
-			
-			String url = "http://localhost:8080/users/signup/repass?set=" + encodedHash;
-			
-			String text = "ユーザーネーム: " + repassUserName + " さん \n いつも、面談予約システムをご利用頂き、ありがとうございます! \n 下記が、パスワード再設定用のurlです。\n" + url;
-			
-			emailService.sendEmail(toEmail, subject, text);
-			
-			redirectAttributes.addFlashAttribute("repassEmailSucc1", "指定されたメールアドレスに、送信しました" );
-			
-			return "redirect:/users/login";
 			
 		}
 		
-		redirectAttributes.addFlashAttribute("repassEmailErr1", "指定されたメールアドレスは、登録されていません" );
-		
+
 		return "redirect:/users/repass_email";
+
 		
 		
 
