@@ -56,6 +56,8 @@ public class LoginViewController {
 		
 		String updatePassResult = (String)model.getAttribute("setPassResult");
 		
+		String deleteUserResult = (String)model.getAttribute("userDeleteResult");
+		
 		if (repassEmailSucc1 != null) {
 			
 			model.addAttribute("repassEmailSucc1", repassEmailSucc1);
@@ -64,6 +66,10 @@ public class LoginViewController {
 			
 			System.out.println(updatePassResult);
 			model.addAttribute("setPassResult", updatePassResult);
+			
+		} else if (deleteUserResult != null) {
+			
+			model.addAttribute("userDeleteResult", deleteUserResult);
 			
 		}
 		

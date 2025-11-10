@@ -50,4 +50,25 @@ public class LoginService {
 		return repository.findById(id);
 	}
 	
+	
+	
+	/**
+	 * ログイン中のユーザーidから、会員退会処理
+	 * 
+	 * @param id ログイン中ユーザーid
+	 * @return 退会処理結果
+	 */
+	
+	public String deleteUserById(int id) {
+		
+		String userDeleteResult = null;
+		
+		repository.deleteById(id);
+		
+		userDeleteResult = "退会処理が完了しました";
+		
+		return userDeleteResult;
+		
+	}
+	
 }
