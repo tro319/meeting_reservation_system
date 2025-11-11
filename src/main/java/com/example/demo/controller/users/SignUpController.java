@@ -44,7 +44,9 @@ public class SignUpController {
 	
 	@PostMapping("/users/signup/confirm")
 	
-	public String signUpConfirm(Model model, RedirectAttributes redirectAttributes, SignUpFormInfo form) {
+	public String signUpConfirm(Model model, HttpSession session, RedirectAttributes redirectAttributes, SignUpFormInfo form) {
+		
+		session.setAttribute("signUpFormInfo", form);
 		
 		Boolean checkResult = null;
 		
@@ -126,6 +128,7 @@ public class SignUpController {
 	 * 会員登録修正ボタン遷移処理
 	 * 
 	 * @param model モデル
+	 * @param session セッション情報
 	 * @param redirectAttributes リダイレクト時値保持用
 	 * @param form 入力情報
 	 * 
@@ -136,8 +139,9 @@ public class SignUpController {
 	
 	@GetMapping("/users/signup/return")
 	
-	public String signUpReturn(Model model, RedirectAttributes redirectAttributes, SignUpFormInfo form) {
+	public String signUpReturn(Model model, HttpSession session, RedirectAttributes redirectAttributes) {
 		
+		SignUpFormInfo form = (SignUpFormInfo)session.getAttribute("signUpFormInfo");
 		
 		redirectAttributes.addFlashAttribute("signUpFormInfo", form);
 		return "redirect:/users/signup";

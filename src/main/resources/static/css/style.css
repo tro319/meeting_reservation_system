@@ -102,7 +102,8 @@ a {
 	margin-top: 25px;
 }
 
-.form .submit-btns input {
+.form .submit-btns input,
+.form .submit-btns button {
 	color: #FFF;
 	background-color: #2D88FF; 
 	border: none;
