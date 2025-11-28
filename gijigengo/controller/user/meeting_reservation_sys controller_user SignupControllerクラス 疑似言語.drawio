@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0" version="29.1.1">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.1">
   <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
     <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -110,13 +110,13 @@
           <mxGeometry height="30" width="950.2938496583143" x="26.70615034168565" as="geometry" />
         </mxCell>
         <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="812" width="1091" x="2276" y="320" as="geometry" />
+          <mxGeometry height="999" width="1091" x="2276" y="320" as="geometry" />
         </mxCell>
         <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;数値型 : loginId ←&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;session変数 &quot;log_user_id&quot; の値&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="2584" y="552" as="geometry" />
         </mxCell>
         <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* PostMapping: &quot;/user/signup&quot;&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Controller、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="2584" y="1052" as="geometry" />
+          <mxGeometry height="30" width="590" x="2582.5" y="1260" as="geometry" />
         </mxCell>
         <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( loginId != null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="2584" y="622" as="geometry" />
@@ -128,7 +128,7 @@
           <mxGeometry height="30" width="590" x="2584" y="692" as="geometry" />
         </mxCell>
         <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect : /user/user_get&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="2604" y="967" as="geometry" />
+          <mxGeometry height="30" width="590" x="2598" y="1131" as="geometry" />
         </mxCell>
         <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if (&amp;nbsp; doubleCheck )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="2604" y="772" as="geometry" />
@@ -143,16 +143,16 @@
           <mxGeometry height="30" width="590" x="2614" y="822" as="geometry" />
         </mxCell>
         <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session変数 &quot;user_signup_data&quot; 削除" vertex="1">
-          <mxGeometry height="30" width="590" x="2602" y="892" as="geometry" />
+          <mxGeometry height="30" width="590" x="2599" y="1038" as="geometry" />
         </mxCell>
-        <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;User型: signupResult = service.登録処理(form)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="2602" y="866" as="geometry" />
+        <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;User型: signupResult ← service.登録処理(form)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="2600" y="843" as="geometry" />
         </mxCell>
         <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="User型: redirect変数 &quot;signup_user&quot; ← signupResult&amp;nbsp;&amp;nbsp;" vertex="1">
-          <mxGeometry height="30" width="590" x="2602" y="921" as="geometry" />
+          <mxGeometry height="30" width="590" x="2598" y="1085" as="geometry" />
         </mxCell>
         <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="String型: redirect変数 &quot;user_signup_result&quot; ← &quot;ユーザー登録が完了しました！&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="2602" y="944" as="geometry" />
+          <mxGeometry height="30" width="590" x="2598" y="1108" as="geometry" />
         </mxCell>
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
           <mxGeometry height="20" width="20" x="1235.003157894737" y="534" as="geometry" />
@@ -169,8 +169,29 @@
         <mxCell id="Huqtsanhw5f1xzZ61HUD-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=36;fontColor=#80708A;" value="&lt;font&gt;大域 field&lt;/font&gt;" vertex="1">
           <mxGeometry height="246" width="963" x="1139" y="38" as="geometry" />
         </mxCell>
-        <mxCell id="Huqtsanhw5f1xzZ61HUD-3" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;大域: SignupService型: service&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+        <mxCell id="Huqtsanhw5f1xzZ61HUD-3" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;fontSize=12;" value="&lt;font&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;大域: SignupService型: service&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="614" x="1288.5" y="133" as="geometry" />
+        </mxCell>
+        <mxCell id="PG8TkhmsUevh0mXRQlC--1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="mailService.sendMail( signupEmail, &quot;会員登録が完了しました! ｜ 面談予約システム&quot;, signupSendText )&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="590" x="2600" y="1015" as="geometry" />
+        </mxCell>
+        <mxCell id="PG8TkhmsUevh0mXRQlC--2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: MailSendService型: mailService" vertex="1">
+          <mxGeometry height="30" width="590" x="1512" y="163" as="geometry" />
+        </mxCell>
+        <mxCell id="PG8TkhmsUevh0mXRQlC--3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;文字列型: signupName&amp;nbsp;←&amp;nbsp;signupResult.getName()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="2600" y="892" as="geometry" />
+        </mxCell>
+        <mxCell id="PG8TkhmsUevh0mXRQlC--4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;文字列型: signupEmail&amp;nbsp;←&amp;nbsp;signupResult.getEmail()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="2600" y="916" as="geometry" />
+        </mxCell>
+        <mxCell id="PG8TkhmsUevh0mXRQlC--5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;数値型: signupId&amp;nbsp;←&amp;nbsp;signupResult.getId()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="2601" y="869" as="geometry" />
+        </mxCell>
+        <mxCell id="PG8TkhmsUevh0mXRQlC--6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="数値型: session変数 &quot;log_user_id&quot;&amp;nbsp; ← signupId" vertex="1">
+          <mxGeometry height="30" width="590" x="2598" y="1061" as="geometry" />
+        </mxCell>
+        <mxCell id="PG8TkhmsUevh0mXRQlC--8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;文字列型: signupSendText&amp;nbsp;←&amp;nbsp;&lt;/div&gt;&lt;div&gt;signupName + &quot;さん、&quot; + &quot; 当サービス、「面談予約システム」への登録ありがとうございます！\n&quot; + &quot;引き続きよろしくお願い致します。&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="590" x="2600" y="943" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
