@@ -20,22 +20,16 @@
           <mxGeometry height="30" width="590" x="288" y="623" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="SignupForm型: signupForm ← session変数 &quot;user_signup_data&quot; の値&amp;nbsp;" vertex="1">
-          <mxGeometry height="30" width="590" x="308" y="723" as="geometry" />
+          <mxGeometry height="30" width="590" x="308" y="771" as="geometry" />
         </mxCell>
-        <mxCell id="y_rmSiP4a9WrNTzO88O2-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect : /user/reservation_ables_get&quot;" vertex="1">
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/reservation_ables_get&quot;" vertex="1">
           <mxGeometry height="30" width="590" x="308" y="663" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;else&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="693" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( signupForm != null )&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="308" y="747" as="geometry" />
-        </mxCell>
-        <mxCell id="y_rmSiP4a9WrNTzO88O2-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="SignupForm型: model変数 &quot;signup_form&quot; ← signupForm" vertex="1">
-          <mxGeometry height="30" width="624" x="318" y="777" as="geometry" />
-        </mxCell>
-        <mxCell id="y_rmSiP4a9WrNTzO88O2-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( errMsg != null )&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="318" y="817" as="geometry" />
+          <mxGeometry height="30" width="590" x="308" y="795" as="geometry" />
         </mxCell>
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="812" width="1091" x="1104" y="320" as="geometry" />
@@ -52,13 +46,13 @@
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;font&gt;if ( signupForm == null )&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="1312.5" y="797" as="geometry" />
         </mxCell>
-        <mxCell id="ZfGfXsy4YiebRTj8fB6C-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect : /user/reservation_ables_get&quot;" vertex="1">
+        <mxCell id="ZfGfXsy4YiebRTj8fB6C-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/reservation_ables_get&quot;" vertex="1">
           <mxGeometry height="30" width="590" x="1312.5" y="727" as="geometry" />
         </mxCell>
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;else&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="1292.5" y="757" as="geometry" />
         </mxCell>
-        <mxCell id="ZfGfXsy4YiebRTj8fB6C-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect : /user/signup&quot;" vertex="1">
+        <mxCell id="ZfGfXsy4YiebRTj8fB6C-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/signup&quot;" vertex="1">
           <mxGeometry height="30" width="590" x="1322.5" y="826" as="geometry" />
         </mxCell>
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;user/signup_confirm&quot;" vertex="1">
@@ -68,13 +62,10 @@
           <mxGeometry height="30" width="590" x="1312.5" y="775" as="geometry" />
         </mxCell>
         <mxCell id="yoJPITj32RzDB6UqYEiH-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;user/signup&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="306" y="862" as="geometry" />
+          <mxGeometry height="30" width="590" x="302" y="877" as="geometry" />
         </mxCell>
-        <mxCell id="yoJPITj32RzDB6UqYEiH-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="String型: errMsg ←&amp;nbsp;model変数 &quot;signup_err_msg&quot; の値" vertex="1">
-          <mxGeometry height="30" width="624" x="318" y="797" as="geometry" />
-        </mxCell>
-        <mxCell id="yoJPITj32RzDB6UqYEiH-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="String型: model変数 &quot;signup_err_msg&quot; ← errMsg" vertex="1">
-          <mxGeometry height="30" width="590" x="327" y="838" as="geometry" />
+        <mxCell id="yoJPITj32RzDB6UqYEiH-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="SignupForm型: model変数 &quot;user_signup_data&quot; ← signupForm" vertex="1">
+          <mxGeometry height="30" width="590" x="323" y="830" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
           <mxGeometry height="20" width="20" x="214" y="509" as="geometry" />
@@ -91,8 +82,14 @@
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-11" parent="yoJPITj32RzDB6UqYEiH-7" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;文字列型: 確認画面 ( HttpSession型: session, Model型: model, SignupForm型: signupForm )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="759.51" x="26.996842105263113" as="geometry" />
         </mxCell>
-        <mxCell id="K43htWZsL5SR61zaRrvR-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="SignupForm型: model変数 &quot;signup_form&quot; ← signupForm" vertex="1">
+        <mxCell id="K43htWZsL5SR61zaRrvR-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="SignupForm型: model変数 &quot;user_signup_data&quot; ← signupForm" vertex="1">
           <mxGeometry height="30" width="590" x="1312.5" y="857" as="geometry" />
+        </mxCell>
+        <mxCell id="Ns4HQVXjOGJQazfn72JI-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="String型: errMsg ← session変数 &quot;signup_err_msg&quot; の値&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="590" x="309" y="727" as="geometry" />
+        </mxCell>
+        <mxCell id="Ns4HQVXjOGJQazfn72JI-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="String型: model変数 &quot;signup_err_msg&quot; ← errMsg&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="590" x="308" y="748" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

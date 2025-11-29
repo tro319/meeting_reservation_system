@@ -41,7 +41,7 @@ public class SignupController {
 	 * 
 	 */
 	
-	@PostMapping("user/signup/confirm")
+	@PostMapping("/user/signup/confirm")
 	public String confirm(HttpSession session, RedirectAttributes redirectAttributes, SignupForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
@@ -50,7 +50,7 @@ public class SignupController {
 		
 		if (loginId != null) {
 			
-			return "redirect: /user/reservation_ables_get";
+			return "redirect:/user/reservation_ables_get";
 			
 		} else {
 			
@@ -62,9 +62,9 @@ public class SignupController {
 			
 			if (doubleCheck) {
 				
-				redirectAttributes.addFlashAttribute("signup_err_msg", "ユーザーネーム または メールアドレスが既に登録されています。");
+				session.setAttribute("signup_err_msg", "ユーザーネーム または メールアドレスが既に登録されています。");
 				
-				return "redirect: /user/signup";
+				return "redirect:/user/signup/return";
 				
 			} else {
 				
@@ -76,9 +76,9 @@ public class SignupController {
 				
 				if (!pass.equals(repass)) {
 					
-					redirectAttributes.addFlashAttribute("signup_err_msg", "パスワード入力が一致していません。");
+					session.setAttribute("signup_err_msg", "パスワード入力が一致していません。");
 					
-					return "redirect: /user/signup";
+					return "redirect:/user/signup/return";
 					
 				}
 				
@@ -86,7 +86,7 @@ public class SignupController {
 				
 			}
 			
-			return "redirect : /user/signup/confirm";
+			return "redirect:/user/signup/confirm";
 			
 		}
 		
@@ -114,27 +114,17 @@ public class SignupController {
 		
 		if (loginId != null) {
 			
-			return "redirect: /user/reservation_ables_get";
+			return "redirect:/user/reservation_ables_get";
 			
 		} else {
 			
-			String errMsg = (String)model.getAttribute("signup_err_msg");
 			
 			SignupForm returnForm = (SignupForm)session.getAttribute("user_signup_data");
 			
 			redirectAttributes.addFlashAttribute("user_signup_data", returnForm);
 			
-			// エラーメッセージがあるかどうか
 			
-			if (errMsg == null) {
-				
-				return "redirect: /user/signup";
-				
-			}
-			
-			redirectAttributes.addFlashAttribute("signup_err_msg", errMsg);
-			
-			return "redirect: /user/signup";
+			return "redirect:/user/signup";
 		}
 		
 	}
@@ -151,7 +141,7 @@ public class SignupController {
 	 * 
 	 */
 	
-	@PostMapping("/user/signup/")
+	@PostMapping("/user/signup")
 	public String register(HttpSession session, RedirectAttributes redirectAttributes, SignupForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
@@ -160,7 +150,7 @@ public class SignupController {
 		
 		if (loginId != null) {
 			
-			return "redirect: /user/reservation_ables_get";
+			return "redirect:/user/reservation_ables_get";
 			
 		} else {
 			
@@ -170,9 +160,9 @@ public class SignupController {
 				
 				session.setAttribute("user_signup_data", form);
 				
-				redirectAttributes.addFlashAttribute("signup_err_msg", "ユーザーネーム または メールアドレスが、既に登録されています。");
+				session.setAttribute("signup_err_msg", "ユーザーネーム または メールアドレスが、既に登録されています。");
 				
-				return "redirect: /user/signup/return";
+				return "redirect:/user/signup/return";
 				
 			}
 			
@@ -192,12 +182,12 @@ public class SignupController {
 			
 			session.setAttribute("log_user_id", signupId);
 			
-			redirectAttributes.addFlashAttribute("signup_user", signupResult);
+			session.setAttribute("signup_user", signupResult);
 			
-			redirectAttributes.addFlashAttribute("user_signup_result", "ユーザー登録が完了しました!");
+			session.setAttribute("user_signup_result", "ユーザー登録が完了しました!");
 			
 			
-			return "redirect: /user/user_get";
+			return "redirect:/user/user_get";
 			
 			
 		}

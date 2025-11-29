@@ -39,23 +39,19 @@ public class SignupViewController {
 		
 		if (loginId != null) {
 			
-			return "redirect: /user/reservation_get";
+			return "redirect:/user/reservation_get";
 			
 		} else {
+			
+			String errMsg = (String)session.getAttribute("signup_err_msg");
+			
+			model.addAttribute("signup_err_msg", errMsg);
 			
 			SignupForm signupForm = (SignupForm)session.getAttribute("user_signup_data");
 			
 			if (signupForm != null) {
 				
-				model.addAttribute("signup_form", signupForm);
-				
-				String errMsg = (String)model.getAttribute("signup_err_msg");
-				
-				if (errMsg != null) {
-					
-					model.addAttribute("signup_err_msg", errMsg);
-					
-				}
+				model.addAttribute("user_signup_data", signupForm);
 				
 				
 			}
@@ -84,7 +80,7 @@ public class SignupViewController {
 		
 		if (loginId != null) {
 			
-			return "redirect: /user/reservation_get";
+			return "redirect:/user/reservation_ables_get";
 			
 		} else {
 			
@@ -92,11 +88,11 @@ public class SignupViewController {
 			
 			if (signupForm == null) {
 				
-				return "redirect: /user/signup";
+				return "redirect:/user/signup";
 				
 			}
-			
-			model.addAttribute("signup_form", signupForm);
+		
+			model.addAttribute("user_signup_data", signupForm);
 			
 			return "user/signup_confirm";
 			
