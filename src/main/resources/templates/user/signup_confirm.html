@@ -7,7 +7,7 @@
 </head>
 <body>
 	
-	<header th:replace="~{/users/layouts/layout :: common_header_before}">
+	<header th:replace="~{/user/layouts/layout :: common_header_before}">
 		
 		
 	</header>
@@ -27,7 +27,7 @@
 			
 			<div class="sub-link">
 				
-				<a th:href="@{/users/login}">ログインへ</a>
+				<a th:href="@{/user/login}">ログインへ</a>
 				
 			</div>
 			
@@ -40,12 +40,19 @@
 		<div class="container">
 			
 			
-			<form th:action="@{/users/signup}" method="post" th:object="${signUpFormInfo}" class="form">
+			<form th:action="@{/user/signup}" method="post" th:object="${user_signup_data}" class="form">
 				
 				<div>
 					
 					<label>ユーザーネーム</label>
-					<input type="hidden" th:field="*{userName}" value="${userName}" required /><span th:text="*{userName}"></span>
+					<input type="hidden" th:field="*{name}" value="${name}" required /><span th:text="*{name}"></span>
+
+				</div>
+				
+				<div>
+					
+					<label>ふりがな</label>
+					<input type="hidden" th:field="*{kana}" value="${kana}" required /><span th:text="*{kana}"></span>
 
 				</div>
 
@@ -66,7 +73,7 @@
 				
 				<div class="submit-btns">
 					
-					<button type="button" onclick="window.location.href='/users/signup/return'">修正</button>	
+					<button type="button" onclick="window.location.href='/user/signup/return'">修正</button>	
 					<input type="submit" value="登録" />
 
 				</div>

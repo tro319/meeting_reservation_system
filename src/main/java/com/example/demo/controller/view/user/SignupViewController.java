@@ -49,12 +49,14 @@ public class SignupViewController {
 			
 			SignupForm signupForm = (SignupForm)session.getAttribute("user_signup_data");
 			
-			if (signupForm != null) {
+			if (signupForm == null) {
 				
-				model.addAttribute("user_signup_data", signupForm);
+				signupForm = new SignupForm();
 				
 				
 			}
+			
+			model.addAttribute("user_signup_data", signupForm);
 			
 			return "user/signup";
 			

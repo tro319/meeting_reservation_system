@@ -7,7 +7,7 @@
 </head>
 <body>
 	
-	<header th:replace="~{/users/layouts/layout :: common_header_before}">
+	<header th:replace="~{/user/layouts/layout :: common_header_before}">
 		
 		
 	</header>
@@ -27,7 +27,7 @@
 			
 			<div class="sub-link">
 				
-				<a th:href="@{/users/login}">ログインへ</a>
+				<a th:href="@{/user/login}">ログインへ</a>
 				
 			</div>
 			
@@ -39,16 +39,22 @@
 		
 		<div class="container">
 			
-			<p class="err" th:text="${err1}"></p>
-			<p class="err" th:text="${err2}"></p>
-			<p class="err" th:text="${err3}"></p>
+			<p class="err" th:text="${signup_err_msg}"></p>
+
 			
-			<form th:action="@{/users/signup/confirm}" method="post" th:object="${signUpFormInfo}" class="form">
+			<form th:action="@{/user/signup/confirm}" method="post" th:object="${user_signup_data}" class="form">
 				
 				<div>
 					
 					<label>ユーザーネーム</label>
-					<input type="text" th:field="*{userName}" required />
+					<input type="text" th:field="*{name}" required />
+
+				</div>
+				
+				<div>
+					
+					<label>ふりがな</label>
+					<input type="text" th:field="*{kana}" required />
 
 				</div>
 
