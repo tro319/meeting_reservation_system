@@ -1,4 +1,4 @@
-package com.example.demo.kyoutu.config;
+package com.example.demo.config;
 
 import org.dozer.DozerBeanMapper;
 import org.springframework.context.annotation.Bean;

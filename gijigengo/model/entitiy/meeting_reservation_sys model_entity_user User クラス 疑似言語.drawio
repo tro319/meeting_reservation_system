@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0" version="29.1.1">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.1">
   <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
     <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -33,6 +33,12 @@
         </mxCell>
         <mxCell id="7zPoLKytDqFxYl2EtA-v-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 数値型: id" vertex="1">
           <mxGeometry height="30" width="590" x="1268" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="u8z2RxukS16VbqXveDul-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 日付日時型: createdAt" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="u8z2RxukS16VbqXveDul-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 日付日時型: updatedAt" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="218" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

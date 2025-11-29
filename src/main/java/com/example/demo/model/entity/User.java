@@ -1,4 +1,6 @@
-package com.example.demo.model.users;
+package com.example.demo.model.entity;
+
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,27 +10,35 @@ import jakarta.persistence.Table;
 
 import lombok.Data;
 
-/**
- *  ユーザー情報テーブル エンティティ
+/* 
+ * ユーザーエンティティクラス
  * 
  * @author ys
  * 
  */
 
 @Entity
-@Table(name = "users")
+@Table(name="users")
 @Data
-public class UserInfo {
+
+public class User {
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	// TODO DBと両方にUNIQUE制約つけて反映 対象カラム名: email, user_name (tamapon)
+	private String name;
+	
+	private String kana;
+	
 	private String email;
 	
 	private String pass;
 	
-	private String userName;
-
+	private LocalDateTime createdAt;
+	
+	private LocalDateTime updatedAt;
+	
+	
 }
