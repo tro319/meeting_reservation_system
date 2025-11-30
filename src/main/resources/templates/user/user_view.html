@@ -8,9 +8,9 @@
 
 <!-- JavaScript で使用する値受け取り-->
 
-<body th:attr="data-signup-msg=${signUpSucc1}, data-user-update-result=${userUpdateResult}">
+<body th:attr="data-signup-result=${signup_result}">
 	
-	<header th:replace="~{/users/layouts/layout :: common_header_after}">
+	<header th:replace="~{/user/layouts/layout :: common_header_after}">
 		
 
 		
@@ -39,12 +39,19 @@
 		
 		<div class="container">
 			
-			<table class="table border-off" th:object="${userInfoResult}">
+			<table class="table border-off" th:object="${user}">
 				
 				<tr>
 					
-					<td class="tr-title">予約者名</td>
-					<td th:text="*{userName}" class="tr-text"></td>
+					<td class="tr-title">ユーザー名</td>
+					<td th:text="*{name}" class="tr-text"></td>
+					
+				</tr>
+				
+				<tr>
+					
+					<td class="tr-title">ふりがな</td>
+					<td th:text="*{kana}" class="tr-text"></td>
 					
 				</tr>
 				
@@ -55,6 +62,13 @@
 					
 				</tr>
 				
+				<tr>
+					
+					<td class="tr-title">パスワード</td>
+					<td class="tr-text">パスワードは表示されません</td>
+					
+				</tr>
+				
 
 				
 			</table>
@@ -62,8 +76,8 @@
 			
 			<div class="link-btns">
 				
-				<p><a th:href="@{/users/user_update}">更新</a></p>
-				<p><a th:href="@{/users/user_delete}" onclick="return confirm('本当に退会しますか?');">退会</a></p>
+				<p><a th:href="@{/user/user_update}">更新</a></p>
+				<p><a th:href="@{/user/user_delete}" onclick="return confirm('本当に退会しますか?');">退会</a></p>
 				
 			</div>
 			
@@ -76,7 +90,7 @@
 		
 	</main>
 	
-	<footer th:replace="~{/users/layouts/layout :: common_footer_after}">
+	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
 		
 	</footer>
 	
@@ -87,11 +101,9 @@
 	<script>
 		
 
-		const signUpSuccMsg = document.body.dataset.signupMsg;
-		const userUpdateResult = document.body.dataset.userUpdateResult;
+		const signupResult = document.body.dataset.signupResult;
 		
-		if(signUpSuccMsg) window.alert(signUpSuccMsg);
-		if(userUpdateResult) window.alert(userUpdateResult);
+		if(signupResult) window.alert(signupResult);
 		
 	
 

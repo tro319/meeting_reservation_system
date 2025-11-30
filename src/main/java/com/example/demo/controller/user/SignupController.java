@@ -32,7 +32,7 @@ public class SignupController {
 	private final MailSendService mailService;
 	
 	/*
-	 * ユーザー登録確認処理
+	 * ユーザー情報確認処理
 	 * 
 	 * @param session セッション値情報
 	 * @param redirectAttributes リダイレクト値情報
@@ -184,7 +184,7 @@ public class SignupController {
 			
 			session.setAttribute("signup_user", signupResult);
 			
-			session.setAttribute("user_signup_result", "ユーザー登録が完了しました!");
+			session.setAttribute("signup_result", "ユーザー登録が完了しました!");
 			
 			
 			return "redirect:/user/user_get";

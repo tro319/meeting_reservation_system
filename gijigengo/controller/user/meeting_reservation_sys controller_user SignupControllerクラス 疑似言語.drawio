@@ -139,7 +139,7 @@
         <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="User型: session変数 &quot;signup_user&quot; ← signupResult&amp;nbsp;&amp;nbsp;" vertex="1">
           <mxGeometry height="30" width="590" x="2598" y="1085" as="geometry" />
         </mxCell>
-        <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="String型: session変数 &quot;user_signup_result&quot; ← &quot;ユーザー登録が完了しました！&quot;" vertex="1">
+        <mxCell id="A6DKB-HJ5UJ9NW8Q32v7-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="String型: session変数 &quot;signup_result&quot; ← &quot;ユーザー登録が完了しました！&quot;" vertex="1">
           <mxGeometry height="30" width="590" x="2598" y="1108" as="geometry" />
         </mxCell>
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
