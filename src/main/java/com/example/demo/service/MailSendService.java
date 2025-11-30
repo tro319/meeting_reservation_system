@@ -6,12 +6,28 @@ import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 
+/* 
+ * メール送信処理群
+ * 
+ * @author ys
+ * 
+ */
+
 @Service
 @RequiredArgsConstructor
 
 public class MailSendService {
 
 	private final JavaMailSender mailSender;
+	
+	/*
+	 * メール送信処理
+	 * 
+	 * @param to 宛先
+	 * @param subject 件名
+	 * @param text 本文
+	 * 
+	 */
 	
 	public void sendMail(String to, String subject, String text) {
 		

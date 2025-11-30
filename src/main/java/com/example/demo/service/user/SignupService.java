@@ -11,7 +11,7 @@ import com.example.demo.repository.user.UsersRepository;
 import lombok.RequiredArgsConstructor;
 
 /* 
- * ユーザー登録用サービスクラス
+ * ユーザー登録処理群
  * 
  * @author ys
  * 
