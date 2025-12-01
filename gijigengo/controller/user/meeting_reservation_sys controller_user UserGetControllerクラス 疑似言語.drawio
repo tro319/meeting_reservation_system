@@ -7,38 +7,38 @@
         <mxCell id="y_rmSiP4a9WrNTzO88O2-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=0;fontSize=36;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 161, 255);&quot;&gt;class&lt;/span&gt;&lt;/div&gt;&lt;div&gt;ユーザー取得処理群&amp;nbsp;&lt;/div&gt;" vertex="1">
           <mxGeometry height="149" width="471" x="39" y="41" as="geometry" />
         </mxCell>
-        <mxCell id="y_rmSiP4a9WrNTzO88O2-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="813" width="1020" x="50" y="320" as="geometry" />
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="930" width="1020" x="50" y="300" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;数値型 : loginId ←&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;session変数 &quot;log_user_id&quot; の値&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="553" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* GetMapping: &quot;/user/user_get&quot;&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Controller、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="288" y="1053" as="geometry" />
+          <mxGeometry height="30" width="590" x="292" y="1152" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( loginId == null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="288" y="623" as="geometry" />
+          <mxGeometry height="30" width="590" x="288" y="583" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="User型: userInfo ← session変数 &quot;signup_user&quot; の値" vertex="1">
-          <mxGeometry height="30" width="590" x="284" y="723" as="geometry" />
+          <mxGeometry height="30" width="590" x="284" y="646" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/login&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="308" y="663" as="geometry" />
+          <mxGeometry height="30" width="590" x="308" y="623" as="geometry" />
         </mxCell>
-        <mxCell id="y_rmSiP4a9WrNTzO88O2-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if (&amp;nbsp; userInfo != null &amp;amp;&amp;amp; signupResult != null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if (&amp;nbsp; userInfo != null &amp;amp;&amp;amp; resultMsg != null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="284" y="773" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="User型: redirect変数 &quot;user&quot; ← userInfo" vertex="1">
           <mxGeometry height="30" width="624" x="294" y="794" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/user_view&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="294" y="871" as="geometry" />
+          <mxGeometry height="30" width="590" x="294" y="911" as="geometry" />
         </mxCell>
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="userInfo ← service.ユーザー取得処理( loginId )" vertex="1">
-          <mxGeometry height="30" width="590" x="279" y="901" as="geometry" />
+          <mxGeometry height="30" width="590" x="283" y="1000" as="geometry" />
         </mxCell>
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;User型: redirect変数 &quot;user&quot; ← userInfo&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="279" y="928" as="geometry" />
+          <mxGeometry height="30" width="590" x="283" y="1027" as="geometry" />
         </mxCell>
         <mxCell id="Huqtsanhw5f1xzZ61HUD-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=36;fontColor=#80708A;" value="&lt;font&gt;大域 field&lt;/font&gt;" vertex="1">
           <mxGeometry height="246" width="963" x="1139" y="38" as="geometry" />
@@ -53,19 +53,34 @@
           <mxGeometry height="30" width="950.2938496583143" x="154.85615034168566" y="499" as="geometry" />
         </mxCell>
         <mxCell id="RIIyzksVQ8HSW0idPgMg-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/user_view&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="279" y="958" as="geometry" />
+          <mxGeometry height="30" width="590" x="283" y="1057" as="geometry" />
         </mxCell>
         <mxCell id="IF7iwRMe3G0DvhTFONXc-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session変数 &quot;signup_user&quot; 削除" vertex="1">
           <mxGeometry height="30" width="624" x="294" y="830" as="geometry" />
         </mxCell>
-        <mxCell id="wQ4fvcg0XHAQqTmXEPcc-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="文字列型: signupResult ← session変数 &quot;signup_result&quot; の値" vertex="1">
-          <mxGeometry height="30" width="590" x="284" y="743" as="geometry" />
+        <mxCell id="wQ4fvcg0XHAQqTmXEPcc-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="文字列型: resultMsg ← session変数 &quot;signup_result&quot; の値" vertex="1">
+          <mxGeometry height="30" width="590" x="284" y="666" as="geometry" />
         </mxCell>
-        <mxCell id="wQ4fvcg0XHAQqTmXEPcc-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="User型: redirect変数 &quot;signup_result&quot; ← signupResult" vertex="1">
+        <mxCell id="wQ4fvcg0XHAQqTmXEPcc-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="文字列型: redirect変数 &quot;result&quot; ← resultMsg" vertex="1">
           <mxGeometry height="30" width="624" x="294" y="810" as="geometry" />
         </mxCell>
         <mxCell id="wQ4fvcg0XHAQqTmXEPcc-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session変数 &quot;signup_result&quot; 削除" vertex="1">
           <mxGeometry height="30" width="624" x="294" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="q9ra8aTDfSxo17YjXxkh-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if (&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;userInfo == null&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp;&amp;amp;&amp;amp; resultMsg == null)&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="283" y="696" as="geometry" />
+        </mxCell>
+        <mxCell id="q9ra8aTDfSxo17YjXxkh-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="User型: userInfo ← session変数 &quot;set_user&quot; の値" vertex="1">
+          <mxGeometry height="30" width="590" x="294" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="q9ra8aTDfSxo17YjXxkh-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="文字列型: resultMsg ← session変数 &quot;set_result&quot; の値" vertex="1">
+          <mxGeometry height="30" width="590" x="294" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="q9ra8aTDfSxo17YjXxkh-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session変数 &quot;set_user&quot; 削除" vertex="1">
+          <mxGeometry height="30" width="624" x="294" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="q9ra8aTDfSxo17YjXxkh-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session変数 &quot;set_result&quot; 削除" vertex="1">
+          <mxGeometry height="30" width="624" x="294" y="890" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
