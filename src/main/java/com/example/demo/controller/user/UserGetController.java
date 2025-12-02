@@ -48,26 +48,40 @@ public class UserGetController {
 		
 		User userInfo = (User)session.getAttribute("signup_user");
 		
-		String signupResult = (String)session.getAttribute("signup_result");
+		String resultMsg = (String)session.getAttribute("signup_result");
+		
+		// ユーザー登録直後でなければ、ユーザー更新直後かどうか
 		
 		
-		// ユーザー登録直後かどうか
+		if (userInfo == null && resultMsg == null) {
+			
+			userInfo = (User)session.getAttribute("set_user");
+			
+			resultMsg = (String)session.getAttribute("set_result");
+			
+		}
 		
-		if (userInfo != null && signupResult != null) {
+		// 上記2つどちらかどうか
+		
+		if (userInfo != null && resultMsg != null) {
 			
 			redirectAttributes.addFlashAttribute("user", userInfo);
 			
-			redirectAttributes.addFlashAttribute("signup_result", signupResult);
+			redirectAttributes.addFlashAttribute("result", resultMsg);
 			
 			session.removeAttribute("signup_user");
 			
 			session.removeAttribute("signup_result");
 			
+			session.removeAttribute("set_user");
+			
+			session.removeAttribute("set_result");
+			
 			return "redirect:/user/user_view";
 			
 		}
 		
-		userInfo = service.getUserById(loginId);
+		userInfo = service.getUser(loginId);
 		
 		redirectAttributes.addFlashAttribute("user", userInfo);
 		

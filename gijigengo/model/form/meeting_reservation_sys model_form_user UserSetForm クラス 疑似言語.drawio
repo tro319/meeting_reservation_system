@@ -46,7 +46,7 @@
         <mxCell id="GquI7xkYQ5Ya0veQZEpw-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: hidEmail" vertex="1">
           <mxGeometry height="30" width="590" x="1268" y="282" as="geometry" />
         </mxCell>
-        <mxCell id="GquI7xkYQ5Ya0veQZEpw-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: hidPrepass" vertex="1">
+        <mxCell id="GquI7xkYQ5Ya0veQZEpw-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: hidPass" vertex="1">
           <mxGeometry height="30" width="590" x="1268" y="302" as="geometry" />
         </mxCell>
       </root>
