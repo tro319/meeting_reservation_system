@@ -5,7 +5,6 @@ import java.util.Map;
 
 import jakarta.servlet.http.HttpSession;
 
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,7 +30,7 @@ public class UserSetController {
 	
 	private final UserSetService service;
 	
-	private final PasswordEncoder passEncoder;
+//	private final PasswordEncoder passEncoder;
 	
 	/*
 	 * ユーザー情報取得処理
