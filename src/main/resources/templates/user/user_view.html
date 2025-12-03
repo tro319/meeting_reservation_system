@@ -8,7 +8,7 @@
 
 <!-- JavaScript で使用する値受け取り-->
 
-<body th:attr="data-signup-result=${signup_result}">
+<body th:attr="data-result=${result}">
 	
 	<header th:replace="~{/user/layouts/layout :: common_header_after}">
 		
@@ -101,9 +101,9 @@
 	<script>
 		
 
-		const signupResult = document.body.dataset.signupResult;
+		const result = document.body.dataset.result;
 		
-		if(signupResult) window.alert(signupResult);
+		if(result) window.alert(result);
 		
 	
 

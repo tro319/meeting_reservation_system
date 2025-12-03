@@ -73,6 +73,13 @@ public class UserSetController {
 			
 			setForm.setPass(userInfo.getPass());
 			
+			setForm.setHidName(userInfo.getName());
+			
+			setForm.setHidKana(userInfo.getKana());
+			
+			setForm.setHidEmail(userInfo.getEmail());
+			
+			
 			
 		}
 		
@@ -140,12 +147,8 @@ public class UserSetController {
 			updates.put("email", form.getEmail());
 			
 		}
+	
 		
-		if (passEncoder.matches(form.getPass(), form.getHidPass())) {
-			
-			updates.put("pass", form.getPass());
-			
-		}
 			
 		if (updates.size() == 0) {
 			
@@ -154,6 +157,8 @@ public class UserSetController {
 			return "redirect:/user/user_update";
 			
 		}
+		
+		updates.put("pass", form.getPass());
 		
 		User setUser = service.setUser(loginId, updates);
 		

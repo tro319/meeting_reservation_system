@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ユーザー情報更新フォーム画面 | 面談予約システム</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+	<header th:replace="~{/user/layouts/layout :: common_header_after}">
+		
+		
+	</header>
+	
+	
+	
+	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">ユーザー情報更新フォーム</h2>
+				
+			</div>
+			
+<!--			<div class="sub-link">-->
+				
+<!--				<a th:href="@{/users/login}">ログインへ</a>-->
+				
+<!--			</div>-->
+			
+			
+		</div>
+		
+		
+		
+		
+		<div class="container">
+			
+			<p class="err" th:text="*{set_result}"></p>
+			
+
+			
+			<form th:action="@{/user/user_update}" method="post" th:object="${user_set_data}" class="form">
+				
+				
+				
+				<div>
+					
+					<label>ユーザーネーム</label>
+					<input type="text" th:field="*{name}" required />
+					
+					<input type="hidden" th:field="*{hidName}" required />
+
+				</div>
+				
+				<div>
+					
+					<label>ふりがな</label>
+					<input type="text" th:field="*{kana}" required />
+					
+					<input type="hidden" th:field="*{hidKana}" required />
+
+				</div>
+				
+				<div>
+					
+					<label>メールアドレス</label>
+					<input type="email" th:field="*{email}" required />
+					
+					<input type="hidden" th:field="*{hidEmail}" required />
+
+				</div>
+				
+				<div>
+					
+					<label>パスワード</label>
+					<input type="password" th:field="*{pass}" required />
+					
+
+				</div>
+				
+				<div>
+					
+					<label>パスワード【再】</label>
+					<input type="password" th:field="*{repass}" required />
+					
+				</div>
+				
+				
+				<div class="submit-btns">
+					
+					<input type="submit" value="更新" />
+
+				</div>
+
+				
+			</form>
+			
+			
+		</div>
+		
+		
+	</main>
+	
+	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
+		
+	</footer>
+
+	<script th:src="@{/js/original.js}"></script>
+	
+	<script>
+		
+		
+	</script>
+
+
+</body>
+</html>
