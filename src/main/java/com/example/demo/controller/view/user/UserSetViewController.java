@@ -47,6 +47,14 @@ public class UserSetViewController {
 			
 		} 
 		
+		// f5更新対策
+		
+		if (!model.containsAttribute("user_set_data")) {
+			
+			return "redirect:/user/user_update";
+			
+		}
+		
 		
 		return "user/user_update_view";
 		

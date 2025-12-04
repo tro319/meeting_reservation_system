@@ -42,6 +42,15 @@ public class UserGetViewController {
 		}
 		
 		
+		// f5更新にも対応
+		
+		if (!model.containsAttribute("user")) {
+			
+			return "redirect:/user/user_get";
+			
+		}
+		
+		
 		
 		return "user/user_view";
 		
