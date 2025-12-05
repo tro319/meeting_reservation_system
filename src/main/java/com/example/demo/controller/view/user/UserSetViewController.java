@@ -37,7 +37,6 @@ public class UserSetViewController {
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
 		
-		System.out.println("更新前結果");
 		
 		// ログインしているかどうか
 		
