@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.4">
+  <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
+    <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=0;fontSize=36;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 161, 255);&quot;&gt;class&lt;/span&gt;&lt;/div&gt;&lt;div&gt;担当者&lt;/div&gt;" vertex="1">
+          <mxGeometry height="149" width="471" x="39" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="813" width="1020" x="50" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=36;" value="ゲッター/セッター は、@Data (lombook) で自動生成" vertex="1">
+          <mxGeometry height="30" width="854.5" x="155.75" y="549" as="geometry" />
+        </mxCell>
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Entity,&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;@Data, @Table, @Id, @OneToMany, @ManyToOne, @JoinColumn&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="720" x="203" y="1051" as="geometry" />
+        </mxCell>
+        <mxCell id="S7X8e83eDEx1BtPf0ie4-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=36;fontColor=#80708A;" value="&lt;font&gt;大域 field&lt;/font&gt;" vertex="1">
+          <mxGeometry height="378" width="963" x="1151" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="S7X8e83eDEx1BtPf0ie4-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: name" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="111" as="geometry" />
+        </mxCell>
+        <mxCell id="NC2p8tmlkI6qg-qhVgj8-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: kana" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="129" as="geometry" />
+        </mxCell>
+        <mxCell id="NC2p8tmlkI6qg-qhVgj8-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: email" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="149" as="geometry" />
+        </mxCell>
+        <mxCell id="NC2p8tmlkI6qg-qhVgj8-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 文字列型: pass" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="169" as="geometry" />
+        </mxCell>
+        <mxCell id="7zPoLKytDqFxYl2EtA-v-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 数値型: id" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="u8z2RxukS16VbqXveDul-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 日付日時型: createdAt" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="249" as="geometry" />
+        </mxCell>
+        <mxCell id="u8z2RxukS16VbqXveDul-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: 日付日時型: updatedAt" vertex="1">
+          <mxGeometry height="30" width="590" x="1268" y="273" as="geometry" />
+        </mxCell>
+        <mxCell id="9VU42x-UtY9n9GEp9lam-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=36;" value="&lt;div&gt;@OneToMany(mappedBy=&quot;interviewer&quot;, cascade=CascadeType.ALL)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="212" width="854.5" x="213" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="9VU42x-UtY9n9GEp9lam-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: List&amp;lt;Reservation&amp;gt;型: reservations" vertex="1">
+          <mxGeometry height="30" width="590" x="1269" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="xyd6s_XqlhkdUzabNmaY-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: Manager型: manager" vertex="1">
+          <mxGeometry height="30" width="590" x="1269" y="219" as="geometry" />
+        </mxCell>
+        <mxCell id="xyd6s_XqlhkdUzabNmaY-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=36;" value="&lt;div&gt;@ManyToOne&lt;/div&gt;&lt;div&gt;@JoinColumn(name=&quot;manager_id&quot;)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="212" width="854.5" x="210" y="843" as="geometry" />
+        </mxCell>
+        <mxCell id="xyd6s_XqlhkdUzabNmaY-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=36;" value="外部結合関係" vertex="1">
+          <mxGeometry height="30" width="854.5" x="155.75" y="715" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
