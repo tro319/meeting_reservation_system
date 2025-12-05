@@ -63,14 +63,6 @@ public class ReservationsGetController {
 			
 		}
 		
-		// 仮遷移
-		
-		if (true) {
-			
-			return "redirect:/user/user_get";
-			
-		}
-		
 		
 		redirectAttributes.addFlashAttribute("reservations", reservationInfos);
 		

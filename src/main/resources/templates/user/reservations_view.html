@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>予約情報一覧画面　| 予約者</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+
+	<header th:replace="~{/user/layouts/layout :: common_header_after}">
+		
+		
+	</header>
+
+
+
+	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">予約情報一覧</h2>
+				
+			</div>
+			
+<!--			<div class="sub-link">-->
+				
+<!--				<a th:href="@{/user/login}">ログインへ</a>-->
+				
+<!--			</div>-->
+			
+			
+		</div>
+		
+		<div class="container">
+			
+			
+			<table class="table reservations_table">
+				
+				<thead>
+					
+					<tr>
+						
+						<th>担当者名</th>
+						<th>ふりがな</th>
+						<th>面談日</th>
+						<th>開始時間</th>
+						<th></th>
+						
+						
+					</tr>
+					
+					
+				</thead>
+				
+				
+				<tbody>
+					
+					<tr th:if="${!#lists.isEmpty(reservations)}" th:each="reservation : ${reservations}">
+						
+						<td th:text="${reservation.interviewer.name}"></td>
+						<td th:text="${reservation.interviewer.kana}"></td>
+						<td>日付仮</td>
+<!--						<td th:text="${reservation.date}"></td>-->
+						<td th:text="${reservation.time.start}"></td>
+						<td><a th:href="@{/user/reservation?id=${reservation.id}}">詳細</a></td>
+						
+					</tr>
+					
+					
+				</tbody>
+				
+				
+				
+			</table>
+			
+			
+			
+		</div>
+		
+	</main>
+	
+	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
+		
+	</footer>
+
+</body>
+</html>
