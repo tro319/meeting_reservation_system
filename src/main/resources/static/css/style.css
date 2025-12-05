@@ -119,10 +119,16 @@ a {
 /* テーブル共通設定
 ============================== */
 
+.table {
+	margin-bottom: 40px;
+}
+
 .table tr {
 	display: block;
 	margin-top: 20px;
 }
+
+
 
 .table tr:first-child {
 	margin-top: 0;
@@ -137,6 +143,31 @@ a {
 	display: inline-block;
 	margin-left: 40px;
 }
+
+.reservations-table {
+	border: solid 1px #747474;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+.reservations-table th,
+.reservations-table td {
+	text-align: center;
+	border-left: solid 1px #747474;
+	border-bottom: solid 1px #747474;
+	padding: 10px 25px;
+}
+
+.reservations-table th {
+	color: #FFF;
+	background-color: #00489A;
+}
+
+.reservations-table td a {
+	color: #657EFF;
+}
+
+
 
 
 /* ヘッダー共通設定
