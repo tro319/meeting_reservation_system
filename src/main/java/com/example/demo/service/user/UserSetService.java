@@ -37,7 +37,7 @@ public class UserSetService {
 	
 	public User getUser(Integer id) {
 		
-		User userInfo = repository.findById(id).orElseThrow( () -> new IllegalArgumentException("ユーザーが存在しません。") );
+		User userInfo = repository.findById(id).orElse(null);
 		
 		return userInfo;
 		
@@ -55,7 +55,7 @@ public class UserSetService {
 	
 	public User setUser(Integer id, Map<String, String> updates) {
 		
-		User userInfo = repository.findById(id).orElseThrow( () -> new IllegalArgumentException("ユーザーが存在しません。") );
+		User userInfo = repository.findById(id).orElse(null);
 		
 		updates.forEach( (key, value) -> {
 			

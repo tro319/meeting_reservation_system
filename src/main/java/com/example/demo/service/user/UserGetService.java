@@ -32,7 +32,7 @@ public class UserGetService {
 	
 	public User getUser(Integer id) {
 		
-		User userInfo = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("ユーザーが存在しません"));
+		User userInfo = repository.findById(id).orElse(null);
 		
 		return userInfo;
 		

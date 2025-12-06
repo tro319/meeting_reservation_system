@@ -47,7 +47,7 @@ public class UserDeleteController {
 		}
 		
 		
-		service.deleteUserById(loginId);
+		service.deleteUser(loginId);
 		
 		session.removeAttribute("log_user_id");
 		

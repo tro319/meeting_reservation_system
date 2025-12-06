@@ -28,7 +28,7 @@ public class UserDeleteService {
 	 * 
 	 */
 	
-	public void deleteUserById(Integer id) {
+	public void deleteUser(Integer id) {
 		
 		repository.deleteById(id);
 		

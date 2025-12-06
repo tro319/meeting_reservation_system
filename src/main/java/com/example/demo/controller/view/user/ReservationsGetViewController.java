@@ -53,8 +53,6 @@ public class ReservationsGetViewController {
 		
 		
 		return "user/reservations_view";
-		
-			
 			
 
 		
