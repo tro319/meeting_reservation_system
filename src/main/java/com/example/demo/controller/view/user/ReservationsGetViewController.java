@@ -31,7 +31,7 @@ public class ReservationsGetViewController {
 	 */
 	
 	@GetMapping("/user/reservations_view")
-	public String userView(HttpSession session, Model model) {
+	public String reservationsView(HttpSession session, Model model) {
 			
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
 		
