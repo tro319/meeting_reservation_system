@@ -1,0 +1,242 @@
+﻿# A5:ER FORMAT:19
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright © 2007 m.matsubara
+# A5:SQL Mk-2 Version 2.20.4 Copyright © 1997 - 2025 m.matsubara
+#  https://a5m2.mmatsubara.com
+
+[Manager]
+ProjectName=
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=6
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+UpperCaseKeyword=0
+ShowTag=1
+ShowCommonAttributes=0
+BugFixEntityWidth=1
+
+[Entity]
+PName=interviewers
+LName=interviewers
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=50
+Top=50
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="name","name","varchar(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="kana","kana","varchar(30)",,,"","",$FFFFFFFF,""
+Field="email","email","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="pass","pass","varchar(70)","NOT NULL",,"","",$FFFFFFFF,""
+Field="manager_id","manager_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Index=manager_id=0,manager_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",50,50
+ZOrder=-1
+
+[Entity]
+PName=reservations
+LName=reservations
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=300
+Top=500
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="date","date","date","NOT NULL",,"","",$FFFFFFFF,""
+Field="time_id","time_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="user_id","user_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="interviewer_id","interviewer_id","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Index=time_id=0,time_id
+Index=user_id=0,user_id
+Index=interviewer_id=0,interviewer_id
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",300,500,210,182
+ZOrder=-3
+
+[Entity]
+PName=managers
+LName=managers
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=350
+Top=50
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="name","name","varchar(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="kana","kana","varchar(30)",,,"","",$FFFFFFFF,""
+Field="email","email","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="pass","pass","varchar(70)","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",350,50
+ZOrder=-2
+
+[Entity]
+PName=users
+LName=users
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=950
+Top=500
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="name","name","varchar(30)","NOT NULL",,"","",$FFFFFFFF,""
+Field="kana","kana","varchar(50)",,,"","",$FFFFFFFF,""
+Field="email","email","varchar(255)","NOT NULL",,"","",$FFFFFFFF,""
+Field="pass","pass","varchar(70)","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",950,500
+ZOrder=-5
+
+[Entity]
+PName=times
+LName=times
+Comment=
+TableInnerOption=
+TableOption=
+Page=MAIN
+Left=950
+Top=50
+Field="id","id","int auto_increment","NOT NULL",0,"","",$FFFFFFFF,""
+Field="start","start","int","NOT NULL",,"","",$FFFFFFFF,""
+Field="created_at","created_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+Field="updated_at","updated_at","datetime","NOT NULL",,"CURRENT_TIMESTAMP","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="MAIN",950,50
+ZOrder=-4
+
+[Relation]
+Entity1=users
+Entity2=reservations
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=user_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1310,980,1280,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00008000
+ModifiedDateTime=20251207205706
+LineMode=0
+Bar1=131
+Bar2=98
+Bar3=128
+TermPos1=R
+TermPos2=R
+ZOrder=-8
+
+[Relation]
+Entity1=interviewers
+Entity2=reservations
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=interviewer_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1100,1800,3300,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00008080
+ModifiedDateTime=20251207205805
+LineMode=0
+Bar1=110
+Bar2=180
+Bar3=330
+TermPos1=R
+TermPos2=R
+ZOrder=-9
+
+[Relation]
+Entity1=times
+Entity2=reservations
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=time_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,3900,6227,4749,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00800000
+ModifiedDateTime=20251207205720
+LineMode=0
+Bar1=390
+Bar2=623
+Bar3=475
+TermPos1=R
+TermPos2=R
+ZOrder=-7
+
+[Relation]
+Entity1=managers
+Entity2=interviewers
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=manager_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5900,6731,7300,R,R,""
+Dependence=0
+Caption=
+PName=
+LineColor=$00000080
+ModifiedDateTime=20251207205745
+LineMode=0
+Bar1=590
+Bar2=673
+Bar3=730
+TermPos1=R
+TermPos2=R
+ZOrder=-6
