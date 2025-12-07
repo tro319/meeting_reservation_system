@@ -8,7 +8,7 @@
           <mxGeometry height="149" width="471" x="39" y="41" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="930" width="1020" x="50" y="300" as="geometry" />
+          <mxGeometry height="930" width="1060" x="50" y="300" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;数値型 : loginId ←&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;session[ &quot;log_user_id&quot; ]&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="553" as="geometry" />
@@ -23,7 +23,7 @@
           <mxGeometry height="30" width="590" x="308" y="623" as="geometry" />
         </mxCell>
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;redirect[ &quot;reservations&quot; ] ← reservationInfos&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="284" y="696" as="geometry" />
+          <mxGeometry height="30" width="590" x="284" y="796" as="geometry" />
         </mxCell>
         <mxCell id="Huqtsanhw5f1xzZ61HUD-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=36;fontColor=#80708A;" value="&lt;font&gt;大域 field&lt;/font&gt;" vertex="1">
           <mxGeometry height="246" width="963" x="1139" y="38" as="geometry" />
@@ -34,14 +34,20 @@
         <mxCell id="y_rmSiP4a9WrNTzO88O2-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;" vertex="1">
           <mxGeometry height="20" width="20" x="230" y="504" as="geometry" />
         </mxCell>
-        <mxCell id="y_rmSiP4a9WrNTzO88O2-9" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;文字列型: 予約一覧取得へ ( HttpSession型: session, RedirectAttributes型: redirectAttributes )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="30" width="950.2938496583143" x="154.85615034168566" y="499" as="geometry" />
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-9" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;文字列型: 今日以降の予約一覧取得へ ( HttpSession型: session, RedirectAttributes型: redirectAttributes )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="950.2938496583143" x="199.99615034168568" y="499" as="geometry" />
         </mxCell>
         <mxCell id="RIIyzksVQ8HSW0idPgMg-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/reservations_view&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="284" y="726" as="geometry" />
+          <mxGeometry height="30" width="590" x="284" y="826" as="geometry" />
         </mxCell>
-        <mxCell id="wQ4fvcg0XHAQqTmXEPcc-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="List&amp;lt;Reservation&amp;gt;型 reservationInfos ← service.予約一覧取得処理(loginId)" vertex="1">
+        <mxCell id="wQ4fvcg0XHAQqTmXEPcc-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="List&amp;lt;Reservation&amp;gt;型: reservationInfos ← service.予約一覧取得処理(loginId)" vertex="1">
           <mxGeometry height="30" width="590" x="284" y="666" as="geometry" />
+        </mxCell>
+        <mxCell id="szj7cNcZmT4E8tC11ozN-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="日付型: today ← 今日の日付取得" vertex="1">
+          <mxGeometry height="30" width="590" x="284" y="696" as="geometry" />
+        </mxCell>
+        <mxCell id="szj7cNcZmT4E8tC11ozN-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="reservationInfos ← reservationInfos.stream().filter( reservation -&amp;gt; NOT reservation.getDate().isBefore( today ) ).toList()" vertex="1">
+          <mxGeometry height="30" width="706" x="284" y="726" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -63,8 +63,7 @@
 						
 						<td th:text="${reservation.interviewer.name}"></td>
 						<td th:text="${reservation.interviewer.kana}"></td>
-						<td>日付仮</td>
-<!--						<td th:text="${reservation.date}"></td>-->
+						<td th:text="${#temporals.format(reservation.date, 'yyyy年M月d日')}"></td>
 						<td th:text="${reservation.time.start}"></td>
 						<td><a th:href="@{/user/reservation?id=${reservation.id}}">詳細</a></td>
 						

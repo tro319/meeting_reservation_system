@@ -1,5 +1,6 @@
 package com.example.demo.controller.user;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import jakarta.servlet.http.HttpSession;
@@ -29,7 +30,7 @@ public class ReservationsGetController {
 	private final ReservationsGetService service;
 	
 	
-	/*　ユーザーの予約取得処理
+	/*　ユーザーの今日以降の予約一覧取得処理
 	 * 
 	 * @param session セッション値情報
 	 * @param redirectAttributes リダイレクト値情報
@@ -55,13 +56,14 @@ public class ReservationsGetController {
 		
 		List<Reservation> reservationInfos = service.getReservations(loginId);
 		
-		// テスト表示
+		// 今日以降に絞り込み
 		
-		for (Reservation rese : reservationInfos) {
-			
-			System.out.println(rese.getUser().getName());
-			
-		}
+		LocalDate today = LocalDate.now();
+		
+		reservationInfos = reservationInfos.stream()
+							 .filter(reservation -> !reservation.getDate().isBefore(today))
+							    .toList();
+	
 		
 		
 		redirectAttributes.addFlashAttribute("reservations", reservationInfos);
