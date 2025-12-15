@@ -80,7 +80,7 @@ public class LoginController {
 			
 			session.removeAttribute("user_login_data");
 			
-			return "redirect:/user/reservation_ables_get";
+			return "redirect:/user/reservations";
 			
 			
 			
