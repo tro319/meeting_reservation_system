@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.example.demo.model.form.user.SearchForm;
+
 import lombok.RequiredArgsConstructor;
 
 /*
@@ -50,7 +52,9 @@ public class ReservationsGetViewController {
 			
 		}
 		
+		SearchForm searchForm = new SearchForm();
 		
+		model.addAttribute("search_form", searchForm);
 		
 		return "user/reservations_view";
 			

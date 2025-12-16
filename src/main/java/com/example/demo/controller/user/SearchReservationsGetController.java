@@ -53,6 +53,15 @@ public class SearchReservationsGetController {
 			
 		}
 		
+		// 検索フォームが空なのか
+		
+		if (form == null || form.getTime() == 0) {
+			
+			return "redirect:/user/reservations";
+			
+		}
+		
+		
 		
 		
 		List<Reservation> reservationInfos = service.getReservations(loginId);
@@ -69,7 +78,7 @@ public class SearchReservationsGetController {
 		// 各検索値で絞り込み
 		
 		
-		if (form.getName() != null) {
+		if (!form.getName().isBlank() && form.getDate() != null) {
 			
 			reservationInfos = reservationInfos.stream().filter(reservation -> reservation.getInterviewer().getName().contains(form.getName())).toList();
 			
@@ -83,7 +92,7 @@ public class SearchReservationsGetController {
 			
 		}
 		
-		if (form.getDate() != null) {
+		if (!form.getDate().isBlank() && form.getDate() != null) {
 			
 			reservationInfos = reservationInfos.stream().filter(reservation -> reservation.getDate().toString().contains(form.getDate())).toList();
 			
@@ -92,10 +101,12 @@ public class SearchReservationsGetController {
 		
 		session.setAttribute("search_form", form);
 		
+		redirectAttributes.addFlashAttribute("search_form", form);
+		
 		redirectAttributes.addFlashAttribute("reservations", reservationInfos);
 		
 		
-		return "redirect:/user/reservations_view/search?name=" + form.getName() + "&date=" + form.getDate() + "&time=" + form.getTime();
+		return "redirect:/user/reservations_view/search";
 		
 		
 	}
