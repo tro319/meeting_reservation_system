@@ -17,13 +17,13 @@
           <mxGeometry height="30" width="590" x="292" y="1152" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( loginId == null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="288" y="583" as="geometry" />
+          <mxGeometry height="30" width="590" x="288" y="577" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/login&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="308" y="623" as="geometry" />
+          <mxGeometry height="30" width="590" x="308" y="602" as="geometry" />
         </mxCell>
-        <mxCell id="ZfGfXsy4YiebRTj8fB6C-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;redirect[ &quot;reservations&quot; ] ← reservationInfos&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="284" y="997" as="geometry" />
+        <mxCell id="ZfGfXsy4YiebRTj8fB6C-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;redirect[ &quot;search_form&quot; ] ← form&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="284" y="1026" as="geometry" />
         </mxCell>
         <mxCell id="Huqtsanhw5f1xzZ61HUD-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=36;fontColor=#80708A;" value="&lt;font&gt;大域 field&lt;/font&gt;" vertex="1">
           <mxGeometry height="246" width="963" x="1139" y="38" as="geometry" />
@@ -37,8 +37,8 @@
         <mxCell id="y_rmSiP4a9WrNTzO88O2-9" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;文字列型: 予約一覧取得へ ( HttpSession型: session, RedirectAttributes型: redirectAttributes, SearchForm型: form )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="1030" x="230" y="499" as="geometry" />
         </mxCell>
-        <mxCell id="RIIyzksVQ8HSW0idPgMg-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/reservations_view/search?name=&quot; + form.getName() + &quot;&amp;amp;date=&quot; + form.getDate() + &quot;&amp;amp;time=&quot; + form.getTime()" vertex="1">
-          <mxGeometry height="30" width="590" x="284" y="1027" as="geometry" />
+        <mxCell id="RIIyzksVQ8HSW0idPgMg-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/reservations_view/search&quot;" vertex="1">
+          <mxGeometry height="30" width="590" x="284" y="1065" as="geometry" />
         </mxCell>
         <mxCell id="wQ4fvcg0XHAQqTmXEPcc-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="List&amp;lt;Reservation&amp;gt;型: reservationInfos ← service.予約一覧取得処理(loginId)" vertex="1">
           <mxGeometry height="30" width="590" x="284" y="666" as="geometry" />
@@ -49,10 +49,10 @@
         <mxCell id="szj7cNcZmT4E8tC11ozN-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="reservationInfos ← reservationInfos.stream().filter( reservation -&amp;gt; NOT reservation.getDate().isBefore( today ) ).toList()" vertex="1">
           <mxGeometry height="30" width="706" x="284" y="726" as="geometry" />
         </mxCell>
-        <mxCell id="yriV2vHXWQ-M1yNKd7-t-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="reservationInfos ← reservationInfos.stream().filter( reservation -&amp;gt; reservation.getInterviewer().getName().contains(form.getName())&amp;nbsp; ).toList()" vertex="1">
+        <mxCell id="yriV2vHXWQ-M1yNKd7-t-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="reservationInfos ← reservationInfos.stream().filter( reservation -&amp;gt; reservation.getInterviewer().getName().contains(form.getName()&amp;nbsp; || reservation.getInterviewer().getKana().contains(form.getName()) )&amp;nbsp; ).toList()" vertex="1">
           <mxGeometry height="30" width="706" x="300" y="790" as="geometry" />
         </mxCell>
-        <mxCell id="yriV2vHXWQ-M1yNKd7-t-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( form.getName() != null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="yriV2vHXWQ-M1yNKd7-t-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if (&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;form.getName() != null &amp;amp;&amp;amp; !form.getName().isEmpty())&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="284" y="756" as="geometry" />
         </mxCell>
         <mxCell id="yriV2vHXWQ-M1yNKd7-t-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( form.getTime() &amp;gt; 0 )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
@@ -61,14 +61,26 @@
         <mxCell id="yriV2vHXWQ-M1yNKd7-t-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="reservationInfos ← reservationInfos.stream().filter( reservation -&amp;gt; reservation.getTime().getStart() == form.getTime()&amp;nbsp; ).toList()" vertex="1">
           <mxGeometry height="30" width="706" x="300" y="864" as="geometry" />
         </mxCell>
-        <mxCell id="yriV2vHXWQ-M1yNKd7-t-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( form.getDate() != null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="yriV2vHXWQ-M1yNKd7-t-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( &lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;form.getDate() != null &amp;amp;&amp;amp; !form.getDate().isEmpty() )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="284" y="902" as="geometry" />
         </mxCell>
-        <mxCell id="yriV2vHXWQ-M1yNKd7-t-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="reservationInfos ← reservationInfos.stream().filter( reservation -&amp;gt; reservation.getDate().toString().contains(form.getDate())&amp;nbsp; ).toList()" vertex="1">
-          <mxGeometry height="30" width="706" x="300" y="936" as="geometry" />
+        <mxCell id="yriV2vHXWQ-M1yNKd7-t-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="reservationInfos ← reservationInfos.stream().filter( reservation -&amp;gt; reservation.getDate().equals(searchDate)&amp;nbsp; ).toList()" vertex="1">
+          <mxGeometry height="30" width="706" x="300" y="961" as="geometry" />
         </mxCell>
         <mxCell id="IDxL_NpSXNaA-c_TYQAr-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="session[&quot;search_form&quot;] ← form&amp;nbsp;" vertex="1">
-          <mxGeometry height="30" width="590" x="285" y="977" as="geometry" />
+          <mxGeometry height="30" width="590" x="285" y="1003" as="geometry" />
+        </mxCell>
+        <mxCell id="U0HsmjHjVxyM55eyojtW-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;redirect[ &quot;reservations&quot; ] ← reservationInfos&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="284" y="1045" as="geometry" />
+        </mxCell>
+        <mxCell id="GSQkyfbmcanPiJYApNaQ-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;p data-pm-slice=&quot;1 1 []&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ((form.getName() == null || form.getName().isEmpty()) &amp;amp;&amp;amp; (form.getDate() == null || form.getDate().isEmpty())&amp;amp;&amp;amp; (form.getTime() == 0)) &lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="975" x="285" y="621" as="geometry" />
+        </mxCell>
+        <mxCell id="GSQkyfbmcanPiJYApNaQ-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/reservations&quot;" vertex="1">
+          <mxGeometry height="30" width="590" x="305" y="646" as="geometry" />
+        </mxCell>
+        <mxCell id="mD69c7NRx9T8ISCxlRJO-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="日付型: searchDate ← LocalDate.parse(form.getDate())" vertex="1">
+          <mxGeometry height="30" width="706" x="300" y="940" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

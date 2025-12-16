@@ -41,7 +41,7 @@
 							<div>
 								
 								<label for="date">面談日検索</label>
-								<input type="text" th:field="*{date}" /> 
+								<input type="date" th:field="*{date}" /> 
 								
 							</div>
 							
@@ -68,7 +68,7 @@
 							
 						</form>
 						
-						<div class="form-bottom" th:if="${search_form.name != null || search_form.date != null || search_form.time != 0}">
+						<div class="form-bottom" th:if="${ ( search_form.name != null && !search_form.name.isEmpty() ) || ( search_form.date != null && !search_form.date.isEmpty() ) || search_form.time != 0}">
 							
 							<a th:href="@{/user/reservations}">一覧に戻る</a>
 							

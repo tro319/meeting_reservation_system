@@ -55,7 +55,7 @@ public class SearchReservationsGetController {
 		
 		// 検索フォームが空なのか
 		
-		if (form == null || form.getTime() == 0) {
+		if ((form.getName() == null || form.getName().isEmpty()) && (form.getDate() == null || form.getDate().isEmpty())&& (form.getTime() == 0)) {
 			
 			return "redirect:/user/reservations";
 			
@@ -78,9 +78,9 @@ public class SearchReservationsGetController {
 		// 各検索値で絞り込み
 		
 		
-		if (!form.getName().isBlank() && form.getDate() != null) {
+		if (form.getDate() != null && !form.getName().isEmpty()) {
 			
-			reservationInfos = reservationInfos.stream().filter(reservation -> reservation.getInterviewer().getName().contains(form.getName())).toList();
+			reservationInfos = reservationInfos.stream().filter(reservation -> reservation.getInterviewer().getName().contains(form.getName()) || reservation.getInterviewer().getKana().contains(form.getName()) ).toList();
 			
 		}
 		
@@ -92,9 +92,11 @@ public class SearchReservationsGetController {
 			
 		}
 		
-		if (!form.getDate().isBlank() && form.getDate() != null) {
+		if (form.getDate() != null && !form.getDate().isEmpty()) {
 			
-			reservationInfos = reservationInfos.stream().filter(reservation -> reservation.getDate().toString().contains(form.getDate())).toList();
+			LocalDate searchDate = LocalDate.parse(form.getDate());
+			
+			reservationInfos = reservationInfos.stream().filter(reservation -> reservation.getDate().equals(searchDate)).toList();
 			
 			
 		}
