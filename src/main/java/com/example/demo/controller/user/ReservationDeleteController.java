@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.service.user.ReservationDeleteService;
+
 import lombok.RequiredArgsConstructor;
 
 
@@ -35,6 +37,7 @@ public class ReservationDeleteController {
 	@GetMapping("/user/reservation_delete")
 	
 	public String deleteReservation(HttpSession session, @RequestParam int id) {
+		
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
 		

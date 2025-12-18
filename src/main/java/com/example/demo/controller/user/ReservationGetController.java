@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Reservation;
+import com.example.demo.service.user.ReservationGetService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -38,6 +39,7 @@ public class ReservationGetController {
 	@GetMapping("/user/reservation")
 	
 	public String getReservation(HttpSession session, RedirectAttributes redirectAttributes, @RequestParam int id) {
+		
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
 		
