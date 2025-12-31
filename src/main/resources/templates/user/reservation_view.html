@@ -85,7 +85,7 @@
 			
 			<div class="link-btns">
 				
-				<p><a th:href="@{/user/reservation_delete}" onclick="return confirm('本当にキャンセルしますか？');">キャンセル</a></p>
+				<p><a th:href="@{/user/reservation_delete(id=${reservation.id})}" onclick="return confirm('本当にキャンセルしますか？');">キャンセル</a></p>
 				
 			</div>
 			

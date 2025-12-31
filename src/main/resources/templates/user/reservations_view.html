@@ -5,7 +5,7 @@
 <title>予約情報一覧画面　| 予約者</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body>
+<body th:attr="data-reservation-delete-result=${reservation_delete_result}">
 	
 
 	<header th:replace="~{/user/layouts/layout :: common_header_after}">
@@ -131,6 +131,14 @@
 	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
 		
 	</footer>
+	
+	<script>
+		
+		const deleteResult = document.body.dataset.reservationDeleteResult;
+		
+		if (deleteResult) window.alert(deleteResult);
+	
+	</script>
 
 </body>
 </html>
