@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>予約情報詳細画面　| 予約者</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+
+	<header th:replace="~{/user/layouts/layout :: common_header_after}">
+		
+		
+	</header>
+
+
+
+	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">予約情報詳細</h2>
+				
+			</div>
+			
+			<!--		<div class="sub-link">-->
+						
+			<!--			<a th:href="@{/users/signup}">会員登録へ</a>-->
+						
+			<!--		</div>-->
+			
+
+			
+		</div>
+		
+		
+		
+		<div class="container">
+			
+			
+			<table class="reservation-table" th:object="${reservation}">
+				
+				
+				
+				<tbody>
+					
+					<tr>
+						
+						<td>実施者名</td>
+						<td th:text="*{interviewer.name}"></td>
+						
+					</tr>
+					
+					<tr>
+						
+						<td>ふりがな</td>
+						<td th:text="*{interviewer.kana}"></td>
+						
+					</tr>
+					
+					<tr>
+						
+						<td>面談日</td>
+						<td th:text="*{#temporals.format(date, 'yyyy年M月d日')}"></td>
+						
+					</tr>
+					
+					<tr>
+						
+						<td>開始時間</td>
+						<td th:text="*{time.start} + '時'"></td>
+						
+					</tr>
+					
+					
+				</tbody>
+				
+				
+				
+			</table>
+			
+			
+			<div class="link-btns">
+				
+				<p><a th:href="@{/user/reservation_delete}" onclick="return confirm('本当にキャンセルしますか？');">キャンセル</a></p>
+				
+			</div>
+			
+			
+		</div>
+		
+	</main>
+	
+	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
+		
+	</footer>
+
+</body>
+</html>
