@@ -2,7 +2,7 @@ package com.example.demo.service.user;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.repository.user.UsersRepository;
+import com.example.demo.repository.UsersRepository;
 
 import lombok.RequiredArgsConstructor;
 

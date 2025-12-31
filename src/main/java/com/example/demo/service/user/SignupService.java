@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.model.entity.User;
 import com.example.demo.model.form.user.SignupForm;
-import com.example.demo.repository.user.UsersRepository;
+import com.example.demo.repository.UsersRepository;
 
 import lombok.RequiredArgsConstructor;
 
