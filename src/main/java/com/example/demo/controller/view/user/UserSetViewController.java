@@ -33,7 +33,7 @@ public class UserSetViewController {
 	 */
 	
 	@GetMapping("/user/user_update_view")
-	public String viewSet(HttpSession session, Model model, UserSetForm form) {
+	public String formView(HttpSession session, Model model, UserSetForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
 		
