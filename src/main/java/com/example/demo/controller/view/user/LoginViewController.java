@@ -33,7 +33,7 @@ public class LoginViewController {
 	 */
 	
 	@GetMapping("/user/login")
-	public String loginView(HttpSession session, Model model, LoginForm form) {
+	public String formView(HttpSession session, Model model, LoginForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
 		
