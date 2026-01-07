@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.example.demo.model.form.user.SignupForm;
+import com.example.demo.model.form.user.UserSignupForm;
 
 import lombok.RequiredArgsConstructor;
 
@@ -33,7 +33,7 @@ public class SignupViewController {
 	 */
 	
 	@GetMapping("/user/signup")
-	public String formView(HttpSession session, Model model, SignupForm form) {
+	public String formView(HttpSession session, Model model, UserSignupForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
 		
@@ -47,11 +47,11 @@ public class SignupViewController {
 			
 			model.addAttribute("signup_err_msg", errMsg);
 			
-			SignupForm signupForm = (SignupForm)session.getAttribute("user_signup_data");
+			UserSignupForm signupForm = (UserSignupForm)session.getAttribute("user_signup_data");
 			
 			if (signupForm == null) {
 				
-				signupForm = new SignupForm();
+				signupForm = new UserSignupForm();
 				
 				
 			}
@@ -86,7 +86,7 @@ public class SignupViewController {
 			
 		} else {
 			
-			SignupForm signupForm = (SignupForm)session.getAttribute("user_signup_data");
+			UserSignupForm signupForm = (UserSignupForm)session.getAttribute("user_signup_data");
 			
 			if (signupForm == null) {
 				

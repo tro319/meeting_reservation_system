@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.User;
-import com.example.demo.model.form.user.SignupForm;
+import com.example.demo.model.form.user.UserSignupForm;
 import com.example.demo.service.MailSendService;
-import com.example.demo.service.user.SignupService;
+import com.example.demo.service.user.UserSignupService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -26,7 +26,7 @@ import lombok.RequiredArgsConstructor;
 
 public class SignupController {
 	
-	private final SignupService service;
+	private final UserSignupService service;
 	
 	private final MailSendService mailService;
 	
@@ -41,7 +41,7 @@ public class SignupController {
 	 */
 	
 	@PostMapping("/user/signup/confirm")
-	public String confirm(HttpSession session, RedirectAttributes redirectAttributes, SignupForm form) {
+	public String confirm(HttpSession session, RedirectAttributes redirectAttributes, UserSignupForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
 		
@@ -118,7 +118,7 @@ public class SignupController {
 		} else {
 			
 			
-			SignupForm returnForm = (SignupForm)session.getAttribute("user_signup_data");
+			UserSignupForm returnForm = (UserSignupForm)session.getAttribute("user_signup_data");
 			
 			redirectAttributes.addFlashAttribute("user_signup_data", returnForm);
 			
@@ -141,7 +141,7 @@ public class SignupController {
 	 */
 	
 	@PostMapping("/user/signup")
-	public String register(HttpSession session, RedirectAttributes redirectAttributes, SignupForm form) {
+	public String register(HttpSession session, RedirectAttributes redirectAttributes, UserSignupForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
 		

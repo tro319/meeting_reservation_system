@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.example.demo.model.form.user.SearchForm;
+import com.example.demo.model.form.user.UserReservationsSearchForm;
 
 import lombok.RequiredArgsConstructor;
 
@@ -48,7 +48,7 @@ public class SearchReservationsGetViewController {
 			
 			if (!model.containsAttribute("reservations")) {
 				
-				SearchForm searchForm = (SearchForm)session.getAttribute("search_form");
+				UserReservationsSearchForm searchForm = (UserReservationsSearchForm)session.getAttribute("search_form");
 				
 				if (searchForm != null) {
 					

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Reservation;
-import com.example.demo.service.user.ReservationsGetService;
+import com.example.demo.service.user.UserReservationsGetService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -27,7 +27,7 @@ import lombok.RequiredArgsConstructor;
 
 public class ReservationsGetController {
 	
-	private final ReservationsGetService service;
+	private final UserReservationsGetService service;
 	
 	
 	/*　ユーザーの今日以降の予約一覧取得処理

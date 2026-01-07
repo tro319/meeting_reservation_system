@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.service.user.ReservationDeleteService;
+import com.example.demo.service.user.UserReservationDeleteService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -23,7 +23,7 @@ import lombok.RequiredArgsConstructor;
 
 public class ReservationDeleteController {
 	
-	private final ReservationDeleteService service;
+	private final UserReservationDeleteService service;
 	
 	
 	/*　予約キャンセル処理

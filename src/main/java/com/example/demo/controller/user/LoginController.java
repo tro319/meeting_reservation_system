@@ -9,7 +9,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.User;
 import com.example.demo.model.form.LoginForm;
-import com.example.demo.service.user.LoginService;
+import com.example.demo.service.user.UserLoginService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -25,7 +25,7 @@ import lombok.RequiredArgsConstructor;
 
 public class LoginController {
 	
-	private final LoginService service;
+	private final UserLoginService service;
 	
 	private final PasswordEncoder passEncoder;
 	

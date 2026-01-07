@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Reservation;
-import com.example.demo.model.form.user.SearchForm;
-import com.example.demo.service.user.ReservationsGetService;
+import com.example.demo.model.form.user.UserReservationsSearchForm;
+import com.example.demo.service.user.UserReservationsGetService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -28,7 +28,7 @@ import lombok.RequiredArgsConstructor;
 
 public class SearchReservationsGetController {
 	
-	private final ReservationsGetService service;
+	private final UserReservationsGetService service;
 	
 	
 	/*　ユーザーの予約一覧取得処理 (検索後)
@@ -41,7 +41,7 @@ public class SearchReservationsGetController {
 	
 	@GetMapping("/user/reservations/search")
 	
-	public String getReservations(HttpSession session, RedirectAttributes redirectAttributes, SearchForm form) {
+	public String getReservations(HttpSession session, RedirectAttributes redirectAttributes, UserReservationsSearchForm form) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_user_id");
 		

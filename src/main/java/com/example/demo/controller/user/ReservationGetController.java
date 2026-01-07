@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Reservation;
-import com.example.demo.service.user.ReservationGetService;
+import com.example.demo.service.user.UserReservationGetService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -25,7 +25,7 @@ import lombok.RequiredArgsConstructor;
 
 public class ReservationGetController {
 	
-	private final ReservationGetService service;
+	private final UserReservationGetService service;
 	
 	
 	/*　予約取得処理
