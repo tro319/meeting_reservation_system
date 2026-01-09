@@ -3,7 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <title>ユーザー登録画面 | 予約者</title>
+
+<!-- CSS -->
 <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" th:src="@{/js/jquery.autoKana.js}"></script>
+
+<!-- ふりがな自動入力処理 -->
+
+<script type="text/javascript">
+	
+	$(function() {
+		$.fn.autoKana("#name", "#kana");
+	});
+	
+</script>
+
+
 </head>
 <body>
 	
