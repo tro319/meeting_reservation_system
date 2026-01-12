@@ -1,4 +1,4 @@
-package com.example.demo.service.user;
+package com.example.demo.service.interviewer;
 
 import java.util.List;
 
@@ -9,6 +9,7 @@ import com.example.demo.repository.ReservationsRepository;
 
 import lombok.RequiredArgsConstructor;
 
+
 /*
  * 予約一覧取得処理サービス群
  * 
@@ -16,25 +17,25 @@ import lombok.RequiredArgsConstructor;
  * 
  */
 
-@Service
+@Service("interviewerReservationsGetService")
 @RequiredArgsConstructor
 
-public class UserReservationsGetService {
+public class ReservationsGetService {
 	
 	
 	private final ReservationsRepository repository;
 	
-	/* ユーザーの予約一覧取得処理
+	/* 実施者が担当の予約一覧取得処理
 	 * 
 	 * 
-	 * @param userId ログイン中のユーザーid
+	 * @param interviewerId ログイン中の実施者id
 	 * @return 取得した予約リスト
 	 * 
 	 */
 	
-	public List<Reservation> getReservations(Integer userId) {
+	public List<Reservation> getReservations(Integer interviewerId) {
 		
-		List<Reservation> reservationInfos = repository.findByUserId(userId);
+		List<Reservation> reservationInfos = repository.findByInterviewerId(interviewerId);
 		
 		return reservationInfos;
 		

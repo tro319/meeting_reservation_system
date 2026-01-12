@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 
-public class InterviewerSignupForm {
+public class SignupForm {
 	
 	
 	private String name;

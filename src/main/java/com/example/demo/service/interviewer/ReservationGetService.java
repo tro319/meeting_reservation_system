@@ -14,10 +14,10 @@ import com.example.demo.repository.ReservationsRepository;
 
 import lombok.RequiredArgsConstructor;
 
-@Service
+@Service("interviewerReservationGetService")
 @RequiredArgsConstructor
 
-public class InterviewerReservationGetService {
+public class ReservationGetService {
 	
 	
 	private final ReservationsRepository repository;

@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 
-public class ManagerInterviewersSearchForm {
+public class SearchForm {
 	
 	private String name;
 	

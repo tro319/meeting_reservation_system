@@ -13,10 +13,10 @@ import lombok.RequiredArgsConstructor;
  * 
  */
 
-@Service
+@Service("managerInterviewerDeleteService")
 @RequiredArgsConstructor
 
-public class ManagerInterviewerDeleteService {
+public class InterviewerDeleteService {
 
 	private final InterviewersRepository repository;
 	

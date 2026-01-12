@@ -1,4 +1,4 @@
-package com.example.demo.controller.user;
+package com.example.demo.controller.interviewer;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Reservation;
-import com.example.demo.model.form.user.SearchForm;
-import com.example.demo.service.user.ReservationsGetService;
+import com.example.demo.model.form.interviewer.SearchForm;
+import com.example.demo.service.interviewer.ReservationsGetService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -23,7 +23,7 @@ import lombok.RequiredArgsConstructor;
  * 
  */
 
-@Controller
+@Controller("interviewerSearchReservationsGetController")
 @RequiredArgsConstructor
 
 public class SearchReservationsGetController {
@@ -31,7 +31,7 @@ public class SearchReservationsGetController {
 	private final ReservationsGetService service;
 	
 	
-	/*　ユーザーの予約一覧取得処理 (検索後)
+	/*　実施者が担当する、予約一覧取得処理 (検索後)
 	 * 
 	 * @param session セッション値情報
 	 * @param redirectAttributes リダイレクト値情報
@@ -40,17 +40,17 @@ public class SearchReservationsGetController {
 	 * 
 	 */
 	
-	@GetMapping("/user/reservations/search")
+	@GetMapping("/interviewer/reservations/search")
 	
 	public String getReservations(HttpSession session, RedirectAttributes redirectAttributes, SearchForm form) {
 		
-		Integer loginId = (Integer)session.getAttribute("log_user_id");
+		Integer loginId = (Integer)session.getAttribute("log_interviewer_id");
 		
 		// ログインしているかどうか
 		
 		if (loginId == null) {
 			
-			return "redirect:/user/login";
+			return "redirect:/interviewer/login";
 			
 		}
 		
@@ -58,7 +58,7 @@ public class SearchReservationsGetController {
 		
 		if ((form.getName() == null || form.getName().isEmpty()) && (form.getDate() == null || form.getDate().isEmpty())&& (form.getTime() == 0)) {
 			
-			return "redirect:/user/reservations";
+			return "redirect:/interviewer/reservations";
 			
 		}
 		
@@ -81,7 +81,7 @@ public class SearchReservationsGetController {
 		
 		if (form.getName() != null && !form.getName().isEmpty()) {
 			
-			reservationInfos = reservationInfos.stream().filter(reservation -> reservation.getInterviewer().getName().contains(form.getName()) || reservation.getInterviewer().getKana().contains(form.getName()) ).toList();
+			reservationInfos = reservationInfos.stream().filter(reservation -> reservation.getUser().getName().contains(form.getName()) || reservation.getUser().getKana().contains(form.getName()) ).toList();
 			
 		}
 		
@@ -109,7 +109,7 @@ public class SearchReservationsGetController {
 		redirectAttributes.addFlashAttribute("reservations", reservationInfos);
 		
 		
-		return "redirect:/user/reservations_view/search";
+		return "redirect:/interviewer/reservations_view/search";
 		
 		
 	}

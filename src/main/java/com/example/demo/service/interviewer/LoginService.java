@@ -14,10 +14,10 @@ import lombok.RequiredArgsConstructor;
  * 
  */
 
-@Service
+@Service("interviewerLoginService")
 @RequiredArgsConstructor
 
-public class InterviewerLoginService {
+public class LoginService {
 
 	private final InterviewersRepository repository;
 	

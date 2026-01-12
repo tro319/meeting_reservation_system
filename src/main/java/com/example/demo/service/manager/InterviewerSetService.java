@@ -19,10 +19,10 @@ import lombok.RequiredArgsConstructor;
  * 
  */
 
-@Service
+@Service("managerInterviewerSetService")
 @RequiredArgsConstructor
 
-public class ManagerInterviewerSetService {
+public class InterviewerSetService {
 
 	private final PasswordEncoder passEncoder;
 	

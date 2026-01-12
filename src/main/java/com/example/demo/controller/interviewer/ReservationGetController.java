@@ -1,4 +1,4 @@
-package com.example.demo.controller.user;
+package com.example.demo.controller.interviewer;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Reservation;
-import com.example.demo.service.user.ReservationGetService;
+import com.example.demo.service.interviewer.ReservationGetService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
  * 
  */
 
-@Controller
+@Controller("interviewerReservationGetController")
 @RequiredArgsConstructor
 
 public class ReservationGetController {
@@ -37,18 +37,18 @@ public class ReservationGetController {
 	 * 
 	 */
 	
-	@GetMapping("/user/reservation")
+	@GetMapping("/interviewer/reservation")
 	
 	public String getReservation(HttpSession session, RedirectAttributes redirectAttributes, @RequestParam int id) {
 		
 		
-		Integer loginId = (Integer)session.getAttribute("log_user_id");
+		Integer loginId = (Integer)session.getAttribute("log_interviewer_id");
 		
 		// ログインしているかどうか
 		
 		if (loginId == null) {
 			
-			return "redirect:/user/login";
+			return "redirect:/interviewer/login";
 			
 		}
 		
@@ -61,7 +61,7 @@ public class ReservationGetController {
 		
 		session.setAttribute("reservation_id", reservationId);
 		
-		return "redirect:/user/reservation_view";
+		return "redirect:/interviewer/reservation_view";
 		
 		
 	}

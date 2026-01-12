@@ -1,4 +1,4 @@
-package com.example.demo.controller.user;
+package com.example.demo.controller.interviewer;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Reservation;
-import com.example.demo.service.user.ReservationsGetService;
+import com.example.demo.service.interviewer.ReservationsGetService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -22,7 +22,7 @@ import lombok.RequiredArgsConstructor;
  * 
  */
 
-@Controller
+@Controller("interviewerReservationsGetController")
 @RequiredArgsConstructor
 
 public class ReservationsGetController {
@@ -30,7 +30,7 @@ public class ReservationsGetController {
 	private final ReservationsGetService service;
 	
 	
-	/*　ユーザーの今日以降の予約一覧取得処理
+	/*　実施者が担当する、今日以降の予約一覧取得処理
 	 * 
 	 * @param session セッション値情報
 	 * @param redirectAttributes リダイレクト値情報
@@ -38,17 +38,17 @@ public class ReservationsGetController {
 	 * 
 	 */
 	
-	@GetMapping("/user/reservations")
+	@GetMapping("/interviewer/reservations")
 	
 	public String getReservations(HttpSession session, RedirectAttributes redirectAttributes) {
 		
-		Integer loginId = (Integer)session.getAttribute("log_user_id");
+		Integer loginId = (Integer)session.getAttribute("log_interviewer_id");
 		
 		// ログインしているかどうか
 		
 		if (loginId == null) {
 			
-			return "redirect:/user/login";
+			return "redirect:/interviewer/login";
 			
 		}
 		
@@ -68,7 +68,7 @@ public class ReservationsGetController {
 		
 		redirectAttributes.addFlashAttribute("reservations", reservationInfos);
 		
-		return "redirect:/user/reservations_view";
+		return "redirect:/interviewer/reservations_view";
 		
 		
 	}

@@ -1,4 +1,4 @@
-package com.example.demo.model.form.user;
+package com.example.demo.model.form.interviewer;
 
 import lombok.Data;
 
@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 
-public class UserReservationsSearchForm {
+public class SearchForm {
 	
 	private String name;
 	

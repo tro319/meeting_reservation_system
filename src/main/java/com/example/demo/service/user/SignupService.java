@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 
-public class UserSignupService {
+public class SignupService {
 
 	
 	private final UsersRepository repository;

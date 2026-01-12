@@ -10,7 +10,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.example.demo.model.entity.User;
 import com.example.demo.model.form.user.UserSignupForm;
 import com.example.demo.service.MailSendService;
-import com.example.demo.service.user.UserSignupService;
+import com.example.demo.service.user.SignupService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -26,7 +26,7 @@ import lombok.RequiredArgsConstructor;
 
 public class SignupController {
 	
-	private final UserSignupService service;
+	private final SignupService service;
 	
 	private final MailSendService mailService;
 	

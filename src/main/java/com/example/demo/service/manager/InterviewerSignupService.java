@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.model.entity.Interviewer;
 import com.example.demo.model.entity.Manager;
-import com.example.demo.model.form.manager.InterviewerSignupForm;
+import com.example.demo.model.form.manager.SignupForm;
 import com.example.demo.repository.InterviewersRepository;
 import com.example.demo.repository.ManagersRepository;
 
@@ -19,10 +19,10 @@ import lombok.RequiredArgsConstructor;
  * 
  */
 
-@Service
+@Service("managerInterviewerSignupService")
 @RequiredArgsConstructor
 
-public class ManagerInterviewerSignupService {
+public class InterviewerSignupService {
 
 	
 	private final InterviewersRepository repository;
@@ -43,7 +43,7 @@ public class ManagerInterviewerSignupService {
 	 * 
 	 */
 	
-	public Interviewer register(InterviewerSignupForm form, Integer managerId) {
+	public Interviewer register(SignupForm form, Integer managerId) {
 		
 		Interviewer interviewerInfo = mapper.map(form, Interviewer.class);
 		
@@ -69,7 +69,7 @@ public class ManagerInterviewerSignupService {
 	 */
 	
 	
-	public Boolean checkDouble(InterviewerSignupForm form) {
+	public Boolean checkDouble(SignupForm form) {
 		
 		String name = form.getName();
 		

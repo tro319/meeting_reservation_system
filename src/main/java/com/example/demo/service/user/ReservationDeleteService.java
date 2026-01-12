@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 
-public class UserReservationDeleteService {
+public class ReservationDeleteService {
 	
 	
 	private final ReservationsRepository repository;
