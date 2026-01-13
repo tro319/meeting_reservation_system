@@ -2,13 +2,13 @@
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>ユーザーログイン画面　| ユーザー 面談予約システム</title>
+<title>実施者ログイン画面 | 実施者 面談予約システム</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 
 <body>
 	
-	<header th:replace="~{/user/layouts/layout :: common_header_before}">
+	<header th:replace="~{/interviewer/layouts/layout :: common_header_before}">
 		
 		
 	</header>
@@ -22,15 +22,15 @@
 			
 			<div class="sub-title">
 				
-				<h2 class="sub-title">ユーザーログイン画面</h2>
+				<h2 class="sub-title">実施者ログイン画面</h2>
 				
 			</div>
 			
-			<div class="sub-link">
+<!--			<div class="sub-link">-->
 				
-				<a th:href="@{/user/signup}">ユーザー登録へ</a>
+<!--				<a th:href="@{/user/signup}">ユーザー登録へ</a>-->
 				
-			</div>
+<!--			</div>-->
 			
 			
 		</div>
@@ -43,7 +43,7 @@
 		
 			<p class="err" th:text="${login_result}"></p>
 			
-			<form th:action="@{/user/login}" method="post" th:object="${user_login_data}" class="form">
+			<form th:action="@{/interviewer/login}" method="post" th:object="${interviewer_login_data}" class="form">
 		
 				<div>
 					
@@ -68,11 +68,11 @@
 				
 			</form>
 			
-			<div id="repass_email_link">
+<!--			<div id="repass_email_link">-->
 				
-				<p><a th:href="@{/user/repass_email}">パスワードを忘れた方</a></p>
+<!--				<p><a th:href="@{/user/repass_email}">パスワードを忘れた方</a></p>-->
 				
-			</div>
+<!--			</div>-->
 			
 		</div>
 	

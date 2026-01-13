@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>予約詳細画面　| ユーザー 面談予約システム</title>
+<title>予約詳細画面　| 実施者 面談予約システム</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body>
 	
 
-	<header th:replace="~{/user/layouts/layout :: common_header_after}">
+	<header th:replace="~{/interviewer/layouts/layout :: common_header_after}">
 		
 		
 	</header>
@@ -49,15 +49,15 @@
 					
 					<tr>
 						
-						<td>実施者名</td>
-						<td th:text="*{interviewer.name}"></td>
+						<td>予約者名</td>
+						<td th:text="*{user.name}"></td>
 						
 					</tr>
 					
 					<tr>
 						
 						<td>ふりがな</td>
-						<td th:text="*{interviewer.kana}"></td>
+						<td th:text="*{user.kana}"></td>
 						
 					</tr>
 					
@@ -83,18 +83,18 @@
 			</table>
 			
 			
-			<div class="link-btns">
+<!--			<div class="link-btns">-->
 				
-				<p><a th:href="@{/user/reservation_delete(id=${reservation.id})}" onclick="return confirm('本当にキャンセルしますか？');">キャンセル</a></p>
+<!--				<p><a th:href="@{/user/reservation_delete(id=${reservation.id})}" onclick="return confirm('本当にキャンセルしますか？');">キャンセル</a></p>-->
 				
-			</div>
+<!--			</div>-->
 			
 			
 		</div>
 		
 	</main>
 	
-	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
+	<footer th:replace="~{/interviewer/layouts/layout :: common_footer_after}">
 		
 	</footer>
 	

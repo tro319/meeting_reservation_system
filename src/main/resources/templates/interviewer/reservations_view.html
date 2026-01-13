@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>予約一覧画面　| ユーザー 面談予約システム</title>
+<title>予約一覧画面　| 実施者 面談予約システム</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body th:attr="data-reservation-delete-result=${reservation_delete_result}">
+<body>
 	
 
-	<header th:replace="~{/user/layouts/layout :: common_header_after}">
+	<header th:replace="~{/interviewer/layouts/layout :: common_header_after}">
 		
 		
 	</header>
@@ -22,18 +22,18 @@
 			
 			<div class="sub-title">
 				
-				<h2 class="sub-title">予約一覧</h2>
+				<h2 class="sub-title">担当予約状況</h2>
 				
 			</div>
 			
 			<div class="form-cover">
 				
 				
-				<form class="form search-form" method="get" th:action="@{/user/reservations/search}" th:object="${search_form}">
+				<form class="form search-form" method="get" th:action="@{/interviewer/reservations/search}" th:object="${search_form}">
 							
 							<div>
 								
-								<label for="name">実施者検索</label>
+								<label for="name">予約者検索</label>
 								<input type="text" th:field="*{name}" /> 
 								
 							</div>
@@ -70,7 +70,7 @@
 						
 						<div class="form-bottom" th:if="${ ( search_form.name != null && !search_form.name.isEmpty() ) || ( search_form.date != null && !search_form.date.isEmpty() ) || search_form.time != 0}">
 							
-							<a th:href="@{/user/reservations}">一覧に戻る</a>
+							<a th:href="@{/interviewer/reservations}">一覧に戻る</a>
 							
 						</div>
 						
@@ -90,7 +90,7 @@
 					
 					<tr>
 						
-						<th>担当者名</th>
+						<th>予約者名</th>
 						<th>ふりがな</th>
 						<th>面談日</th>
 						<th>開始時間</th>
@@ -107,11 +107,11 @@
 					
 					<tr th:if="${!#lists.isEmpty(reservations)}" th:each="reservation : ${reservations}">
 						
-						<td th:text="${reservation.interviewer.name}"></td>
-						<td th:text="${reservation.interviewer.kana}"></td>
+						<td th:text="${reservation.user.name}"></td>
+						<td th:text="${reservation.user.kana}"></td>
 						<td th:text="${#temporals.format(reservation.date, 'yyyy年M月d日')}"></td>
 						<td th:text="${reservation.time.start}"></td>
-						<td><a th:href="@{/user/reservation(id=${reservation.id})}">詳細</a></td>
+						<td><a th:href="@{/interviewer/reservation(id=${reservation.id})}">詳細</a></td>
 						
 					</tr>
 					
@@ -128,19 +128,12 @@
 		
 	</main>
 	
-	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
+	<footer th:replace="~{/interviewer/layouts/layout :: common_footer_after}">
 		
 	</footer>
 	
 	<script th:src="@{/js/original.js}"></script>
 	
-	<script>
-		
-		const deleteResult = document.body.dataset.reservationDeleteResult;
-		
-		if (deleteResult) window.alert(deleteResult);
-	
-	</script>
 
 </body>
 </html>

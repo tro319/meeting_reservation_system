@@ -84,13 +84,18 @@ public class LoginController {
 			
 			
 			
+			
 		} else {
 			
 			session.setAttribute("login_result",  "メールアドレスが間違っています");
 			
+			System.out.println(passEncoder.encode(form.getPass()));
+			
 			return "redirect:/interviewer/login";
 			
+			
 		}
+		
 		
 	}
 	

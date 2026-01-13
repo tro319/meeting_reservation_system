@@ -40,6 +40,8 @@ public class LogoutController {
 			
 		}
 		
+		session.removeAttribute("login_result");
+		
 		session.removeAttribute("log_interviewer_id");
 		
 		return "redirect:/interviewer/login";
