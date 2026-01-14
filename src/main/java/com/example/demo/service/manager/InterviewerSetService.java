@@ -58,7 +58,7 @@ public class InterviewerSetService {
 	 * 
 	 */
 	
-	public Interviewer setUser(Integer id, Map<String, String> updates, Integer managerId) {
+	public Interviewer setInterviewer(Integer id, Map<String, String> updates, Integer managerId) {
 		
 		Interviewer interviewerInfo = repository.findById(id).orElse(null);
 		
