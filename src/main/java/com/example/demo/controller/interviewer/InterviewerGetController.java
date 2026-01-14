@@ -36,7 +36,7 @@ public class InterviewerGetController {
 	 */
 	
 	@GetMapping("/interviewer/interviewer_get")
-	public String getUser(HttpSession session, RedirectAttributes redirectAttributes) {
+	public String getInterviewer(HttpSession session, RedirectAttributes redirectAttributes) {
 		
 		Integer loginId = (Integer)session.getAttribute("log_interviewer_id");
 		
