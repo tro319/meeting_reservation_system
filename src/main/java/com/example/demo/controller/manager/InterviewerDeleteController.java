@@ -59,7 +59,7 @@ public class InterviewerDeleteController {
 		service.deleteInterviewer(interviewerId);
 		
 		
-		redirectAttributes.addFlashAttribute("delete_result", "削除が完了しました!");
+		session.setAttribute("delete_result", "削除が完了しました!");
 		
 		return "redirect:/manager/interviewers";
 		

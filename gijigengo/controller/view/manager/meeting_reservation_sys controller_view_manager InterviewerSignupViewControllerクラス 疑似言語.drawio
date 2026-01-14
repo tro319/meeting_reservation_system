@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.9">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.3.1">
   <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
     <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -55,7 +55,7 @@
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/manager/interviewer_signup&quot;" vertex="1">
           <mxGeometry height="30" width="590" x="1322.5" y="826" as="geometry" />
         </mxCell>
-        <mxCell id="ZfGfXsy4YiebRTj8fB6C-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;manager/interviewer_signup/confirm&quot;" vertex="1">
+        <mxCell id="ZfGfXsy4YiebRTj8fB6C-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;manager/interviewer_signup_confirm&quot;" vertex="1">
           <mxGeometry height="30" width="590" x="1315" y="880" as="geometry" />
         </mxCell>
         <mxCell id="ZfGfXsy4YiebRTj8fB6C-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="SignupForm型: signupForm ←&amp;nbsp;session[ &quot;interviewer_signup_data&quot; ]" vertex="1">

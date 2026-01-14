@@ -68,6 +68,7 @@ public class LoginController {
 				
 				session.setAttribute("login_result",  "パスワードが間違っています");
 				
+				
 				return "redirect:/manager/login";
 				
 			}
@@ -80,6 +81,7 @@ public class LoginController {
 			
 			session.removeAttribute("manager_login_data");
 			
+			
 			return "redirect:/manager/interviewers";
 			
 			
@@ -88,6 +90,7 @@ public class LoginController {
 		} else {
 			
 			session.setAttribute("login_result",  "メールアドレスが間違っています");
+			
 			
 			return "redirect:/manager/login";
 			

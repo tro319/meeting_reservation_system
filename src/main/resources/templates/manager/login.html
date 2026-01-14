@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>管理者ログイン画面　| 管理者 面談予約システム</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+
+<body>
+	
+	<header th:replace="~{/manager/layouts/layout :: common_header_before}">
+		
+		
+	</header>
+	
+	
+	
+	<main>
+	
+	
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">管理者ログイン画面</h2>
+				
+			</div>
+			
+<!--			<div class="sub-link">-->
+				
+<!--				<a th:href="@{/user/signup}">ユーザー登録へ</a>-->
+				
+<!--			</div>-->
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		<div class="container">
+		
+			<p class="err" th:text="${login_result}"></p>
+			
+			<form th:action="@{/manager/login}" method="post" th:object="${manager_login_data}" class="form">
+		
+				<div>
+					
+					<label>email</label>
+					<input type="email" th:field="*{email}" required />
+				
+				</div>
+				
+				<div>
+					
+					<label>パスワード</label>
+					<input type="password" th:field="*{pass}" required />
+		
+				</div>
+				
+				<div class="submit-btns">
+					
+					<input type="submit" value="ログイン" />
+		
+				</div>
+		
+				
+			</form>
+			
+<!--			<div id="repass_email_link">-->
+				
+<!--				<p><a th:href="@{/user/repass_email}">パスワードを忘れた方</a></p>-->
+				
+<!--			</div>-->
+			
+		</div>
+	
+	</main>
+		
+
+	<script>
+		
+		
+	</script>
+	
+
+</body>
+</html>

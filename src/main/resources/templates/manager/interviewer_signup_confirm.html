@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>実施者登録確認画面 | 管理者 面談予約システム</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+	<header th:replace="~{/manager/layouts/layout :: common_header_after}">
+		
+		
+	</header>
+	
+	
+	
+	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">実施者登録確認</h2>
+				
+			</div>
+			
+<!--			<div class="sub-link">-->
+				
+<!--				<a th:href="@{/user/login}">ログインへ</a>-->
+				
+<!--			</div>-->
+			
+			
+		</div>
+		
+		
+		
+		
+		<div class="container">
+			
+			
+			<form th:action="@{/manager/interviewer_signup}" method="post" th:object="${interviewer_signup_data}" class="form">
+				
+				<div>
+					
+					<label>実施者名</label>
+					<input type="hidden" th:field="*{name}" value="${name}" required /><span th:text="*{name}"></span>
+
+				</div>
+				
+				<div>
+					
+					<label>ふりがな</label>
+					<input type="hidden" th:field="*{kana}" value="${kana}" required /><span th:text="*{kana}"></span>
+
+				</div>
+
+				<div>
+					
+					<label>email</label>
+					<input type="hidden" th:field="*{email}" value="${email}" required /><span th:text="*{email}"></span>
+				
+				</div>
+				
+				<div>
+					
+					<label>パスワード</label>
+					<input type="hidden" th:field="*{pass}" value="${pass}" required /><span>パスワードは表示されません</span>
+
+				</div>
+
+				
+				<div class="submit-btns">
+					
+					<button type="button" onclick="window.location.href='/manager/interviewer_signup/return'">修正</button>	
+					<input type="submit" value="登録" />
+
+				</div>
+
+				
+			</form>
+			
+
+			
+			
+		</div>
+		
+		
+	</main>
+	
+	<footer th:replace="~{/manager/layouts/layout :: common_footer_after}">
+		
+	</footer>
+
+	<script th:src="@{/js/original.js}"></script>
+
+
+</body>
+</html>

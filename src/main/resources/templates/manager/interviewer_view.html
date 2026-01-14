@@ -2,15 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>実施者情報確認画面 | 実施者 面談予約システム</title>
+<title>実施者詳細画面 | 管理者 面談予約システム</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 
 <!-- JavaScript で使用する値受け取り-->
 
-<body>
+<body th:attr="data-result=${result}">
 	
-	<header th:replace="~{/interviewer/layouts/layout :: common_header_after}">
+	<header th:replace="~{/manager/layouts/layout :: common_header_after}">
 		
 
 		
@@ -23,7 +23,7 @@
 			
 			<div class="sub-title">
 				
-				<h2 class="sub-title">実施者情報確認</h2>
+				<h2 class="sub-title">実施者詳細</h2>
 				
 			</div>
 			
@@ -81,12 +81,12 @@
 			</table>
 			
 			
-<!--			<div class="link-btns">-->
+			<div class="link-btns">
 				
-<!--				<p><a th:href="@{/interviewer/user_update}">更新</a></p>-->
-<!--				<p><a th:href="@{/user/user_delete}" onclick="return confirm('本当に退会しますか?');">退会</a></p>-->
+				<p><a th:href="@{/manager/interviewer_update(id=${interviewer.id})}">更新</a></p>
+				<p><a th:href="@{/manager/interviewer_delete(id=${interviewer.id})}" onclick="return confirm('本当に削除しますか?');">削除</a></p>
 				
-<!--			</div>-->
+			</div>
 			
 
 			
@@ -97,13 +97,21 @@
 		
 	</main>
 	
-	<footer th:replace="~{/interviewer/layouts/layout :: common_footer_after}">
+	<footer th:replace="~{/manager/layouts/layout :: common_footer_after}">
 		
 	</footer>
 	
 	<script th:src="@{/js/original.js}"></script>
 	
-
+	<script>
+		
+		const result = document.body.dataset.result;
+		
+		
+		if (result) window.alert(result);
+		
+		
+	</script>
 	
 
 </body>

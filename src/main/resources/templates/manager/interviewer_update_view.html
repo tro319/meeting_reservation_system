@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>ユーザー情報更新フォーム画面 | ユーザー 面談予約システム</title>
+<title>実施者情報更新フォーム画面 | 管理者 面談予約システム</title>
 
 <!-- CSS -->
 <link rel="stylesheet" th:href="@{/css/style.css}" />
@@ -26,7 +26,7 @@
 </head>
 <body>
 	
-	<header th:replace="~{/user/layouts/layout :: common_header_after}">
+	<header th:replace="~{/manager/layouts/layout :: common_header_after}">
 		
 		
 	</header>
@@ -40,13 +40,13 @@
 			
 			<div class="sub-title">
 				
-				<h2 class="sub-title">ユーザー情報更新フォーム</h2>
+				<h2 class="sub-title">実施者情報更新フォーム</h2>
 				
 			</div>
 			
 <!--			<div class="sub-link">-->
 				
-<!--				<a th:href="@{/users/login}">ログインへ</a>-->
+<!--				<a th:href="@{/manager/interviewer_get(id=${interviewer.id})}">実施者詳細へ</a>-->
 				
 <!--			</div>-->
 			
@@ -62,13 +62,13 @@
 			
 
 			
-			<form th:action="@{/user/user_update}" method="post" th:object="${user_set_data}" class="form">
+			<form th:action="@{/manager/interviewer_update}" method="post" th:object="${interviewer_set_data}" class="form">
 				
 				
 				
 				<div>
 					
-					<label>ユーザーネーム</label>
+					<label>実施者名</label>
 					<input type="text" th:field="*{name}" required />
 					
 					<input type="hidden" th:field="*{hidName}" required />
@@ -124,7 +124,7 @@
 		
 	</main>
 	
-	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
+	<footer th:replace="~{/manager/layouts/layout :: common_footer_after}">
 		
 	</footer>
 

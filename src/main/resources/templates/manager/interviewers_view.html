@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>実施者一覧画面　| 管理者 面談予約システム</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body th:attr="data-delete-result=${delete_result}">
+	
+
+	<header th:replace="~{/manager/layouts/layout :: common_header_after}">
+		
+		
+	</header>
+
+
+
+	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">実施者一覧</h2>
+				
+			</div>
+			
+			<div class="form-cover">
+				
+				
+				<form class="form search-form" method="get" th:action="@{/manager/interviewers/search}" th:object="${search_form}">
+							
+							<div>
+								
+								<label for="name">実施者検索</label>
+								<input type="text" th:field="*{name}" /> 
+								
+							</div>
+							
+							
+							<div class="submit-btns">
+								
+								<input type="submit" value="検索" />
+								
+							</div>
+							
+							
+				</form>
+						
+						<div class="form-bottom" th:if="${ search_form.name != null && !search_form.name.isEmpty() }">
+							
+							<a th:href="@{/manager/interviewers}">一覧に戻る</a>
+							
+						</div>
+						
+				
+			</div>
+			
+		</div>
+		
+		<div class="add-btn interviewer-add-btn">
+			
+			<p><a th:href="@{/manager/interviewer_signup}">実施者登録</a></p>
+			
+		</div>
+		
+		
+		
+		<div class="container">
+			
+			
+			<table class="list-table interviewers-table">
+				
+				<thead>
+					
+					<tr>
+						
+						<th>実施者名</th>
+						<th>ふりがな</th>
+						<th></th>
+						
+						
+					</tr>
+					
+					
+				</thead>
+				
+				
+				<tbody>
+					
+					<tr th:if="${!#lists.isEmpty(interviewers)}" th:each="interviewer : ${interviewers}">
+						
+						<td th:text="${interviewer.name}"></td>
+						<td th:text="${interviewer.kana}"></td>
+						<td><a th:href="@{/manager/interviewer_get(id=${interviewer.id})}">詳細</a></td>
+						
+					</tr>
+					
+					
+				</tbody>
+				
+				
+				
+			</table>
+			
+			
+			
+		</div>
+		
+	</main>
+	
+	<footer th:replace="~{/manager/layouts/layout :: common_footer_after}">
+		
+	</footer>
+	
+	<script th:src="@{/js/original.js}"></script>
+	
+	<script>
+		
+		const deleteResult = document.body.dataset.deleteResult;
+		
+		if (deleteResult) window.alert(deleteResult);
+		
+	</script>
+	
+
+</body>
+</html>

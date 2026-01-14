@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>ユーザー情報更新フォーム画面 | ユーザー 面談予約システム</title>
+<title>実施者登録画面 | 管理者 面談予約システム</title>
 
 <!-- CSS -->
 <link rel="stylesheet" th:href="@{/css/style.css}" />
@@ -26,7 +26,7 @@
 </head>
 <body>
 	
-	<header th:replace="~{/user/layouts/layout :: common_header_after}">
+	<header th:replace="~{/manager/layouts/layout :: common_header_after}">
 		
 		
 	</header>
@@ -40,13 +40,13 @@
 			
 			<div class="sub-title">
 				
-				<h2 class="sub-title">ユーザー情報更新フォーム</h2>
+				<h2 class="sub-title">実施者登録</h2>
 				
 			</div>
 			
 <!--			<div class="sub-link">-->
 				
-<!--				<a th:href="@{/users/login}">ログインへ</a>-->
+<!--				<a th:href="@{/user/login}">ログインへ</a>-->
 				
 <!--			</div>-->
 			
@@ -58,60 +58,49 @@
 		
 		<div class="container">
 			
-			<p class="err" th:text="*{set_result}"></p>
-			
+			<p class="err" th:text="${signup_err_msg}"></p>
 
 			
-			<form th:action="@{/user/user_update}" method="post" th:object="${user_set_data}" class="form">
-				
-				
+			<form th:action="@{/manager/interviewer_signup/confirm}" method="post" th:object="${interviewer_signup_data}" class="form">
 				
 				<div>
 					
-					<label>ユーザーネーム</label>
+					<label for="name">実施者名</label>
 					<input type="text" th:field="*{name}" required />
-					
-					<input type="hidden" th:field="*{hidName}" required />
 
 				</div>
 				
 				<div>
 					
-					<label>ふりがな</label>
+					<label for="kana">ふりがな</label>
 					<input type="text" th:field="*{kana}" required />
-					
-					<input type="hidden" th:field="*{hidKana}" required />
 
 				</div>
-				
+
 				<div>
 					
-					<label>メールアドレス</label>
+					<label for="email">email</label>
 					<input type="email" th:field="*{email}" required />
-					
-					<input type="hidden" th:field="*{hidEmail}" required />
-
+				
 				</div>
 				
 				<div>
 					
-					<label>パスワード</label>
+					<label for="pass">パスワード</label>
 					<input type="password" th:field="*{pass}" required />
-					
 
 				</div>
 				
 				<div>
 					
-					<label>パスワード【再】</label>
+					<label for="repass">パスワード【再】</label>
 					<input type="password" th:field="*{repass}" required />
-					
+
 				</div>
-				
 				
 				<div class="submit-btns">
 					
-					<input type="submit" value="更新" />
+					<input type="submit" value="確認" />
 
 				</div>
 
@@ -124,12 +113,12 @@
 		
 	</main>
 	
-	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
+	<footer th:replace="~{/manager/layouts/layout :: common_footer_after}">
 		
 	</footer>
-
-
+	
 	<script th:src="@{/js/original.js}"></script>
+
 
 </body>
 </html>

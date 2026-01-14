@@ -55,6 +55,15 @@ public class InterviewersGetController {
 		
 		List<Interviewer> interviewerInfos = service.getInterviewers();
 		
+		String deleteResult = (String)session.getAttribute("delete_result");
+		
+		session.removeAttribute("delete_result");
+		
+		if (deleteResult != null) {
+			
+			redirectAttributes.addFlashAttribute("delete_result", deleteResult);
+			
+		}
 		
 		redirectAttributes.addFlashAttribute("interviewers", interviewerInfos);
 		

@@ -144,26 +144,26 @@ a {
 	margin-left: 40px;
 }
 
-.reservations-table {
+.list-table {
 	border: solid 1px #747474;
 	border-collapse: collapse;
 	margin: 0 auto;
 }
 
-.reservations-table th,
-.reservations-table td {
+.list-table th,
+.list-table td {
 	text-align: center;
 	border-left: solid 1px #747474;
 	border-bottom: solid 1px #747474;
 	padding: 10px 25px;
 }
 
-.reservations-table th {
+.list-table th {
 	color: #FFF;
 	background-color: #00489A;
 }
 
-.reservations-table td a {
+.list-table td a {
 	color: #657EFF;
 }
 
@@ -265,6 +265,17 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 40px;
+}
+
+.add-btn {
+	text-align: right;
+	margin: 24px 40px 40px 40px;
+}
+
+.add-btn p a {
+	color: #FFF;
+	background-color: #2D88FF;
+	padding: 3px 8px;
 }
 
 

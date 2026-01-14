@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
 --
 -- Host: localhost    Database: meeting_sys
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.40
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -34,7 +34,7 @@ CREATE TABLE `interviewers` (
   PRIMARY KEY (`id`),
   KEY `manager_id` (`manager_id`),
   CONSTRAINT `interviewers_ibfk_1` FOREIGN KEY (`manager_id`) REFERENCES `managers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `interviewers` (
 
 LOCK TABLES `interviewers` WRITE;
 /*!40000 ALTER TABLE `interviewers` DISABLE KEYS */;
-INSERT INTO `interviewers` VALUES (1,'吉田 匠太郎','よしだ しょうたろう','ktc23a32f0005@edu.kyoto-tech.ac.jp','$2a$10$CeeoTYOt7FPcNCGowTUvTeNZcJfoFwtVyvWmPBysAP4nRryVwRcSq',1,'2025-12-05 16:55:28','2025-12-05 16:55:28');
+INSERT INTO `interviewers` VALUES (3,'吉田 匠太郎','よしだ しょうたろう','ktc23a32f0005@edu.kyoto-tech.ac.jp','$2a$10$JzLsZWJOcdu1809.CB2SPu6BenScpWhZaQyl2od0Ie/4C0Kjf90CG',1,'2026-01-14 23:09:03','2026-01-14 23:11:59'),(4,'玉谷 知也','たまたに ともや','ktc23a32f0002@edu.kyoto-tech.ac.jp','$2a$10$eyHWhgAsTmuKubCkcWSE0uNwvC0sZ.4HEwuKSTO.3SEPaVH7VyZyK',1,'2026-01-14 23:12:54','2026-01-14 23:12:54');
 /*!40000 ALTER TABLE `interviewers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,7 +63,7 @@ CREATE TABLE `managers` (
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `managers` (
 
 LOCK TABLES `managers` WRITE;
 /*!40000 ALTER TABLE `managers` DISABLE KEYS */;
-INSERT INTO `managers` VALUES (1,'管理者1',NULL,'kanrisha1@gmail.com','aaaaaaaa','2025-12-05 16:54:06','2025-12-05 16:54:06'),(2,'管理者2',NULL,'kanrisha2@gmail.com','aaaaaaaa','2025-12-05 16:54:16','2025-12-05 16:54:16');
+INSERT INTO `managers` VALUES (1,'吉田 匠太郎','よしだ しょうたろう','ktc23a32f0005@edu.kyoto-tech.ac.jp','$2a$10$Dr7DM6yyPQMiaqsEVcT/re0nIGLoXikFE/Iw8PhFpZFVWT.mmOUgm','2025-12-05 16:54:06','2025-12-05 16:54:06'),(3,'玉谷 知也','たまたに ともや','ktc23a32f0002@edu.kyoto-tech.ac.jp','$2a$10$A7rfPUWASXl29VAWAdPYeug/2uV.a1.mTWM0bnRMFvZcqsJ4Oj66e','2026-01-14 23:06:58','2026-01-14 23:06:58');
 /*!40000 ALTER TABLE `managers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -98,7 +98,7 @@ CREATE TABLE `reservations` (
   CONSTRAINT `reservations_ibfk_1` FOREIGN KEY (`time_id`) REFERENCES `times` (`id`),
   CONSTRAINT `reservations_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   CONSTRAINT `reservations_ibfk_3` FOREIGN KEY (`interviewer_id`) REFERENCES `interviewers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -107,7 +107,6 @@ CREATE TABLE `reservations` (
 
 LOCK TABLES `reservations` WRITE;
 /*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
-INSERT INTO `reservations` VALUES (1,'2025-12-05',1,2,1,'2025-12-05 17:02:58','2025-12-05 17:02:58'),(2,'2025-12-05',1,3,1,'2025-12-05 17:58:36','2025-12-05 17:58:36');
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -175,4 +174,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-01-14 14:13:00
+-- Dump completed on 2026-01-14 23:16:56
