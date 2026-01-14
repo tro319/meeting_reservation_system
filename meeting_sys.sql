@@ -43,7 +43,7 @@ CREATE TABLE `interviewers` (
 
 LOCK TABLES `interviewers` WRITE;
 /*!40000 ALTER TABLE `interviewers` DISABLE KEYS */;
-INSERT INTO `interviewers` VALUES (1,'実施者1',NULL,'interviewer1@gmail.com','aaaaaaaa',1,'2025-12-05 16:55:28','2025-12-05 16:55:28');
+INSERT INTO `interviewers` VALUES (1,'吉田 匠太郎','よしだ しょうたろう','ktc23a32f0005@edu.kyoto-tech.ac.jp','$2a$10$CeeoTYOt7FPcNCGowTUvTeNZcJfoFwtVyvWmPBysAP4nRryVwRcSq',1,'2025-12-05 16:55:28','2025-12-05 16:55:28');
 /*!40000 ALTER TABLE `interviewers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -175,4 +175,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-12-05 18:12:43
+-- Dump completed on 2026-01-14 14:13:00
