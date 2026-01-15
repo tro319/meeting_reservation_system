@@ -38,63 +38,67 @@
 		
 		<div class="container">
 			
+			<div class="reservation-ables-table-cover">
 			
-			<table class="reservation-ables-table">
-				
-				<thead>
+			
+				<table class="reservation-ables-table">
 					
-					<tr>
+					<thead>
 						
-						<th></th>
-						
+						<tr>
 							
-						<th th:each="date : ${dates}" th:text="${#strings.replace(date.toString(), '-', '/')}" class="date-cell"></th>
-						
-					</tr>
-					
-					
-				</thead>
-				
-				
-				<tbody>
-					
-					<th:block th:each="time : ${times}">
-					
-					<tr>
-						
-						<th th:text="${time.start} + '時'"></th>
-						
-						<th:block th:each="date : ${dates}">
-						
-						<td>
+							<th></th>
 							
-							<th:block th:if="${reservation_ables[date.toString()].get(time.start)}">
+								
+							<th th:each="date : ${dates}" th:text="${#strings.replace(date.toString(), '-', '/')}" class="date-cell"></th>
 							
-								<a th:href="@{/user/reservation_confirm(date=${date}, time=${time.id}, interviewer_id=${interviewer_id})}" class="able">〇</a>
+						</tr>
+						
+						
+					</thead>
+					
+					
+					<tbody>
+						
+						<th:block th:each="time : ${times}">
+						
+						<tr>
+							
+							<th th:text="${time.start} + '時'"></th>
+							
+							<th:block th:each="date : ${dates}">
+							
+							<td>
+								
+								<th:block th:if="${reservation_ables[date.toString()].get(time.start)}">
+								
+									<a th:href="@{/user/reservation_confirm(date=${date}, time=${time.id}, interviewer_id=${interviewer_id})}" class="able">〇</a>
+								
+								</th:block>
+								
+								<th:block th:unless="${reservation_ables[date.toString()].get(time.start)}">
+								
+									<a class="unable">×</a>
+								
+								</th:block>
+								
+							</td>
 							
 							</th:block>
 							
-							<th:block th:unless="${reservation_ables[date.toString()].get(time.start)}">
 							
-								<a class="unable">×</a>
-							
-							</th:block>
-							
-						</td>
+						</tr>
 						
 						</th:block>
 						
 						
-					</tr>
-					
-					</th:block>
+					</tbody>
 					
 					
-				</tbody>
-				
-				
-				
-			</table>
+					
+				</table>
+			
+			</div>
 			
 			
 			

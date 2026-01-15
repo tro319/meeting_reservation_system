@@ -172,7 +172,13 @@ a {
 	color: #657EFF;
 }
 
+.reservation-ables-table-cover {
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
 .reservation-ables-table {
+	width: 100%;
 	border-collapse: collapse;
 	margin-bottom: 40px;
 }
