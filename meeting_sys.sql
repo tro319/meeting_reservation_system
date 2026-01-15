@@ -98,7 +98,7 @@ CREATE TABLE `reservations` (
   CONSTRAINT `reservations_ibfk_1` FOREIGN KEY (`time_id`) REFERENCES `times` (`id`),
   CONSTRAINT `reservations_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   CONSTRAINT `reservations_ibfk_3` FOREIGN KEY (`interviewer_id`) REFERENCES `interviewers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -107,6 +107,7 @@ CREATE TABLE `reservations` (
 
 LOCK TABLES `reservations` WRITE;
 /*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
+INSERT INTO `reservations` VALUES (9,'2026-01-15',1,2,3,'2026-01-15 19:16:49','2026-01-15 19:16:49'),(11,'2026-01-20',3,2,3,'2026-01-15 21:21:05','2026-01-15 21:21:05'),(12,'2026-01-21',2,4,3,'2026-01-15 21:24:40','2026-01-15 21:24:40');
 /*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +153,7 @@ CREATE TABLE `users` (
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,7 +162,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (2,'よたろ','よたろ','ktc23a32f0005@edu.kyoto-tech.ac.jp','$2a$10$vEAB9lZjuImAQuT0N8.nJe26Pup0Gb5lzjbsSey02HbHnwQi716vO','2025-12-05 16:49:46','2025-12-05 16:49:46'),(3,'よしだ2','よしだ2','shotaro2452@gmail.com','$2a$10$u0hMRLUTmaHuGRpconQQ4ObzPIh.oztAazm5mSuuZJqkgM4UmaPje','2025-12-05 17:58:09','2025-12-05 17:58:09');
+INSERT INTO `users` VALUES (2,'よたろ','よたろ','ktc23a32f0005@edu.kyoto-tech.ac.jp','$2a$10$vEAB9lZjuImAQuT0N8.nJe26Pup0Gb5lzjbsSey02HbHnwQi716vO','2025-12-05 16:49:46','2025-12-05 16:49:46'),(4,'ともやん','ともやん','ktc23a32f0002@edu.kyoto-tech.ac.jp','$2a$10$xa3X1qB.QPHonXf1Jkp5DeQZbyDckxpdDIjnTEMNbUmB3/Za0Vsou','2026-01-15 21:27:16','2026-01-15 21:30:58');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -174,4 +175,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-01-14 23:16:56
+-- Dump completed on 2026-01-15 22:24:05
