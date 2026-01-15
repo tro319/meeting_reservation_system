@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>予約空き状況一覧画面　| ユーザー 面談予約システム</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+
+	<header th:replace="~{/user/layouts/layout :: common_header_after}">
+		
+		
+	</header>
+
+
+
+	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">予約空き状況一覧</h2>
+				
+			</div>
+			
+			<div class="sub-link">
+				
+				<a th:href="@{/user/interviewers}">実施者一覧へ</a>
+						
+			</div>
+			
+		</div>
+		
+		
+		
+		<div class="container">
+			
+			
+			<table class="reservation-ables-table">
+				
+				<thead>
+					
+					<tr>
+						
+						<th></th>
+						
+							
+						<th th:each="date : ${dates}" th:text="${#strings.replace(date.toString(), '-', '/')}" class="date-cell"></th>
+						
+					</tr>
+					
+					
+				</thead>
+				
+				
+				<tbody>
+					
+					<th:block th:each="time : ${times}">
+					
+					<tr>
+						
+						<th th:text="${time.start} + '時'"></th>
+						
+						<th:block th:each="date : ${dates}">
+						
+						<td>
+							
+							<th:block th:if="${reservation_ables[date.toString()].get(time.start)}">
+							
+								<a th:href="@{/user/reservation_confirm(date=${date}, time=${time.id}, interviewer_id=${interviewer_id})}" class="able">〇</a>
+							
+							</th:block>
+							
+							<th:block th:unless="${reservation_ables[date.toString()].get(time.start)}">
+							
+								<a class="unable">×</a>
+							
+							</th:block>
+							
+						</td>
+						
+						</th:block>
+						
+						
+					</tr>
+					
+					</th:block>
+					
+					
+				</tbody>
+				
+				
+				
+			</table>
+			
+			
+			
+		</div>
+		
+	</main>
+	
+	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
+		
+	</footer>
+	
+	<script>
+		
+		document.querySelectorAll(".date-cell").forEach(cell => {
+			
+			const text = cell.textContent.trim();
+			
+			const iso = text.replace(/\//g, "-");
+			
+			const date = new Date(iso);
+			
+			const week = ["日", "月", "火", "水", "木", "金", "土"];
+			
+			cell.textContent = `${text} (${week[date.getDay()]})`;
+			
+		});
+		
+	</script>
+
+	
+	<script th:src="@{/js/original.js}"></script>
+	
+
+</body>
+</html>

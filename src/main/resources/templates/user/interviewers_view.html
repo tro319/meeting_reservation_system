@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>実施者一覧画面　| ユーザー 面談予約システム</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+
+	<header th:replace="~{/user/layouts/layout :: common_header_after}">
+		
+		
+	</header>
+
+
+
+	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">実施者一覧</h2>
+				
+			</div>
+			
+		</div>
+		
+		
+		
+		<div class="container">
+			
+			<div class="intro-list-cover">
+				
+				
+				<ul class="intro-list interviewers-list">
+						
+						<li th:if="${!#lists.isEmpty(interviewers)}" th:each="interviewer : ${interviewers}">
+							
+							<p class="intro-title" th:text="${interviewer.name}"></p>
+							
+							<p class="intro-sub-title" th:text="${interviewer.kana}"></p>
+							
+							<p class="intro-link"><a th:href="@{/user/reservation_ables_get(interviewer_id=${interviewer.id})}">予約空き状況へ</a></p>
+							
+						</li>
+						
+						
+				</ul>
+				
+				
+				
+			</div>
+			
+			
+
+				
+			
+		</div>
+		
+	</main>
+	
+	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
+		
+	</footer>
+	
+	<script th:src="@{/js/original.js}"></script>
+	
+
+</body>
+</html>
