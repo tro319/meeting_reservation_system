@@ -32,10 +32,10 @@ public class TimesGetService {
 	
 	public List<Time> getTimes() {
 		
-		List<Time> timesInfo = repository.findAll();
+		List<Time> timeInfos = repository.findAll();
 		
 		
-		return timesInfo;
+		return timeInfos;
 		
 	}
 	

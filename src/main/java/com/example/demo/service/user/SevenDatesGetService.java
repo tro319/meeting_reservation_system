@@ -32,19 +32,19 @@ public class SevenDatesGetService {
 		
 		LocalDate curDate = LocalDate.now();
 		
-		List<LocalDate> datesInfo = new ArrayList<>();
+		List<LocalDate> dateInfos = new ArrayList<>();
 		
 		
 		for (int i = 0; i < 7; i++) {
 			
 			LocalDate nextDate = curDate.plusDays(i);
 			
-			datesInfo.add(nextDate);
+			dateInfos.add(nextDate);
 			
 		}
 		
 		
-		return datesInfo;
+		return dateInfos;
 		
 	}
 	
