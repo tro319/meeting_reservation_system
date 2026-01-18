@@ -57,6 +57,14 @@ public class InterviewersGetController {
 		
 		redirectAttributes.addFlashAttribute("interviewers", interviewerInfos);
 		
+		String registerResult = (String)session.getAttribute("register_result");
+		
+		if (registerResult != null) {
+		
+			redirectAttributes.addFlashAttribute("register_result", registerResult);
+			
+		}
+		
 		return "redirect:/user/interviewers_view";
 		
 		

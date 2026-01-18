@@ -34,14 +34,14 @@
         <mxCell id="y_rmSiP4a9WrNTzO88O2-9" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;Reservation型: 予約登録処理 ( ReservationRegisterForm型 : form )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="549" x="198" y="500" as="geometry" />
         </mxCell>
-        <mxCell id="S7X8e83eDEx1BtPf0ie4-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;日付型 : date ← LocalDate.parse(form.getDate(), DateFormatter.ofPattern(&quot;yyyy/MM/dd&quot;))&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="S7X8e83eDEx1BtPf0ie4-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;日付型 : date ← LocalDate.parse(form.getDate(), DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd&quot;))&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="576" as="geometry" />
         </mxCell>
         <mxCell id="S7X8e83eDEx1BtPf0ie4-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="Time型: timeInfo ← timesRepository.findById(form.getTimeId()).orElse(null)" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="596" as="geometry" />
         </mxCell>
         <mxCell id="S7X8e83eDEx1BtPf0ie4-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return doubleCheck" vertex="1">
-          <mxGeometry height="30" width="590" x="1382" y="669" as="geometry" />
+          <mxGeometry height="30" width="590" x="1382" y="626" as="geometry" />
         </mxCell>
         <mxCell id="S7X8e83eDEx1BtPf0ie4-6" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;真偽型 : 予約登録情報重複チェック ( ReservationRegisterForm型 : form )&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="744" x="1297" y="491.5" as="geometry" />
@@ -85,14 +85,8 @@
         <mxCell id="EQP1SYHn8zGAxKkQWzi0-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;List&amp;lt;Reservation&amp;gt;型 : reservationInfos ← repository.findAll()&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="1387" y="530" as="geometry" />
         </mxCell>
-        <mxCell id="EQP1SYHn8zGAxKkQWzi0-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;reservationInfos ← reservationInfos.stream().filter(reservation -&amp;gt; (NOT reservation.getDate().equals(afterDate)) &amp;amp;&amp;amp; (reservation.getTime().getId() != form.getTimeId()) &amp;amp;&amp;amp; (reservation.getUser().getId() != form.getUserId()) &amp;amp;&amp;amp; (reservation.getInterviewer().getId() != form.getInterviewerId())).toList()&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="EQP1SYHn8zGAxKkQWzi0-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;doubleCheck ← reservationInfos.stream().anyMatch(reservation -&amp;gt; (NOT reservation.getDate().equals(LocalDate.parse(form.getDate(), DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd&quot;))) &amp;amp;&amp;amp; (reservation.getTime().getId() != form.getTimeId()) &amp;amp;&amp;amp; (reservation.getUser().getId() != form.getUserId()) &amp;amp;&amp;amp; (reservation.getInterviewer().getId() != form.getInterviewerId()))&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="1387" y="570" as="geometry" />
-        </mxCell>
-        <mxCell id="EQP1SYHn8zGAxKkQWzi0-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="if (reservationInfos != null)" vertex="1">
-          <mxGeometry height="30" width="590" x="1385" y="617.5" as="geometry" />
-        </mxCell>
-        <mxCell id="EQP1SYHn8zGAxKkQWzi0-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="doubleCheck ← false" vertex="1">
-          <mxGeometry height="30" width="590" x="1396" y="639" as="geometry" />
         </mxCell>
         <mxCell id="EQP1SYHn8zGAxKkQWzi0-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="真偽型: doubleCheck ← true" vertex="1">
           <mxGeometry height="30" width="590" x="1387" y="513" as="geometry" />

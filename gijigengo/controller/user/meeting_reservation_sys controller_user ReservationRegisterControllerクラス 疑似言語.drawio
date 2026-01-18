@@ -4,7 +4,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="y_rmSiP4a9WrNTzO88O2-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=0;fontSize=36;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 161, 255);&quot;&gt;class&lt;/span&gt;&lt;/div&gt;&lt;div&gt;ユーザー登録処理群&amp;nbsp;&lt;/div&gt;" vertex="1">
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;rounded=0;fontSize=36;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 161, 255);&quot;&gt;class&lt;/span&gt;&lt;/div&gt;&lt;div&gt;予約登録処理群&amp;nbsp;&lt;/div&gt;" vertex="1">
           <mxGeometry height="149" width="471" x="39" y="41" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
@@ -19,7 +19,7 @@
         <mxCell id="y_rmSiP4a9WrNTzO88O2-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( loginId == null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="581" as="geometry" />
         </mxCell>
-        <mxCell id="y_rmSiP4a9WrNTzO88O2-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[ &quot;reservation_date&quot; ] ← form.getDate()" vertex="1">
+        <mxCell id="y_rmSiP4a9WrNTzO88O2-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[ &quot;reservation_date&quot; ] ← registerForm.getDate()" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="850" as="geometry" />
         </mxCell>
         <mxCell id="y_rmSiP4a9WrNTzO88O2-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/login&quot;" vertex="1">
@@ -55,19 +55,19 @@
         <mxCell id="Mv6W1iKIPkXz7I_j6kLv-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="registerForm.setTimeId(timeId)" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="677" as="geometry" />
         </mxCell>
-        <mxCell id="Mv6W1iKIPkXz7I_j6kLv-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="registerForm.setUserId(userId)" vertex="1">
+        <mxCell id="Mv6W1iKIPkXz7I_j6kLv-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="registerForm.setUserId(loginId)" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="695" as="geometry" />
         </mxCell>
         <mxCell id="Mv6W1iKIPkXz7I_j6kLv-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="registerForm.setInterviewerId(interviewerId)" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="715" as="geometry" />
         </mxCell>
-        <mxCell id="Mv6W1iKIPkXz7I_j6kLv-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Time型: timeInfo ← timesRepository.findById(form.getTimeId()).orElse(null)" vertex="1">
+        <mxCell id="Mv6W1iKIPkXz7I_j6kLv-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Time型: timeInfo ← timesRepository.findById(registerForm.getTimeId()).orElse(null)" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="780" as="geometry" />
         </mxCell>
-        <mxCell id="Mv6W1iKIPkXz7I_j6kLv-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="User型: userInfo ← usersRepository.findById(form.getUserId()).orElse(null)" vertex="1">
+        <mxCell id="Mv6W1iKIPkXz7I_j6kLv-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="User型: userInfo ← usersRepository.findById(registerForm.getUserId()).orElse(null)" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="806" as="geometry" />
         </mxCell>
-        <mxCell id="Mv6W1iKIPkXz7I_j6kLv-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Interviewer型: interviewerInfo ← interviewersRepository.findById(form.getInterviewerId()).orElse(null)" vertex="1">
+        <mxCell id="Mv6W1iKIPkXz7I_j6kLv-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Interviewer型: interviewerInfo ← interviewersRepository.findById(registerForm.getInterviewerId()).orElse(null)" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="828" as="geometry" />
         </mxCell>
         <mxCell id="Mv6W1iKIPkXz7I_j6kLv-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[ &quot;reservation_time&quot; ] ← timeInfo" vertex="1">
@@ -170,19 +170,16 @@
           <mxGeometry height="30" width="590" x="203" y="508" as="geometry" />
         </mxCell>
         <mxCell id="Mv6W1iKIPkXz7I_j6kLv-38" parent="Mv6W1iKIPkXz7I_j6kLv-19" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Reservation型: reservationInfo ← service.予約登録処理(form)" vertex="1">
-          <mxGeometry height="30" width="590" x="182" y="577" as="geometry" />
+          <mxGeometry height="30" width="590" x="182" y="535" as="geometry" />
         </mxCell>
         <mxCell id="vJuQBIi7CQH9J2CEQS6M-1" parent="Mv6W1iKIPkXz7I_j6kLv-19" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[&quot;register_result&quot;] ← &quot;予約が重複しているため、別の予約枠を選択してください。&quot;" vertex="1">
           <mxGeometry height="30" width="590" x="203" y="492" as="geometry" />
         </mxCell>
         <mxCell id="vJuQBIi7CQH9J2CEQS6M-2" parent="Mv6W1iKIPkXz7I_j6kLv-19" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[&quot;register_result&quot;] ← &quot;予約が完了しました。&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="182" y="538" as="geometry" />
+          <mxGeometry height="30" width="590" x="182" y="553" as="geometry" />
         </mxCell>
         <mxCell id="Mv6W1iKIPkXz7I_j6kLv-40" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;fontSize=12;" value="&lt;font&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;大域: ReservationRegisterService型: service&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="614" x="1293" y="193" as="geometry" />
-        </mxCell>
-        <mxCell id="_1mKCvpFBsdCGh2Y5bE6-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="redirect[&quot;reservation_register_form&quot;] ← registerForm" vertex="1">
-          <mxGeometry height="30" width="590" x="290" y="755" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

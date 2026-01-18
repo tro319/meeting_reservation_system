@@ -61,6 +61,14 @@ public class ReservationGetController {
 		
 		session.setAttribute("reservation_id", reservationId);
 		
+		String registerResult = (String)session.getAttribute("register_result");
+		
+		if (registerResult != null) {
+		
+			redirectAttributes.addFlashAttribute("register_result", registerResult);
+			
+		}
+		
 		return "redirect:/user/reservation_view";
 		
 		

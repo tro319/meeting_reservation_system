@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>予約確認画面 | ユーザー 面談予約システム</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+	<header th:replace="~{/user/layouts/layout :: common_header_before}">
+		
+		
+	</header>
+	
+	
+	
+	<main>
+		
+		
+		<div class="page-main-tops">
+			
+			<div class="sub-title">
+				
+				<h2 class="sub-title">予約登録確認</h2>
+				
+			</div>
+			
+			<div class="sub-link">
+				
+				<a th:href="@{/user/reservation_ables_get?(interviewer_id=${reservation_interviewer.id})}">予約空き状況一覧へ</a>
+				
+			</div>
+			
+			
+		</div>
+		
+		
+		
+		
+		<div class="container">
+			
+			
+			<form th:action="@{/user/reservation_register}" method="post" th:object="${reservation_register_form}" class="form">
+				
+				<div>
+					
+					<label>実施者名</label>
+					<input type="hidden" th:field="*{interviewerId}" value="${interviewerId}" required /><span th:text="${reservation_interviewer.name}"></span>
+
+				</div>
+				
+				<div>
+					
+					<label>ユーザー名</label>
+					<input type="hidden" th:field="*{userId}" value="${userId}" required /><span th:text="${reservation_user.name}"></span>
+
+				</div>
+
+				<div>
+					
+					<label>面談日</label>
+					<input type="hidden" th:field="*{date}" value="${date}" required /><span th:text="${#strings.replace(reservation_date, '-', '/')}"></span>
+				
+				</div>
+				
+				<div>
+					
+					<label>開始時間</label>
+					<input type="hidden" th:field="*{timeId}" value="${timeId}" required /><span th:text="${reservation_time.start + '時'}"></span>
+
+				</div>
+
+				
+				<div class="submit-btns">
+					
+					<input type="submit" value="確定" />
+
+				</div>
+
+				
+			</form>
+			
+
+			
+			
+		</div>
+		
+		
+	</main>
+	
+	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
+		
+	</footer>
+	
+	
+	<script th:src="@{/js/original.js}"></script>
+
+
+</body>
+</html>

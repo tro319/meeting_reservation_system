@@ -41,7 +41,7 @@
           <mxGeometry height="30" width="590" x="288" y="702" as="geometry" />
         </mxCell>
         <mxCell id="6GLlRcwnAXxS7TqUwe_Q-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Interviewer型: interviewerInfo ← session[ &quot;reservation_interviewer&quot; ]" vertex="1">
-          <mxGeometry height="30" width="590" x="288" y="728" as="geometry" />
+          <mxGeometry height="30" width="590" x="288" y="720" as="geometry" />
         </mxCell>
         <mxCell id="6GLlRcwnAXxS7TqUwe_Q-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="model[&quot;reservation_date&quot;] ← date" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="753" as="geometry" />
@@ -54,6 +54,12 @@
         </mxCell>
         <mxCell id="6GLlRcwnAXxS7TqUwe_Q-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="model[&quot;reservation_interviewer&quot;] ← interviewerInfo" vertex="1">
           <mxGeometry height="30" width="590" x="288" y="807" as="geometry" />
+        </mxCell>
+        <mxCell id="fv91hKeUK8LleUAoKU-R-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="ReservationRegisterForm型: registerForm ← session[ &quot;reservation_register_form&quot; ]" vertex="1">
+          <mxGeometry height="30" width="590" x="288" y="633" as="geometry" />
+        </mxCell>
+        <mxCell id="fv91hKeUK8LleUAoKU-R-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="model[&quot;reservation_register_form&quot;] ← registerForm" vertex="1">
+          <mxGeometry height="30" width="590" x="288" y="736" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
