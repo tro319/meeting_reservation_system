@@ -72,7 +72,7 @@
 								
 								<th:block th:if="${reservation_ables[date.toString()].get(time.start)}">
 								
-									<a th:href="@{/user/reservation_confirm(date=${date}, time=${time.id}, interviewer_id=${interviewer_id})}" class="able">〇</a>
+									<a th:href="@{/user/reservation_register_confirm(date=${date}, time=${time.id}, interviewer_id=${interviewer_id})}" class="able">〇</a>
 								
 								</th:block>
 								
