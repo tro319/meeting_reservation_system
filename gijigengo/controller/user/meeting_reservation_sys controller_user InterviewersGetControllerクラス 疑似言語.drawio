@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.3.1">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.3.2">
   <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
     <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -41,7 +41,16 @@
           <mxGeometry height="30" width="590" x="284" y="666" as="geometry" />
         </mxCell>
         <mxCell id="eOPVteI1dmzOfS7KjaYZ-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;redirect[ &quot;interviewers&quot; ] ← interviewerInfos&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="285" y="745" as="geometry" />
+          <mxGeometry height="30" width="590" x="285" y="701" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrMVMrgFhDvABKSoaLk-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="文字列型: registerResult ← session[&quot;register_result&quot;]" vertex="1">
+          <mxGeometry height="30" width="590" x="285" y="731" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrMVMrgFhDvABKSoaLk-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( registerResult != null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="286" y="767" as="geometry" />
+        </mxCell>
+        <mxCell id="4BrMVMrgFhDvABKSoaLk-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="redirect[&quot;register_result&quot;] ← registerResult" vertex="1">
+          <mxGeometry height="30" width="590" x="306" y="795" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
