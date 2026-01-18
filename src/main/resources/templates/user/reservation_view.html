@@ -5,7 +5,7 @@
 <title>予約詳細画面　| ユーザー 面談予約システム</title>
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body>
+<body th:attr="data-register-result=${register_result}">
 	
 
 	<header th:replace="~{/user/layouts/layout :: common_header_after}">
@@ -39,6 +39,7 @@
 		
 		
 		<div class="container">
+			
 			
 			
 			<table class="reservation-table" th:object="${reservation}">
@@ -97,6 +98,14 @@
 	<footer th:replace="~{/user/layouts/layout :: common_footer_after}">
 		
 	</footer>
+	
+	<script>
+		
+		const registerResult = document.body.dataset.registerResult;
+		
+		if (registerResult) window.alert(registerResult);
+		
+	</script>
 	
 	<script th:src="@{/js/original.js}"></script>
 

@@ -52,6 +52,9 @@
         <mxCell id="4BrMVMrgFhDvABKSoaLk-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="redirect[&quot;register_result&quot;] ← registerResult" vertex="1">
           <mxGeometry height="30" width="590" x="306" y="795" as="geometry" />
         </mxCell>
+        <mxCell id="gfF0vSEgd6bbf_dQG2ui-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[&quot;register_result&quot;] 削除" vertex="1">
+          <mxGeometry height="30" width="590" x="284" y="818" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

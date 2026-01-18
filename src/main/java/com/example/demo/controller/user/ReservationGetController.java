@@ -69,6 +69,8 @@ public class ReservationGetController {
 			
 		}
 		
+		session.removeAttribute("register_result");
+		
 		return "redirect:/user/reservation_view";
 		
 		

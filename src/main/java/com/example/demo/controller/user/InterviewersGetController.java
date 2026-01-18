@@ -65,6 +65,8 @@ public class InterviewersGetController {
 			
 		}
 		
+		session.removeAttribute("register_result");
+		
 		return "redirect:/user/interviewers_view";
 		
 		
