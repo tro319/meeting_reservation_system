@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.3.1">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.3.2">
   <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
     <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -107,7 +107,7 @@
           <mxGeometry height="30" width="590" x="2773.143849658314" y="479" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Interviewer型: setInterviewer ← service.実施者更新処理( interviewerId, updates, loginId )" vertex="1">
-          <mxGeometry height="30" width="590" x="2773.143849658314" y="1076" as="geometry" />
+          <mxGeometry height="30" width="590" x="2773.143849658314" y="1017" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[ &quot;interviewer_set_data&quot; ] ← form" vertex="1">
           <mxGeometry height="30" width="590" x="2773.143849658314" y="547" as="geometry" />
@@ -182,7 +182,7 @@
           <mxGeometry height="30" width="590" x="294" y="947" as="geometry" />
         </mxCell>
         <mxCell id="rZqtaOEAE3jxr1bKxNd--5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="updates.put( &quot;pass&quot;, form.getPass() )&amp;nbsp;" vertex="1">
-          <mxGeometry height="30" width="590" x="2773.14" y="1017" as="geometry" />
+          <mxGeometry height="30" width="590" x="2773.14" y="995" as="geometry" />
         </mxCell>
         <mxCell id="7h3qa9LMOhv2gMDX9CAw-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="redirect[ &quot;interviewer&quot; ] ← interviewerInfo" vertex="1">
           <mxGeometry height="30" width="590" x="313" y="1088" as="geometry" />
@@ -210,6 +210,21 @@
         </mxCell>
         <mxCell id="55M9O7Ge7Uha-VYKfjUy-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Interviewer型: interviewerInfo ← null" vertex="1">
           <mxGeometry height="30" width="624" x="284" y="753" as="geometry" />
+        </mxCell>
+        <mxCell id="G7rW1tD9EzGd4cpLxRAb-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="文字列型: setName ← setInterviewer.getName()" vertex="1">
+          <mxGeometry height="30" width="590" x="2773.143849658314" y="1038" as="geometry" />
+        </mxCell>
+        <mxCell id="G7rW1tD9EzGd4cpLxRAb-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="文字列型: setEmail ← setInterviewer.getEmail()" vertex="1">
+          <mxGeometry height="30" width="590" x="2773.143849658314" y="1058" as="geometry" />
+        </mxCell>
+        <mxCell id="G7rW1tD9EzGd4cpLxRAb-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="文字列型: setSendText ← setName + &quot;さん、&quot; + &quot;実施者情報が更新されました。&quot;" vertex="1">
+          <mxGeometry height="30" width="590" x="2773.143849658314" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="G7rW1tD9EzGd4cpLxRAb-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="mailService.メール送信(setEmail, &quot;実施者情報更新が完了しました! | 面談予約システム&quot;, setSendText" vertex="1">
+          <mxGeometry height="30" width="590" x="2773.143849658314" y="1098" as="geometry" />
+        </mxCell>
+        <mxCell id="G7rW1tD9EzGd4cpLxRAb-5" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;fontSize=12;" value="&lt;font&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;大域: MailSendService型: mailService&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="614" x="1286.5" y="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

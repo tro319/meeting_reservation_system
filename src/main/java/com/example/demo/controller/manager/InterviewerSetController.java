@@ -13,6 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.Interviewer;
 import com.example.demo.model.form.manager.InterviewerSetForm;
+import com.example.demo.service.MailSendService;
 import com.example.demo.service.manager.InterviewerSetService;
 
 import lombok.RequiredArgsConstructor;
@@ -31,7 +32,8 @@ public class InterviewerSetController {
 	
 	private final InterviewerSetService service;
 	
-//	private final PasswordEncoder passEncoder;
+	private final MailSendService mailService;
+	
 	
 	/*
 	 * 実施者情報取得処理
@@ -181,6 +183,14 @@ public class InterviewerSetController {
 		updates.put("pass", form.getPass());
 		
 		Interviewer setInterviewer = service.setInterviewer(interviewerId, updates, loginId);
+		
+		String setName = setInterviewer.getName();
+		
+		String setEmail = setInterviewer.getEmail();
+		
+		String setSendText = setName + "さん、" + "実施者情報が更新されました。";
+		
+		mailService.sendMail(setEmail, "実施者情報更新が完了しました! | 面談予約システム", setSendText);
 		
 		
 		session.setAttribute("set_result", "実施者情報更新しました");

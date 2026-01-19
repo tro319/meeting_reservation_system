@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.3.1">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.3.2">
   <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
     <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -161,7 +161,7 @@
           <mxGeometry height="30" width="590" x="2600" y="1015" as="geometry" />
         </mxCell>
         <mxCell id="PG8TkhmsUevh0mXRQlC--2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="大域: MailSendService型: mailService" vertex="1">
-          <mxGeometry height="30" width="590" x="1512" y="163" as="geometry" />
+          <mxGeometry height="30" width="590" x="1482" y="163" as="geometry" />
         </mxCell>
         <mxCell id="PG8TkhmsUevh0mXRQlC--3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;文字列型: signupName&amp;nbsp;←&amp;nbsp;signupResult.getName()&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="2600" y="892" as="geometry" />
@@ -169,7 +169,7 @@
         <mxCell id="PG8TkhmsUevh0mXRQlC--4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;文字列型: signupEmail&amp;nbsp;←&amp;nbsp;signupResult.getEmail()&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="2600" y="916" as="geometry" />
         </mxCell>
-        <mxCell id="PG8TkhmsUevh0mXRQlC--8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;文字列型: signupSendText&amp;nbsp;←&amp;nbsp;&lt;/div&gt;&lt;div&gt;signupName + &quot;さん、&quot; + &quot; 当サービス、「面談予約システム」への登録ありがとうございます！\n&quot; + &quot;引き続きよろしくお願い致します。&quot;&lt;/div&gt;" vertex="1">
+        <mxCell id="PG8TkhmsUevh0mXRQlC--8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;文字列型: signupSendText&amp;nbsp;←&amp;nbsp;&lt;/div&gt;&lt;div&gt;signupName + &quot;さん、&quot; + &quot; 当サービス、「面談予約システム」への実施者登録ありがとうございます！\n&quot; + &quot;引き続きよろしくお願い致します。&quot;&lt;/div&gt;" vertex="1">
           <mxGeometry height="44" width="590" x="2600" y="943" as="geometry" />
         </mxCell>
         <mxCell id="Uuk6P-gXyICZa3Dqzwox-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[ &quot;interviewer_signup_data&quot; ] ← form" vertex="1">

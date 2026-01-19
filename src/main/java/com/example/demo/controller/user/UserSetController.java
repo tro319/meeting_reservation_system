@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.model.entity.User;
 import com.example.demo.model.form.user.UserSetForm;
+import com.example.demo.service.MailSendService;
 import com.example.demo.service.user.UserSetService;
 
 import lombok.RequiredArgsConstructor;
@@ -29,6 +30,8 @@ import lombok.RequiredArgsConstructor;
 public class UserSetController {
 	
 	private final UserSetService service;
+	
+	private final MailSendService mailService;
 	
 //	private final PasswordEncoder passEncoder;
 	
@@ -160,6 +163,14 @@ public class UserSetController {
 		updates.put("pass", form.getPass());
 		
 		User setUser = service.setUser(loginId, updates);
+		
+		String setName = setUser.getName();
+		
+		String setEmail = setUser.getEmail();
+		
+		String setSendText = setName + "さん、" + "ユーザー情報が更新されました";
+		
+		mailService.sendMail(setEmail, "ユーザー情報更新が完了しました! | 面談予約システム", setSendText);
 		
 		session.setAttribute("set_user", setUser);
 		

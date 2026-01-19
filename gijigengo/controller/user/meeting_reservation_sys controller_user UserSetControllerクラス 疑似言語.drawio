@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.9">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.3.2">
   <diagram name="ページ1" id="mb2iSDPSAOiip58z1rqg">
     <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -95,19 +95,19 @@
           <mxGeometry height="30" width="590" x="294" y="1024" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=light-dark(#daeece, #214210);align=center;verticalAlign=top;rounded=0;fontSize=36;fontColor=#00A1FF;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgb(50, 182, 49);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span&gt;method&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="960" width="1120" x="2500" y="320" as="geometry" />
+          <mxGeometry height="1540" width="1120" x="2490.29" y="320" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=12;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;数値型 : loginId ←&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;session[ &quot;log_user_id&quot; ]&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="2773.143849658314" y="448" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* PostMapping: &quot;/user/user_update&quot;&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* annotation: @Controller、@RequiredArgsConstructor&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;* 英字のメソッド呼び出しは、Java Spring 標準メソッド&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="590" x="2773.143849658314" y="1220" as="geometry" />
+          <mxGeometry height="30" width="590" x="2765.0038496583143" y="1464" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;if ( loginId == null )&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="590" x="2773.143849658314" y="479" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="User型: setUser ← service.ユーザー更新処理( loginId, updates )" vertex="1">
-          <mxGeometry height="30" width="590" x="2773.143849658314" y="1076" as="geometry" />
+          <mxGeometry height="30" width="590" x="2773.143849658314" y="1017" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[ &quot;user_set_data&quot; ] ← form" vertex="1">
           <mxGeometry height="30" width="590" x="2773.143849658314" y="547" as="geometry" />
@@ -164,16 +164,16 @@
           <mxGeometry height="30" width="590" x="2773.14" y="600" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="return &quot;redirect:/user/user_get&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="2775.0038496583143" y="1168" as="geometry" />
+          <mxGeometry height="30" width="590" x="2773.143849658314" y="1280" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-67" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[ &quot;set_user&quot; ] ← setUser" vertex="1">
-          <mxGeometry height="30" width="590" x="2775.0038496583143" y="1098" as="geometry" />
+          <mxGeometry height="30" width="590" x="2773.143849658314" y="1210" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[ &quot;set_result&quot; ] ← &quot;ユーザー情報更新しました&quot;" vertex="1">
-          <mxGeometry height="30" width="590" x="2775.0038496583143" y="1120" as="geometry" />
+          <mxGeometry height="30" width="590" x="2773.143849658314" y="1232" as="geometry" />
         </mxCell>
         <mxCell id="zO6J6DDj_q5sUfTJo57w-69" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="session[ &quot;user_set_data&quot; ] 削除" vertex="1">
-          <mxGeometry height="30" width="590" x="2775.0038496583143" y="1144" as="geometry" />
+          <mxGeometry height="30" width="590" x="2773.143849658314" y="1256" as="geometry" />
         </mxCell>
         <mxCell id="rZqtaOEAE3jxr1bKxNd--1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="setForm.setHidName(&amp;nbsp;userInfo.getName()&amp;nbsp;)" vertex="1">
           <mxGeometry height="30" width="590" x="294" y="916" as="geometry" />
@@ -185,7 +185,22 @@
           <mxGeometry height="30" width="590" x="294" y="947" as="geometry" />
         </mxCell>
         <mxCell id="rZqtaOEAE3jxr1bKxNd--5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="updates.put( &quot;pass&quot;, form.getPass() )&amp;nbsp;" vertex="1">
-          <mxGeometry height="30" width="590" x="2773.14" y="1017" as="geometry" />
+          <mxGeometry height="30" width="590" x="2773.14" y="994" as="geometry" />
+        </mxCell>
+        <mxCell id="6JP6Ieheojm47d9aJUFV-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="mailService.メール送信( setEmail, &quot;ユーザー情報更新が完了しました! ｜ 面談予約システム&quot;, setSendText )&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="656.86" x="2773.14" y="1163" as="geometry" />
+        </mxCell>
+        <mxCell id="6JP6Ieheojm47d9aJUFV-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;文字列型: setName&amp;nbsp;← setUser.getName()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="2773.14" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="6JP6Ieheojm47d9aJUFV-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;文字列型: setEmail ← setUser.getEmail()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="590" x="2773.14" y="1064" as="geometry" />
+        </mxCell>
+        <mxCell id="6JP6Ieheojm47d9aJUFV-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;文字列型: setSendText&amp;nbsp;←&amp;nbsp;&lt;/div&gt;&lt;div&gt;setName + &quot;さん、&quot; + &quot; ユーザー情報更新が完了しました!\n&quot; + &quot;引き続きよろしくお願い致します。&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="590" x="2773.14" y="1102" as="geometry" />
+        </mxCell>
+        <mxCell id="6JP6Ieheojm47d9aJUFV-5" parent="1" style="whiteSpace=wrap;html=1;fillColor=none;labelBorderColor=none;strokeColor=none;fontSize=12;" value="&lt;font&gt;&lt;span&gt;&lt;span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;大域: MailSendService型: mailService&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="614" x="1288.5" y="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

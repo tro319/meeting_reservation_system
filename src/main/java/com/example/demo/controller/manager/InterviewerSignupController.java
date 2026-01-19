@@ -173,9 +173,9 @@ public class InterviewerSignupController {
 			
 			String signupEmail = signupResult.getEmail();
 			
-//			String signupSendText = signupName + "さん、" + "当サービス、「面談予約システム」への登録ありがとうございます! \n" + "引き続きよろしくお願い致します。";
-//			
-//			mailService.sendMail(signupEmail, "会員登録が完了しました! | 面談予約システム", signupSendText);
+			String signupSendText = signupName + "さん、" + "当サービス、「面談予約システム」への実施者登録ありがとうございます! \n" + "引き続きよろしくお願い致します。";
+			
+			mailService.sendMail(signupEmail, "実施者登録が完了しました! | 面談予約システム", signupSendText);
 			
 			session.removeAttribute("interviewer_signup_data");
 			

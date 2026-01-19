@@ -175,7 +175,7 @@ public class SignupController {
 			
 			String signupSendText = signupName + "さん、" + "当サービス、「面談予約システム」への登録ありがとうございます! \n" + "引き続きよろしくお願い致します。";
 			
-			mailService.sendMail(signupEmail, "会員登録が完了しました! | 面談予約システム", signupSendText);
+			mailService.sendMail(signupEmail, "ユーザー登録が完了しました! | 面談予約システム", signupSendText);
 			
 			session.removeAttribute("user_signup_data");
 			

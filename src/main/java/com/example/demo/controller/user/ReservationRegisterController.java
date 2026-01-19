@@ -1,5 +1,7 @@
 package com.example.demo.controller.user;
 
+import java.time.format.DateTimeFormatter;
+
 import jakarta.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -16,6 +18,7 @@ import com.example.demo.model.form.user.ReservationRegisterForm;
 import com.example.demo.repository.InterviewersRepository;
 import com.example.demo.repository.TimesRepository;
 import com.example.demo.repository.UsersRepository;
+import com.example.demo.service.MailSendService;
 import com.example.demo.service.user.ReservationRegisterService;
 
 import lombok.RequiredArgsConstructor;
@@ -34,6 +37,8 @@ import lombok.RequiredArgsConstructor;
 public class ReservationRegisterController {
 	
 	private final ReservationRegisterService service;
+	
+	private final MailSendService mailService;
 	
 	private final TimesRepository timesRepository;
 	
@@ -175,6 +180,14 @@ public class ReservationRegisterController {
 		}
 		
 		Reservation reservationInfo = service.registerReservation(form);
+		
+		String registerName = reservationInfo.getUser().getName();
+		
+		String registerEmail = reservationInfo.getUser().getEmail();
+		
+		String registerSendText = registerName + "さん、" + "下記日程で面談予約が完了しました。\n\n" + "面談日: " + reservationInfo.getDate().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) + "\n開始時間: " + reservationInfo.getTime().getStart() + "時\n担当者名: " + reservationInfo.getInterviewer().getName() + "\nユーザー名: " + reservationInfo.getUser().getName();
+		
+		mailService.sendMail(registerEmail, "面談予約が完了しました! | 面談予約システム", registerSendText);
 		
 		session.setAttribute("register_result", "予約が完了しました。");
 		
