@@ -64,6 +64,13 @@
 					
 					<tr>
 						
+						<td>ユーザー名</td>
+						<td th:text="*{user.name}"></td>
+						
+					</tr>
+					
+					<tr>
+						
 						<td>面談日</td>
 						<td th:text="*{#temporals.format(date, 'yyyy年M月d日')}"></td>
 						

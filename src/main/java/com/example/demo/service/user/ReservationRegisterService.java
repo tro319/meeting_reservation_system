@@ -87,7 +87,7 @@ public class ReservationRegisterService {
 		
 		List<Reservation> reservationInfos = repository.findAll();
 		
-		doubleCheck = reservationInfos.stream().anyMatch(reservation -> (!reservation.getDate().equals(LocalDate.parse(form.getDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd")))) && (reservation.getTime().getId() != form.getTimeId()) && (reservation.getUser().getId() != form.getUserId()) && (reservation.getInterviewer().getId() != form.getInterviewerId()));
+		doubleCheck = reservationInfos.stream().anyMatch(reservation -> (reservation.getDate().equals(LocalDate.parse(form.getDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd")))) && (reservation.getTime().getId() == form.getTimeId()) && (reservation.getUser().getId() == form.getUserId()));
 		
 		
 		return doubleCheck;
