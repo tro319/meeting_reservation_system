@@ -49,6 +49,12 @@ public class LoginViewController {
 			
 			LoginForm loginForm = (LoginForm)session.getAttribute("user_login_data");
 			
+			String resetResult = (String)session.getAttribute("input_result");
+			
+			session.removeAttribute("input_result");
+			
+			model.addAttribute("input_result", resetResult);
+			
 			if (loginForm == null) {
 				
 				loginForm = new LoginForm();

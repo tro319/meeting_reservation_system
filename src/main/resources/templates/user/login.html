@@ -6,7 +6,7 @@
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 
-<body>
+<body th:attr="data-input-result=${input_result}">
 	
 	<header th:replace="~{/user/layouts/layout :: common_header_before}">
 		
@@ -70,7 +70,7 @@
 			
 			<div id="repass_email_link">
 				
-				<p><a th:href="@{/user/repass_email}">パスワードを忘れた方</a></p>
+				<p><a th:href="@{/user/reset_email}">パスワードを忘れた方</a></p>
 				
 			</div>
 			
@@ -81,6 +81,9 @@
 
 	<script>
 		
+		const inputResult = document.body.dataset.inputResult;
+		
+		if (inputResult) window.alert(inputResult);		
 		
 	</script>
 	

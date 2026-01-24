@@ -90,4 +90,30 @@ public class UserSetService {
 		
 	}
 	
+	
+	/*
+	 * emailからユーザー情報更新処理(パスワード再設定)
+	 * 
+	 * @param email 指定されたemail
+	 * @param pass 指定されたパスワード
+	 * @return ユーザーエンティティ1件
+	 * 
+	 */
+	
+	public User setUserByEmail(String email, String pass) {
+		
+		User userInfo = repository.findByEmail(email).orElse(null);
+		
+		if (userInfo != null) {
+			
+			String afterPass = passEncoder.encode(pass);
+			
+			userInfo.setPass(afterPass);
+			
+		}
+		
+		return repository.save(userInfo);
+		
+	}
+	
 }
