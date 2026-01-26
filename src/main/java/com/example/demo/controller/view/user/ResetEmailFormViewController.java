@@ -47,6 +47,8 @@ public class ResetEmailFormViewController {
 			ResetEmailForm emailForm = new ResetEmailForm();
 			
 			model.addAttribute("input_result", inputResult);
+			
+			session.removeAttribute("input_result");
 		
 			
 			model.addAttribute("reset_input_data", emailForm);
